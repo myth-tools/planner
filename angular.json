@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "projects": {
+    "wotr-planner": {
+      "projectType": "application",
+      "root": "apps/wotr-planner",
+      "sourceRoot": "apps/wotr-planner/src",
+      "prefix": "myth-tools",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/wotr-planner",
+            "index": "apps/wotr-planner/src/index.html",
+            "main": "apps/wotr-planner/src/main.ts",
+            "polyfills": "apps/wotr-planner/src/polyfills.ts",
+            "tsConfig": "apps/wotr-planner/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/wotr-planner/src/favicon.ico",
+              "apps/wotr-planner/src/assets"
+            ],
+            "styles": ["apps/wotr-planner/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/wotr-planner/src/environments/environment.ts",
+                  "with": "apps/wotr-planner/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "wotr-planner:build:production"
+            },
+            "development": {
+              "browserTarget": "wotr-planner:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "wotr-planner:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/wotr-planner/src/**/*.ts",
+              "apps/wotr-planner/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/wotr-planner"],
+          "options": {
+            "jestConfig": "apps/wotr-planner/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "wotr-planner-e2e": {
+      "root": "apps/wotr-planner-e2e",
+      "sourceRoot": "apps/wotr-planner-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/wotr-planner-e2e/cypress.json",
+            "devServerTarget": "wotr-planner:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "wotr-planner:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/wotr-planner-e2e/**/*.{js,ts}"]
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": ["wotr-planner"]
+    }
+  }
+}
