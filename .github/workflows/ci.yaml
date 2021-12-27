@@ -18,13 +18,12 @@ jobs:
               with:
                 node-version: 16
 
-            - name: Cache Node Modules
-              id: cache-node-modules
+            - name: Cache node modules
               uses: actions/cache@v2
               env:
                 cache-name: cache-node-modules
               with:
-                path: node_modules
+                path: ~/.npm
                 key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
                 restore-keys: |
                   ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -32,7 +31,6 @@ jobs:
                   ${{ runner.os }}-
 
             - name: Install Dependencies
-                if: steps.cache-node-modules.outputs.cache-hit != 'true'
                 run: npm ci
 
             - name: Build
