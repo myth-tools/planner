@@ -3,6 +3,8 @@ name: Version
 on:
     pull_request:
         types: [closed]
+        branches:
+            - master
 
 jobs:
     version:
@@ -14,7 +16,7 @@ jobs:
             - name: Checkout
               uses: 'actions/checkout@v2'
               with:
-                  ref: ${{ github.ref }}
+                  fetch-depth: 0
 
             - name: Automated Version Bump
               id: version-bump
