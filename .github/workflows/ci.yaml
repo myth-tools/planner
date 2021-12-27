@@ -31,7 +31,7 @@ jobs:
                   ${{ runner.os }}-
 
             - name: Install Dependencies
-                run: npm ci
+                run: npm install
 
             - name: Build
                 run: npm run nx run-many --target=build --all --prod
