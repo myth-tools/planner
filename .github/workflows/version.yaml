@@ -1,12 +1,12 @@
-name: 'Bump Version'
+name: Version
 
 on:
     pull_request:
         types: [closed]
 
 jobs:
-    bump-version:
-        name: 'Bump Version'
+    version:
+        name: Version
         if: github.event.action == 'closed' && github.event.pull_request.merged == true
         runs-on: ubuntu-latest
 
@@ -27,4 +27,4 @@ jobs:
             - name: Output
               env:
                   NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
-              run: echo "new tag $NEW_TAG"
+              run: echo "Created new tag $NEW_TAG"
