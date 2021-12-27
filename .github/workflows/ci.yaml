@@ -13,6 +13,8 @@ jobs:
         steps:
             - name: checkout
               uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
 
             - name: setup node
               uses: actions/setup-node@v1
@@ -25,6 +27,8 @@ jobs:
 
             - name: get nx commit sha
               uses: nrwl/nx-set-shas@v2
+              with:
+                  main-branch-name: master
 
             - name: lint
               run: npm run nx affected -- --target=lint --base=${{ env.NX_HEAD }}
@@ -44,6 +48,8 @@ jobs:
         steps:
             - name: checkout
               uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
 
             - name: setup node
               uses: actions/setup-node@v1
