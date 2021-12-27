@@ -16,28 +16,28 @@ jobs:
             - name: Setup NodeJS
               uses: actions/setup-node@v1
               with:
-                node-version: 16
+                  node-version: 16
 
             - name: Cache node modules
               uses: actions/cache@v2
               env:
-                cache-name: cache-node-modules
+                  cache-name: cache-node-modules
               with:
-                path: ~/.npm
-                key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-                restore-keys: |
-                  ${{ runner.os }}-build-${{ env.cache-name }}-
-                  ${{ runner.os }}-build-
-                  ${{ runner.os }}-
+                  path: ~/.npm
+                  key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-build-${{ env.cache-name }}-
+                      ${{ runner.os }}-build-
+                      ${{ runner.os }}-
 
             - name: Install Dependencies
-                run: npm install
+              run: npm install
 
             - name: Test
-                run: npm run nx run-many --target=test --all
+              run: npm run nx run-many --target=test --all
 
             - name: Lint
-                run: npm run nx run-many --target=lint --all
+              run: npm run nx run-many --target=lint --all
 
             - name: Build
-                run: npm run nx affected:build --prod
+              run: npm run nx affected:build --prod
