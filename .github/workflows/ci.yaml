@@ -7,6 +7,7 @@ on:
 
 jobs:
     build-test-lint:
+        name: 'CI'
         runs-on: ubuntu-latest
 
         steps:

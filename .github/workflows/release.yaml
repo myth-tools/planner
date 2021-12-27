@@ -1,4 +1,4 @@
-name: Build and Release
+name: Build
 
 on:
     pull_request:
@@ -6,6 +6,7 @@ on:
 
 jobs:
     build-test-release:
+        name: Release
         if: github.event.action == 'closed' && github.event.pull_request.merged == true
         runs-on: ubuntu-latest
 
