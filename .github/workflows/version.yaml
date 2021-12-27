@@ -1,0 +1,30 @@
+name: 'Bump Version'
+
+on:
+    push:
+        branches:
+            - 'master'
+
+jobs:
+    bump-version:
+        name: 'Bump Version'
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: 'actions/checkout@v2'
+              with:
+                  ref: ${{ github.ref }}
+
+            - name: Automated Version Bump
+              id: version-bump
+              uses: 'phips28/gh-action-bump-version@master'
+              with:
+                  tag-prefix: 'v'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Output
+              env:
+                  NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
+              run: echo "new tag $NEW_TAG"
