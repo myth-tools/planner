@@ -1,6 +1,29 @@
 {
     "version": 1,
     "projects": {
+        "shared-data-access-firebase": {
+            "root": "libs/shared/data-access/firebase",
+            "sourceRoot": "libs/shared/data-access/firebase/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/shared/data-access/firebase/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/shared/data-access/firebase"],
+                    "options": {
+                        "jestConfig": "libs/shared/data-access/firebase/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
         "wotr-compiler": {
             "root": "apps/wotr-compiler",
             "sourceRoot": "apps/wotr-compiler/src",
