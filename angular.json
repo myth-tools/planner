@@ -165,6 +165,7 @@
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {
                         "cname": "wotr.myth-tools.com",
+                        "noDotfiles": true,
                         "name": "Christopher",
                         "email": "24984762+christopher-kiss@users.noreply.github.com"
                     }
