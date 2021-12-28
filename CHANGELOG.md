@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/myth-tools/myth-tools/compare/v1.1.0...v1.2.0) (2021-12-28)
+
+
+### Features
+
+* add lib to generate dynamic links ([#12](https://github.com/myth-tools/myth-tools/issues/12)) ([3c47e51](https://github.com/myth-tools/myth-tools/commit/3c47e5167a997e49136b627834d91359b44a993e))
+
 # [1.1.0](https://github.com/myth-tools/myth-tools/compare/v1.0.0...v1.1.0) (2021-12-28)
 
 
