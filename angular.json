@@ -141,8 +141,7 @@
                 "deploy": {
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {
-                        "cname": "",
-                        "baseHref": "https://myth-tools.github.io/myth-tools/",
+                        "cname": "wotr.myth-tools.com",
                         "name": "Christopher",
                         "email": "24984762+christopher-kiss@users.noreply.github.com"
                     }
