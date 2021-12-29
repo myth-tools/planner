@@ -5,8 +5,9 @@
     "modifyObstructiveCode": false,
     "supportFile": "./src/support/index.ts",
     "pluginsFile": false,
-    "video": true,
+    "video": false,
     "videosFolder": "../../build/cypress/apps/wotr-planner-e2e/videos",
+    "screenshotOnRunFailure": false,
     "screenshotsFolder": "../../build/cypress/apps/wotr-planner-e2e/screenshots",
     "chromeWebSecurity": false
 }

@@ -32,13 +32,16 @@ jobs:
                   main-branch-name: master
 
             - name: lint
-              run: npm run nx affected -- --target=lint
+              run: npm run nx affected:lint
 
             - name: test
-              run: npm run nx affected -- --target=test
+              run: npm run nx affected:test
+
+            - name: e2e
+              run: npm run nx affected:e2e
 
             - name: build
-              run: npm run nx affected -- --target=build
+              run: npm run nx affected:build
 
     release:
         name: release
