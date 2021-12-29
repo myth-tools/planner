@@ -165,7 +165,7 @@
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {
                         "cname": "wotr.myth-tools.com",
-                        "noDotfiles": true,
+                        "repo": "https://github.com/myth-tools/wotr.git",
                         "name": "Christopher",
                         "email": "24984762+christopher-kiss@users.noreply.github.com"
                     }
