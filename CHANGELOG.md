@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/myth-tools/myth-tools/compare/v1.2.0...v1.3.0) (2021-12-29)
+
+
+### Features
+
+* **planner:** add angular material and basic style configuration ([#14](https://github.com/myth-tools/myth-tools/issues/14)) ([65f8be9](https://github.com/myth-tools/myth-tools/commit/65f8be9d78e83efa0feed0063b694f1c666560b6))
+
 # [1.2.0](https://github.com/myth-tools/myth-tools/compare/v1.1.0...v1.2.0) (2021-12-28)
 
 
