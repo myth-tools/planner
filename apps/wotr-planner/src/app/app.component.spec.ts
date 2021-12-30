@@ -16,11 +16,18 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     });
 
+    it(`should have a release`, () => {
+        const fixture = TestBed.createComponent(AppComponent);
+        const app = fixture.componentInstance;
+
+        expect(app.release).toEqual(environment.release);
+    });
+
     it(`should have a version`, () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.componentInstance;
 
-        expect(app.version).toEqual(environment.version);
+        expect(app.version).toEqual(environment.game.version);
     });
 
     it('should render title', () => {

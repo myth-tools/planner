@@ -7,5 +7,6 @@ import { environment } from '../environments/environment';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    public readonly version = environment.version;
+    public readonly release = environment.release;
+    public readonly version = environment.game.version;
 }
