@@ -35,7 +35,7 @@ jobs:
               run: npm run nx affected:lint
 
             - name: test
-              run: npm run nx affected:test
+              run: npm run nx affected:test -- --codeCoverage
 
             - name: e2e
               run: npm run nx affected:e2e
