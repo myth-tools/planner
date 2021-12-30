@@ -81,5 +81,5 @@ jobs:
             - name: deploy
               if: steps.semantic.outputs.new_release_published == 'true'
               env:
-                  GITHUB_TOKEN: ${{ secrets.PAT }}
+                  PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
               run: npm run ng deploy
