@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/myth-tools/myth-tools/compare/v1.3.0...v1.4.0) (2021-12-30)
+
+
+### Features
+
+* extract blueprints and version info ([#18](https://github.com/myth-tools/myth-tools/issues/18)) ([410d9f1](https://github.com/myth-tools/myth-tools/commit/410d9f13dd871c4f77e1a7fa06e03a2490af47e0))
+
 # [1.3.0](https://github.com/myth-tools/myth-tools/compare/v1.2.0...v1.3.0) (2021-12-29)
 
 
