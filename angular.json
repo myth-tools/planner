@@ -55,7 +55,8 @@
                 "serve": {
                     "builder": "@nrwl/node:execute",
                     "options": {
-                        "buildTarget": "wotr-compiler:build"
+                        "buildTarget": "wotr-compiler:build",
+                        "inspect": true
                     }
                 },
                 "lint": {
@@ -70,6 +71,29 @@
                     "outputs": ["coverage/apps/wotr-compiler"],
                     "options": {
                         "jestConfig": "apps/wotr-compiler/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
+        "wotr-compiler-feature-compiler": {
+            "root": "libs/wotr-compiler/feature/compiler",
+            "sourceRoot": "libs/wotr-compiler/feature/compiler/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr-compiler/feature/compiler/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/wotr-compiler/feature/compiler"],
+                    "options": {
+                        "jestConfig": "libs/wotr-compiler/feature/compiler/jest.config.js",
                         "passWithNoTests": true
                     }
                 }

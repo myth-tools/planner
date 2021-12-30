@@ -4,7 +4,12 @@
 
 export const environment = {
     production: false,
-    version: '0.0.0-development',
+    release: '0.0.0-development',
+    game: {
+        date: '1899-12-31T00:00:00.000Z',
+        hash: '00000000000000000000000000000000',
+        version: '0.0.0'
+    },
     firebase: {
         apiKey: 'AIzaSyCRsh4TCiKBZ9tFH6rJaJ_OdZt-3ckcbHI',
         prefix: 'short-url.myth-tools.com',
