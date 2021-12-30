@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/myth-tools/myth-tools/compare/v1.4.0...v1.4.1) (2021-12-30)
+
+
+### Bug Fixes
+
+* bump version to trigger deploy ([77373ad](https://github.com/myth-tools/myth-tools/commit/77373ad6f09d7fb622c761fd657458ff59b3a9be))
+
 # [1.4.0](https://github.com/myth-tools/myth-tools/compare/v1.3.0...v1.4.0) (2021-12-30)
 
 
