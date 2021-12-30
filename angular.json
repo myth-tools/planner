@@ -42,13 +42,7 @@
                         "production": {
                             "optimization": true,
                             "extractLicenses": true,
-                            "inspect": false,
-                            "fileReplacements": [
-                                {
-                                    "replace": "apps/wotr-compiler/src/environments/environment.ts",
-                                    "with": "apps/wotr-compiler/src/environments/environment.prod.ts"
-                                }
-                            ]
+                            "inspect": false
                         }
                     }
                 },
