@@ -10,6 +10,10 @@ export const environment = {
         file: '/Wrath_Data/StreamingAssets/Version.info',
         output: 'apps/wotr-planner/src/environments/environment.prod.ts'
     },
+    bundles: {
+        file: '/Bundles',
+        output: 'bundles'
+    },
     foldersOfInterest: [
         'Backgrounds',
         'Buffs',
@@ -23,6 +27,7 @@ export const environment = {
         'Races',
         'Spells',
         'Traits',
-        'Weapons'
+        'Weapons',
+        'Units/Companions'
     ]
 };

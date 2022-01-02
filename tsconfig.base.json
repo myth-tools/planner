@@ -16,7 +16,8 @@
         "baseUrl": ".",
         "paths": {
             "@myth-tools/shared/data-access/firebase": ["libs/shared/data-access/firebase/src/index.ts"],
-            "@myth-tools/wotr-compiler/feature/compiler": ["libs/wotr-compiler/feature/compiler/src/index.ts"]
+            "@myth-tools/wotr-compiler/feature/compiler": ["libs/wotr-compiler/feature/compiler/src/index.ts"],
+            "@myth-tools/wotr-compiler/feature/extractor": ["libs/wotr-compiler/feature/extractor/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

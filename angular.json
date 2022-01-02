@@ -94,6 +94,29 @@
             },
             "tags": []
         },
+        "wotr-compiler-feature-extractor": {
+            "root": "libs/wotr-compiler/feature/extractor",
+            "sourceRoot": "libs/wotr-compiler/feature/extractor/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr-compiler/feature/extractor/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/wotr-compiler/feature/extractor"],
+                    "options": {
+                        "jestConfig": "libs/wotr-compiler/feature/extractor/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
         "wotr-planner": {
             "projectType": "application",
             "root": "apps/wotr-planner",
