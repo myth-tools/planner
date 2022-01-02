@@ -16,6 +16,7 @@
         "baseUrl": ".",
         "paths": {
             "@myth-tools/shared/data-access/firebase": ["libs/shared/data-access/firebase/src/index.ts"],
+            "@myth-tools/shared/feature/blueprints": ["libs/shared/feature/blueprints/src/index.ts"],
             "@myth-tools/wotr-compiler/feature/compiler": ["libs/wotr-compiler/feature/compiler/src/index.ts"]
         }
     },
