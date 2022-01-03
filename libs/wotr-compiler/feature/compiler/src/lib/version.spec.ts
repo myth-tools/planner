@@ -20,13 +20,13 @@ const readFileMock = mocked(readFile).mockImplementation(async (fileName: string
 
 describe('Version', () => {
     it('should be defined', () => {
-        expect(new Version({ root: '', file: '', output: '' })).toBeDefined();
+        expect(new Version()).toBeDefined();
     });
 
     it('should get version info', async () => {
-        const root = 'test/';
-        const file = 'version.info';
-        const output = 'environment.ts';
+        const gameDirectory = 'test/';
+        const versionInfoFile = 'version.info';
+        const outputFile = 'environment.ts';
 
         const environment = {
             date: '1899-12-31T00:00:00.000Z',
@@ -40,20 +40,23 @@ describe('Version', () => {
             version: '1.1.6e'
         };
 
-        const version = new Version({ root, file, output });
+        const version = new Version();
 
-        fileMap.set(join(root, file), '2021-Dec-22 14:51 34f0951707d3c52b611428f8db5b4710080c8b45 1.1.6e');
+        fileMap.set(
+            join(gameDirectory, versionInfoFile),
+            '2021-Dec-22 14:51 34f0951707d3c52b611428f8db5b4710080c8b45 1.1.6e'
+        );
         fileMap.set('environment.ts', getEnvironmentString(environment.date, environment.hash, environment.version));
 
-        await version.extract();
+        await version.execute({ gameDirectory, versionInfoFile, outputFile });
 
         expect(readFileMock).toHaveBeenCalledTimes(2);
-        expect(readFileMock.mock.calls[0]).toEqual([join(root, file), 'utf-8']);
-        expect(readFileMock.mock.calls[1]).toEqual([output, 'utf-8']);
+        expect(readFileMock.mock.calls[0]).toEqual([join(gameDirectory, versionInfoFile), 'utf-8']);
+        expect(readFileMock.mock.calls[1]).toEqual([outputFile, 'utf-8']);
 
         expect(writeFileMock).toHaveBeenCalledTimes(1);
         expect(writeFileMock).toHaveBeenCalledWith(
-            output,
+            outputFile,
             getEnvironmentString(expected.date, expected.hash, expected.version),
             'utf-8'
         );

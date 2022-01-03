@@ -1,28 +1,15 @@
 export const environment = {
     production: false,
     release: '0.0.0-development',
-    root: 'E:/Steam/steamapps/common/Pathfinder Second Adventure',
+    gameDirectory: 'E:/Steam/steamapps/common/Pathfinder Second Adventure',
     blueprints: {
-        file: 'blueprints.zip',
-        output: 'blueprints'
+        zipFile: 'blueprints.zip',
+        extractFolder: 'blueprints',
+        compileFolder: 'libs/shared/assets/all-blueprints',
+        indexFileName: '_index'
     },
     version: {
-        file: '/Wrath_Data/StreamingAssets/Version.info',
-        output: 'apps/wotr-planner/src/environments/environment.prod.ts'
-    },
-    foldersOfInterest: [
-        'Backgrounds',
-        'Buffs',
-        'Classes',
-        'Classgroups',
-        'Encycolpedia',
-        'Equipment',
-        'Feats',
-        'Items',
-        'Mythic',
-        'Races',
-        'Spells',
-        'Traits',
-        'Weapons'
-    ]
+        versionInfoFile: '/Wrath_Data/StreamingAssets/Version.info',
+        outputFile: 'apps/wotr-planner/src/environments/environment.prod.ts'
+    }
 };

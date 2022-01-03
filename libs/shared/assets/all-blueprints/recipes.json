@@ -1,0 +1,1105 @@
+[{
+  "AssetId": "fe4c7fac8007fdc4698ff6c0d56e78ca",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "ba723928d46def24a9c0f5b28786b573",
+        "stringkey": "356a984d-6967-415b-8c1d-5cd71846faeb"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_88d5fa4520cf59d41b4e145cecab8719",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_59702b51281bd4f4f966d20be9b62c78",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_2bd6154284b913b479d38f539d4a00dd",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_dd818875c6dabb444b6aa5fafe65bf75",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 33,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_58879110ddb29e740acfc313e8d57d35"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_2779754eecffd044fbd4842dba55312c",
+        "m_Buff": "!bp_ea1da890226a90145a55ef3e6e432c83"
+      },
+      {
+        "m_Unit": "!bp_1b893f7cf2b150e4f8bc2b3c389ba71d",
+        "m_Buff": "!bp_dacbbac9477e776409158fd4808c5067"
+      },
+      {
+        "m_Unit": "!bp_096fc4a96d675bb45a0396bcaa7aa993",
+        "m_Buff": "!bp_db6d9d9360abb2d47ab674065edf779c"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "00208bad7bf11584e984868c1cb058dc",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "7d479201bebd07a4c93a60b81b7460f6",
+        "stringkey": "a461f1b7-ca6b-418b-93fd-af904bb3f9d2"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_dcd8ab193dbcb4d4d9f0462cf6458069",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_59702b51281bd4f4f966d20be9b62c78",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_233b68ccbc44dbc4280763659aa3ef64",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 24,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_a1a2be9cb4afc7e4ca051efa99c52908"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_54be53f0b35bf3c4592a97ae335fe765",
+        "m_Buff": "!bp_33ad5f94d97ee3544ac827c592640d80"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "876eb975c4da09943a3508b6738bd042",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "143412cb3e5b6c84d87ee71f58e4ff5e",
+        "stringkey": "dc183117-44f5-45b0-83f8-9e3e9673dcd3"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_5a9c1c8cfdc9c134cbd3cdf48f514438",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_74100d2f1ff98844085e3d7af1df33ac",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_77509196c5b384e40b5c43543b4a5be5",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_e03a716387e8ee3458771376529cf17c",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 24,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_78b04e09372a87643af30786a85416d3"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_1cbbbb892f93c3d439f8417ad7cbb6aa",
+        "m_Buff": "!bp_4435843391d2f1946b942d17345ea286"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "286a134f31538ee409befc8af4d48f87",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "1c6f8bc2300c3994f8702d909d2f82ac",
+        "stringkey": "4e23277e-af99-426a-8895-6920f0128897"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_5efe9453aed80994b83c262737f7f1ae",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_88d5fa4520cf59d41b4e145cecab8719",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_5154f0acc97b1ac4ebbcd37e1b63505f",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_2bd6154284b913b479d38f539d4a00dd",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_9ba0194ebcbeb8a428926c1ad9911967",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 40,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_600566c4e43f0254699e77f0d8e87a67"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_397b090721c41044ea3220445300e1b8",
+        "m_Buff": "!bp_025cbac65c6011142a647fa6c7ad1bf4"
+      },
+      {
+        "m_Unit": "!bp_cb29621d99b902e4da6f5d232352fbda",
+        "m_Buff": "!bp_34534469d82897740b527af70d18bd61"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "fa519e96f6c86384a8701ccfdc74c66a",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "3212f5d704b5f3c4ca03efde747ecd7f",
+        "stringkey": "6eceaddc-b7fa-41ea-b392-9d023c0b67d9"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_74100d2f1ff98844085e3d7af1df33ac",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c8562b15bf2aa3f429962c811710dde2",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_74af1ead553ef234fa11f369e7459e62",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 24,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_d577e126f13b1694da4fa7fcbb67eeaf"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_2779754eecffd044fbd4842dba55312c",
+        "m_Buff": "!bp_ea1da890226a90145a55ef3e6e432c83"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "2a90bf62e8f07f54bbdca0b925eebe44",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "864e95baf24df8b43ab104d5cf2f9bc0",
+        "stringkey": "81d1592f-03f2-4d28-a745-ddd34dbd8029"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_908373390dd992f4491a827fbf88b357",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_41765b1ef6660d246b1cd9cd7b941979",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_77509196c5b384e40b5c43543b4a5be5",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 22,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_62958f0ac8986d143a04e05d73d75a1d"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_397b090721c41044ea3220445300e1b8",
+        "m_Buff": "!bp_025cbac65c6011142a647fa6c7ad1bf4"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "bb22451633451b842a5dd692851be27e",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "74db5b73066077e48b0145f444ac81fb",
+        "stringkey": "303abda7-52fa-4e0f-b4e9-b7c411353cf7"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 10,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_a0b88a628424b5a4fbd5d206a3bad8eb"
+    ],
+    "UnitBuffs": []
+  }
+},
+{
+  "AssetId": "f58df7e3cb1b7f84095926c44e6321d6",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "4eace733f56763c44ae4075c069e04b0",
+        "stringkey": "ba777551-c81e-4718-a752-344e9772dcd4"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_5a9c1c8cfdc9c134cbd3cdf48f514438",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c8562b15bf2aa3f429962c811710dde2",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_74af1ead553ef234fa11f369e7459e62",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_d4aca765e97d1314789a3d8fcdf61b08",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 33,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_4583ecddd77443c4bb2f855bed7f736d"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_f72bb7c48bb3e45458f866045448fb58",
+        "m_Buff": "!bp_f49481db2fdaa2643ae18a25ef497cb9"
+      },
+      {
+        "m_Unit": "!bp_ae766624c03058440a036de90a7f2009",
+        "m_Buff": "!bp_18f1268093e77094684fd4014d470665"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "0eea67c01740861419c52c92696c3bc4",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "935ee222ca925f14ea92ba44a7bf6a38",
+        "stringkey": "4ce0622e-d22b-4115-bb25-53ac00591fb7"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_fce9f41ff499d7d46ba47f19be889cbf",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_41765b1ef6660d246b1cd9cd7b941979",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c60547826d61197449146fe2c074183d",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 16,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_04415e7e591d82649abd3c65a12d2e15"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_0d37024170b172346b3769df92a971f5",
+        "m_Buff": "!bp_841a8b3450279a0488f5e82282f9d093"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "deb7f1dcf1440044e96ca22197c9df73",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "9cdaccb1d342a91459a37fc8bf19e588",
+        "stringkey": "1a91a050-d4a7-47dd-be0b-100bd3ae99fd"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_88d5fa4520cf59d41b4e145cecab8719",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_fce9f41ff499d7d46ba47f19be889cbf",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_dcd8ab193dbcb4d4d9f0462cf6458069",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 22,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_addbf512681855446b7b3601633b215a"
+    ],
+    "UnitBuffs": []
+  }
+},
+{
+  "AssetId": "4d80045a70ccefa4a968293461e7d6f7",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "b689b297b88f2734fb4765683f63a789",
+        "stringkey": "f9bd7dcd-f500-47b5-95c3-057c645e4f1a"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_b4d993b630ac79944a133134a05ac811",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_74100d2f1ff98844085e3d7af1df33ac",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_e03a716387e8ee3458771376529cf17c",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 22,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_b3f46b546f6532b4691e106b008c8171"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_cb29621d99b902e4da6f5d232352fbda",
+        "m_Buff": "!bp_34534469d82897740b527af70d18bd61"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "69bbe64572a9e4a4b943dcb7c25db7e5",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "328bf7b34b6aa5541a52017a372331fb",
+        "stringkey": "707f06d4-a7da-44d7-9da0-c3d96dd9e37c"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_41765b1ef6660d246b1cd9cd7b941979",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_e03a716387e8ee3458771376529cf17c",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_74100d2f1ff98844085e3d7af1df33ac",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_2bd6154284b913b479d38f539d4a00dd",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_5bfed09712e38cd44962e20735de275b",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 35,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_865906cd7c7949244bf9205763401194"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_766435873b1361c4287c351de194e5f9",
+        "m_Buff": "!bp_56304db26814d434f9b3b9cd4c2e696e"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "d573917e32b6fa640abeb2807f73c8ec",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "e410205e5d55edb488f745ab2c4f368e",
+        "stringkey": "02d009fd-7cb0-43ab-b5fb-7378095b09de"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_5efe9453aed80994b83c262737f7f1ae",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_908373390dd992f4491a827fbf88b357",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_e03a716387e8ee3458771376529cf17c",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 21,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_f599a71369b6fd544b0b0ba827e4846f"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_096fc4a96d675bb45a0396bcaa7aa993",
+        "m_Buff": "!bp_db6d9d9360abb2d47ab674065edf779c"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "a4aa3487b7f33d54995ff76c7b37f2cb",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "65e72d84884e9a341ad733a395fa3ce7",
+        "stringkey": "6c21b19c-2c9a-478c-8613-22fee6a62f6e"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_dcd8ab193dbcb4d4d9f0462cf6458069",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_5a9c1c8cfdc9c134cbd3cdf48f514438",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_74af1ead553ef234fa11f369e7459e62",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 22,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_1033f520b4947c04f8e3cc34c487fb0d"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_ae766624c03058440a036de90a7f2009",
+        "m_Buff": "!bp_18f1268093e77094684fd4014d470665"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "52c031b5da663a248a5325b27c10d92f",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "8bef55630d6f6774b9fd14c58169ae81",
+        "stringkey": "301e680e-bac9-4693-9804-3c2e90338f7e"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_b4d993b630ac79944a133134a05ac811",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c60547826d61197449146fe2c074183d",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_59702b51281bd4f4f966d20be9b62c78",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 20,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_b7765edf798d0324a9d93ece55650a86"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_f72bb7c48bb3e45458f866045448fb58",
+        "m_Buff": "!bp_f49481db2fdaa2643ae18a25ef497cb9"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "81238fbe49a8a03448b1c51c67be0569",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "e3dc5dacd65a79f4a8e2ba23c1403aa7",
+        "stringkey": "db6abd52-80ae-4604-bb64-c7168ee510e7"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_c60547826d61197449146fe2c074183d",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c8562b15bf2aa3f429962c811710dde2",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_233b68ccbc44dbc4280763659aa3ef64",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 23,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_1474be355e341ad419cd7813e5239f66"
+    ],
+    "UnitBuffs": []
+  }
+},
+{
+  "AssetId": "c7c4bef0711206b4f84fa89cef33d9d5",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "f8106ada4a664eb44a0991a71e163819",
+        "stringkey": "9b98b0de-a417-4dff-97dc-501fd1df21bc"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_b4d993b630ac79944a133134a05ac811",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_5efe9453aed80994b83c262737f7f1ae",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_908373390dd992f4491a827fbf88b357",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 17,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_667228bd1dd4028438a32e9c64ff5076"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_1b893f7cf2b150e4f8bc2b3c389ba71d",
+        "m_Buff": "!bp_dacbbac9477e776409158fd4808c5067"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "2a2e2616eb49cbf43a57029872931a4c",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "0b1edb7af1ae0dd4ebff102a839270da",
+        "stringkey": "e465c26b-b997-4b8e-9bb1-ea3310ae6bb0"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_fce9f41ff499d7d46ba47f19be889cbf",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_5a9c1c8cfdc9c134cbd3cdf48f514438",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_5154f0acc97b1ac4ebbcd37e1b63505f",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_20dddd5a81cd237429b080548fb59651",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 34,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_0c283d43dde431f43aa13ace4488fba4"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_54be53f0b35bf3c4592a97ae335fe765",
+        "m_Buff": "!bp_33ad5f94d97ee3544ac827c592640d80"
+      },
+      {
+        "m_Unit": "!bp_a352873d37ec6c54c9fa8f6da3a6b3e1",
+        "m_Buff": "!bp_3e5af9a51a8894246bc891ef8563daa1"
+      },
+      {
+        "m_Unit": "!bp_0d37024170b172346b3769df92a971f5",
+        "m_Buff": "!bp_841a8b3450279a0488f5e82282f9d093"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "ccb3a2898f95aac4080cb998e321f9b1",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "832e84789acfad34b98b2a673ab41bfa",
+        "stringkey": "a9d48b7b-69b4-41c8-ba21-ca983c2f7a30"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_b4d993b630ac79944a133134a05ac811",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_5efe9453aed80994b83c262737f7f1ae",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c60547826d61197449146fe2c074183d",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 14,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_5967611998c5bf44fbde4047ee47e386"
+    ],
+    "UnitBuffs": []
+  }
+},
+{
+  "AssetId": "b9ec9f2751297694cad93582690df397",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "7424fa25c3898e947b7c0fe8b9b52463",
+        "stringkey": "0810a2b0-ccd6-4e4b-90a0-76414f1abb15"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_88d5fa4520cf59d41b4e145cecab8719",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_59702b51281bd4f4f966d20be9b62c78",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_233b68ccbc44dbc4280763659aa3ef64",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 21,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_192e675439e3ebc4d880b618b4904107"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_a352873d37ec6c54c9fa8f6da3a6b3e1",
+        "m_Buff": "!bp_3e5af9a51a8894246bc891ef8563daa1"
+      }
+    ]
+  }
+},
+{
+  "AssetId": "0498fd2af3d0f514e9d1cd2275739aca",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "dabd90823cd5e6740b685098258095a4",
+        "stringkey": "0c59f021-0287-4dc5-a222-62f77388c0c2"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_908373390dd992f4491a827fbf88b357",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_77509196c5b384e40b5c43543b4a5be5",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_5154f0acc97b1ac4ebbcd37e1b63505f",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_74af1ead553ef234fa11f369e7459e62",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_973a9726c25d0094b8ba80a2af774322",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 35,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_b6cdcbd81eac742489605dcb197999bb"
+    ],
+    "UnitBuffs": []
+  }
+},
+{
+  "AssetId": "197af78f957512844b1dfc9d1cf5d172",
+  "Data": {
+    "$type": "9100efc3f953411998535df29d58de0a, BlueprintCookingRecipe",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Name": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": {
+        "assetguid": "758e88414232c66459fcec033c9ab34d",
+        "stringkey": "77789f5d-c524-4b63-a1c1-8cefb323c1cf"
+      }
+    },
+    "Ingredients": [
+      {
+        "m_Item": "!bp_88d5fa4520cf59d41b4e145cecab8719",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_41765b1ef6660d246b1cd9cd7b941979",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_fce9f41ff499d7d46ba47f19be889cbf",
+        "Count": 1
+      },
+      {
+        "m_Item": "!bp_c10fd269328a23d4b8cd594c794cb8b4",
+        "Count": 1
+      }
+    ],
+    "CookingDC": 15,
+    "BuffDurationHours": 24,
+    "m_PartyBuffs": [
+      "!bp_ca6a914c1c9c8d747997f13802c8ace3"
+    ],
+    "UnitBuffs": [
+      {
+        "m_Unit": "!bp_766435873b1361c4287c351de194e5f9",
+        "m_Buff": "!bp_56304db26814d434f9b3b9cd4c2e696e"
+      }
+    ]
+  }
+}]

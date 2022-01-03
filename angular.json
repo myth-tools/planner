@@ -24,29 +24,6 @@
             },
             "tags": []
         },
-        "shared-feature-blueprints": {
-            "root": "libs/shared/feature/blueprints",
-            "sourceRoot": "libs/shared/feature/blueprints/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/shared/feature/blueprints/**/*.ts"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/shared/feature/blueprints"],
-                    "options": {
-                        "jestConfig": "libs/shared/feature/blueprints/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": []
-        },
         "wotr-compiler": {
             "root": "apps/wotr-compiler",
             "sourceRoot": "apps/wotr-compiler/src",
@@ -140,10 +117,11 @@
                         "tsConfig": "apps/wotr-planner/tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
+                            { "input": "libs/shared/assets", "output": ".", "glob": "favicon.ico" },
                             {
                                 "input": "libs/shared/assets",
-                                "output": ".",
-                                "glob": "**/*"
+                                "output": "./assets",
+                                "glob": "fonts/**/*"
                             }
                         ],
                         "styles": ["apps/wotr-planner/src/styles/styles.scss"],

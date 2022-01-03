@@ -1,15 +1,13 @@
-import { Options } from '../data-models/options';
+import { VersionOptions } from '../data-models/options';
 import { join } from 'path';
 import { readFile, writeFile } from 'fs/promises';
 import { VersionInfo } from '../data-models/version-info';
 
 export class Version {
-    constructor(private readonly options: Options) {}
+    public async execute({ gameDirectory, versionInfoFile, outputFile }: VersionOptions) {
+        const versionInfo = await this.get(gameDirectory, versionInfoFile);
 
-    public async extract() {
-        const versionInfo = await this.get(this.options.root, this.options.file);
-
-        return this.update(this.options.output, versionInfo);
+        return this.update(outputFile, versionInfo);
     }
 
     private async get(root: string, file: string) {
