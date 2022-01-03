@@ -28,7 +28,7 @@ describe('Extract', () => {
         expect(rm).toHaveBeenCalled();
         expect(entries).toHaveBeenCalledTimes(1);
         expect(extract).toHaveBeenCalledTimes(3);
-        expect(extract.mock.results[0].value).resolves.toBe(1);
+        expect(extract.mock.results[0].value).resolves.toBe(undefined);
         expect(extract.mock.results[1].value).resolves.toBe(3);
         expect(extract.mock.results[2].value).resolves.toBe(2);
         expect(close).toHaveBeenCalledTimes(1);
@@ -51,6 +51,11 @@ describe('Extract', () => {
         const extract = jest.fn().mockImplementation(async (name: string) => {
             const entries = Object.values(entryData);
             const extracted = entries.filter(entry => entry.name.includes(name));
+
+            // Files return undefined instead of a number.
+            if (extracted.length === 1) {
+                return extracted[0].isFile ? undefined : 1;
+            }
 
             return extracted.length;
         });
