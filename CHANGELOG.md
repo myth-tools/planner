@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/myth-tools/myth-tools/compare/v1.4.1...v1.5.0) (2022-01-03)
+
+
+### Features
+
+* compile blueprints into a usable format for the browser ([#21](https://github.com/myth-tools/myth-tools/issues/21)) ([8230772](https://github.com/myth-tools/myth-tools/commit/82307722c6e98d8305ac646a640054805ae4bf7b))
+
 ## [1.4.1](https://github.com/myth-tools/myth-tools/compare/v1.4.0...v1.4.1) (2021-12-30)
 
 
