@@ -1,0 +1,1532 @@
+[{
+  "AssetId": "d0252c90549d29340b22da64bd748273",
+  "Data": {
+    "$type": "6370c9530f88b5c41bd101d35b8e4fd2, BlueprintProjectile",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Speed": 26.0,
+    "MinTime": 0.0,
+    "View": {
+      "AssetId": "bd24c76b8ed0d4545ac610991a2eaa31"
+    },
+    "CastFx": null,
+    "CastEffectDuration": 1.0,
+    "LifetimeParticlesAfterHit": 23.0,
+    "ProjectileHit": {
+      "FollowTarget": true,
+      "HitFx": {
+        "AssetId": "2689afc45eec3a748b8c4b725fe5985f"
+      },
+      "HitSnapFx": null,
+      "MissFx": null,
+      "MissDecalFx": {
+        "AssetId": "20fa60da029baba49ba84f9fd4e9d3d8"
+      }
+    },
+    "DamageHit": {
+      "FollowTarget": false,
+      "HitLevel": "Standard",
+      "MinorAdditionalHits": true,
+      "BillboardBlood": true,
+      "DirectionalBlood": true
+    },
+    "SourceBone": "Locator_PalmFX_Left",
+    "SourceBoneOffsetAtTarget": false,
+    "UseSourceBoneScale": false,
+    "SourceBoneCorpulenceOffset": 0.0,
+    "TargetBone": "Locator_HitFX_00",
+    "TargetBoneOnCrit": "Locator_HitCriticalFX_00",
+    "TargetBoneOffsetMultiplier": 1.0,
+    "FallsOnMiss": false,
+    "MissMinRadius": 1.0,
+    "MissMaxRadius": 3.0,
+    "MissRaycastDistance": 13.5,
+    "AddRagdollImpulse": 0.0,
+    "m_Trajectory": "!bp_d2b5ccb441b77b045a0d68a18d8f0154",
+    "FollowTerrain": false,
+    "StuckArrowPrefab": {
+      "guid": "900012229ed51d447950c0734f57f658",
+      "fileid": 1838188355143508
+    },
+    "DeflectedArrowPrefab": {
+      "guid": "0413ba43c2d10f944a71c7f37eeacfc5",
+      "fileid": 1190139256516706
+    }
+  }
+},
+{
+  "AssetId": "0f083f2598b3e6441992ebadbc0325aa",
+  "Data": {
+    "$type": "6370c9530f88b5c41bd101d35b8e4fd2, BlueprintProjectile",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Speed": 23.0,
+    "MinTime": 0.0,
+    "View": {
+      "AssetId": "bd24c76b8ed0d4545ac610991a2eaa31"
+    },
+    "CastFx": null,
+    "CastEffectDuration": 1.0,
+    "LifetimeParticlesAfterHit": 23.0,
+    "ProjectileHit": {
+      "FollowTarget": true,
+      "HitFx": {
+        "AssetId": "e4bda450abe562c41be49d22db36deca"
+      },
+      "HitSnapFx": null,
+      "MissFx": null,
+      "MissDecalFx": {
+        "AssetId": "ee7f130161902c44c889bc982f8060eb"
+      }
+    },
+    "DamageHit": {
+      "FollowTarget": false,
+      "HitLevel": "Standard",
+      "MinorAdditionalHits": true,
+      "BillboardBlood": true,
+      "DirectionalBlood": true
+    },
+    "SourceBone": "Locator_PalmFX_Left",
+    "SourceBoneOffsetAtTarget": false,
+    "UseSourceBoneScale": false,
+    "SourceBoneCorpulenceOffset": 0.0,
+    "TargetBone": "Locator_HitFX_00",
+    "TargetBoneOnCrit": "Locator_HitCriticalFX_00",
+    "TargetBoneOffsetMultiplier": 1.0,
+    "FallsOnMiss": false,
+    "MissMinRadius": 1.0,
+    "MissMaxRadius": 3.0,
+    "MissRaycastDistance": 13.5,
+    "AddRagdollImpulse": 0.0,
+    "m_Trajectory": "!bp_d2b5ccb441b77b045a0d68a18d8f0154",
+    "FollowTerrain": false,
+    "StuckArrowPrefab": {
+      "guid": "900012229ed51d447950c0734f57f658",
+      "fileid": 1838188355143508
+    },
+    "DeflectedArrowPrefab": {
+      "guid": "0413ba43c2d10f944a71c7f37eeacfc5",
+      "fileid": 1190139256516706
+    }
+  }
+},
+{
+  "AssetId": "d2b5ccb441b77b045a0d68a18d8f0154",
+  "Data": {
+    "$type": "55a39726d0cce8a45877d1ffb0c3e5e6, BlueprintProjectileTrajectory",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "UpDirection": "0|100|0",
+    "PlaneOffset": [
+      {
+        "Curve": {
+          "preWrapMode": 8,
+          "postWrapMode": 8,
+          "keys": [
+            {
+              "time": 0.0,
+              "value": 0.0,
+              "inTangent": 0.0,
+              "inWeight": 0.333333343,
+              "outTangent": 0.0,
+              "outWeight": 0.333333343,
+              "weightedMode": 0
+            },
+            {
+              "time": 1.0,
+              "value": 0.0,
+              "inTangent": 0.0,
+              "inWeight": 0.333333343,
+              "outTangent": 0.0,
+              "outWeight": 0.333333343,
+              "weightedMode": 0
+            }
+          ]
+        },
+        "AmplitudeScale": 10.0,
+        "FrequencyScale": 1.0,
+        "ScrollSpeed": 0.0
+      }
+    ],
+    "UpOffset": [
+      {
+        "Curve": {
+          "preWrapMode": 8,
+          "postWrapMode": 8,
+          "keys": [
+            {
+              "time": 0.0,
+              "value": 0.0,
+              "inTangent": 0.0,
+              "inWeight": 0.333333343,
+              "outTangent": 1.0,
+              "outWeight": 0.333333343,
+              "weightedMode": 0
+            },
+            {
+              "time": 0.5,
+              "value": 0.5,
+              "inTangent": 0.0,
+              "inWeight": 0.333333343,
+              "outTangent": 0.0,
+              "outWeight": 0.333333343,
+              "weightedMode": 0
+            },
+            {
+              "time": 1.0,
+              "value": 0.0,
+              "inTangent": -1.0,
+              "inWeight": 0.333333343,
+              "outTangent": 0.0,
+              "outWeight": 0.333333343,
+              "weightedMode": 0
+            }
+          ]
+        },
+        "AmplitudeScale": 1.5,
+        "FrequencyScale": 10.0,
+        "ScrollSpeed": 0.0
+      }
+    ],
+    "AmplitudeScaleByLifetime": {
+      "preWrapMode": 8,
+      "postWrapMode": 8,
+      "keys": [
+        {
+          "time": 0.00352346175,
+          "value": 1.0,
+          "inTangent": 0.0,
+          "inWeight": 0.333333343,
+          "outTangent": 0.0,
+          "outWeight": 0.333333343,
+          "weightedMode": 0
+        },
+        {
+          "time": 0.99924624,
+          "value": 1.0,
+          "inTangent": 0.0,
+          "inWeight": 0.333333343,
+          "outTangent": 0.0,
+          "outWeight": 0.333333343,
+          "weightedMode": 0
+        }
+      ]
+    },
+    "AmplitudeScaleByFullDistance": {
+      "preWrapMode": 8,
+      "postWrapMode": 8,
+      "keys": [
+        {
+          "time": 0.0,
+          "value": 0.0,
+          "inTangent": 0.0,
+          "inWeight": 0.333333343,
+          "outTangent": 0.0,
+          "outWeight": 0.333333343,
+          "weightedMode": 0
+        },
+        {
+          "time": 20.0,
+          "value": 1.0,
+          "inTangent": 0.11730469,
+          "inWeight": 0.333333343,
+          "outTangent": 0.11730469,
+          "outWeight": 0.333333343,
+          "weightedMode": 0
+        }
+      ]
+    }
+  },
+  "Meta": {
+    "ShadowDeleted": false
+  }
+},
+{
+  "AssetId": "32dd45727d8f7f84ba9e650dd8ed5da7",
+  "Data": {
+    "$type": "618a7e0d54149064ab3ffa5d9057362c, BlueprintBuff",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "ee15f0be-712b-40ba-8d1b-6575ece633e6",
+      "m_OwnerString": "32dd45727d8f7f84ba9e650dd8ed5da7",
+      "m_OwnerPropertyPath": "m_DisplayName",
+      "m_JsonPath": "Strings/Mechanics/Blueprints/Buff Damage bonus_m_DisplayName.json",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "32dd45727d8f7f84ba9e650dd8ed5da7",
+      "m_OwnerPropertyPath": "m_Description",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": null,
+    "IsClassFeature": false,
+    "m_Flags": 0,
+    "Stacking": "Replace",
+    "Ranks": 0,
+    "TickEachSecond": false,
+    "Frequency": "Rounds",
+    "FxOnStart": null,
+    "FxOnRemove": null,
+    "ResourceAssetIds": []
+  }
+},
+{
+  "AssetId": "127be665d87f8634a85af05d394ee14f",
+  "Data": {
+    "$type": "6370c9530f88b5c41bd101d35b8e4fd2, BlueprintProjectile",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Speed": 26.0,
+    "MinTime": 0.0,
+    "View": {
+      "AssetId": "1e54ad17926f86c46a0db95e04ec1dca"
+    },
+    "CastFx": null,
+    "CastEffectDuration": 1.0,
+    "LifetimeParticlesAfterHit": 23.0,
+    "ProjectileHit": {
+      "FollowTarget": true,
+      "HitFx": {
+        "AssetId": "2689afc45eec3a748b8c4b725fe5985f"
+      },
+      "HitSnapFx": null,
+      "MissFx": null,
+      "MissDecalFx": {
+        "AssetId": "20fa60da029baba49ba84f9fd4e9d3d8"
+      }
+    },
+    "DamageHit": {
+      "FollowTarget": false,
+      "HitLevel": "Standard",
+      "MinorAdditionalHits": true,
+      "BillboardBlood": true,
+      "DirectionalBlood": false
+    },
+    "SourceBone": "Locator_PalmFX_Left",
+    "SourceBoneOffsetAtTarget": false,
+    "UseSourceBoneScale": false,
+    "SourceBoneCorpulenceOffset": 0.0,
+    "TargetBone": "Locator_HitFX_00",
+    "TargetBoneOnCrit": "Locator_HitCriticalFX_00",
+    "TargetBoneOffsetMultiplier": 1.0,
+    "FallsOnMiss": false,
+    "MissMinRadius": 1.0,
+    "MissMaxRadius": 3.0,
+    "MissRaycastDistance": 25.0,
+    "AddRagdollImpulse": 0.0,
+    "m_Trajectory": "!bp_d2b5ccb441b77b045a0d68a18d8f0154",
+    "FollowTerrain": false,
+    "StuckArrowPrefab": {
+      "guid": "7862bf6514560fb40a1d048c6e6c6e13",
+      "fileid": 1838188355143508
+    },
+    "DeflectedArrowPrefab": {
+      "guid": "23c5174533477994d840c5f0d46180fb",
+      "fileid": 1190139256516706
+    }
+  }
+},
+{
+  "AssetId": "75588478e5cc80742838c901d41a586d",
+  "Data": {
+    "$type": "b7d695389bff6604ca37f190a61f05b5, BlueprintDynamicMapObject",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "Этот блюпринт нужен для спауна интеракшена в месте смерти специальных юнитов",
+    "Prefab": {
+      "guid": "1d2a159fd3f160042bc6e947d4d4548b",
+      "fileid": 6967787591914379002
+    }
+  }
+},
+{
+  "AssetId": "533995c13cde02143b8c2f6b5b98598e",
+  "Data": {
+    "$type": "6370c9530f88b5c41bd101d35b8e4fd2, BlueprintProjectile",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Speed": 26.0,
+    "MinTime": 0.0,
+    "View": {
+      "AssetId": "c9931ddd90ca77649910833ee627ae0a"
+    },
+    "CastFx": null,
+    "CastEffectDuration": 1.0,
+    "LifetimeParticlesAfterHit": 23.0,
+    "ProjectileHit": {
+      "FollowTarget": false,
+      "HitFx": null,
+      "HitSnapFx": null,
+      "MissFx": null,
+      "MissDecalFx": null
+    },
+    "DamageHit": {
+      "FollowTarget": false,
+      "HitLevel": "Standard",
+      "MinorAdditionalHits": true,
+      "BillboardBlood": true,
+      "DirectionalBlood": true
+    },
+    "SourceBone": "Locator_PalmFX_Left",
+    "SourceBoneOffsetAtTarget": false,
+    "UseSourceBoneScale": false,
+    "SourceBoneCorpulenceOffset": 0.0,
+    "TargetBone": "Locator_HitFX_00",
+    "TargetBoneOnCrit": "Locator_HitCriticalFX_00",
+    "TargetBoneOffsetMultiplier": 1.0,
+    "FallsOnMiss": false,
+    "MissMinRadius": 1.0,
+    "MissMaxRadius": 3.0,
+    "MissRaycastDistance": 25.0,
+    "AddRagdollImpulse": 0.0,
+    "m_Trajectory": "!bp_d2b5ccb441b77b045a0d68a18d8f0154",
+    "FollowTerrain": false,
+    "StuckArrowPrefab": {
+      "guid": "e10bdc824555d1343957c5557ed00f8d",
+      "fileid": 1838188355143508
+    },
+    "DeflectedArrowPrefab": {
+      "guid": "70b8c3a952dcffa49b7e5d8e87a81953",
+      "fileid": 1190139256516706
+    }
+  }
+},
+{
+  "AssetId": "91ea1b6a743f23a46baa8532706df331",
+  "Data": {
+    "$type": "b9ea3359b1204b798a61750d6cb4e723, ConditionsHolder",
+    "Conditions": {
+      "Operation": "And",
+      "Conditions": [
+        {
+          "$type": "4976252585b024c499c47cd56966ab2b, ItemsEnough",
+          "name": "$ItemsEnough$7aa23c0d-5585-457a-9fc3-0e0f802722f6",
+          "Not": false,
+          "Money": false,
+          "m_ItemToCheck": "!bp_95c126deb99ba054aa5b84710520c035",
+          "Quantity": 1
+        }
+      ]
+    }
+  },
+  "Meta": {
+    "ShadowDeleted": false
+  }
+},
+{
+  "AssetId": "83b33d1fd75b5d8409cc491463175dbb",
+  "Data": {
+    "$type": "b7d695389bff6604ca37f190a61f05b5, BlueprintDynamicMapObject",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "Этот блюпринт нужен для динамического создания Финнеана на привале",
+    "Prefab": {
+      "guid": "89c1c5153d72cde4f9f2a469f986ca37",
+      "fileid": 4776468564303513288
+    }
+  }
+},
+{
+  "AssetId": "cdcf060b81ff7344db1d93e0dfb6aa2f",
+  "Data": {
+    "$type": "da11db195c86e0d4dae17a2c03a4ba9a, BlueprintAbility",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$AbilityCustomFly$6e703b34-eb43-47f9-bc52-2a8fbcd4a0c5"
+    ],
+    "Components": [
+      {
+        "$type": "b3922df93ce63c44f9d223a7360d0896, AbilityCustomFly",
+        "name": "$AbilityCustomFly$6e703b34-eb43-47f9-bc52-2a8fbcd4a0c5",
+        "m_Overrides": [],
+        "Animation": {
+          "guid": "81bce43e3917a6047bff3d869b4160c0",
+          "fileid": 11400000
+        },
+        "MaxHeight": 15.0,
+        "FlyUpTime": 1.5,
+        "TakeoffTime": 0.8,
+        "LandTime": 0.8,
+        "TakeOff": [
+          {
+            "time": 0.0,
+            "value": 0.0,
+            "inTangent": 0.0254237261,
+            "inWeight": 0.0,
+            "outTangent": 0.0254237261,
+            "outWeight": 0.245833337,
+            "weightedMode": 0
+          },
+          {
+            "time": 0.112863928,
+            "value": 0.09873395,
+            "inTangent": 0.316341162,
+            "inWeight": 0.333333343,
+            "outTangent": 0.316341162,
+            "outWeight": 0.1972556,
+            "weightedMode": 0
+          },
+          {
+            "time": 1.0,
+            "value": 1.0,
+            "inTangent": 2.53846216,
+            "inWeight": 0.108333349,
+            "outTangent": 2.53846216,
+            "outWeight": 0.0,
+            "weightedMode": 0
+          }
+        ],
+        "Landing": [
+          {
+            "time": 0.0,
+            "value": 1.0,
+            "inTangent": -1.38888919,
+            "inWeight": 0.0,
+            "outTangent": -1.38888919,
+            "outWeight": 0.225,
+            "weightedMode": 0
+          },
+          {
+            "time": 1.0,
+            "value": 0.0,
+            "inTangent": -0.0306122452,
+            "inWeight": 0.204166651,
+            "outTangent": -0.0306122452,
+            "outWeight": 0.0,
+            "weightedMode": 0
+          }
+        ]
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": {
+      "guid": "a5d39012724cc6542a4ee150c0d84689",
+      "fileid": 21300000
+    },
+    "m_DefaultAiAction": null,
+    "Type": "Extraordinary",
+    "Range": "Long",
+    "CustomRange": {
+      "m_Value": 0.0
+    },
+    "ShowNameForVariant": false,
+    "OnlyForAllyCaster": false,
+    "CanTargetPoint": true,
+    "CanTargetEnemies": false,
+    "CanTargetFriends": false,
+    "CanTargetSelf": false,
+    "SpellResistance": false,
+    "ActionBarAutoFillIgnored": false,
+    "Hidden": false,
+    "NeedEquipWeapons": false,
+    "NotOffensive": false,
+    "EffectOnAlly": "None",
+    "EffectOnEnemy": "None",
+    "m_Parent": null,
+    "Animation": "Special",
+    "HasFastAnimation": false,
+    "AnimationStyle": "CastActionOmni",
+    "m_TargetMapObjects": false,
+    "ActionType": "Standard",
+    "AvailableMetamagic": "Quicken, Heighten",
+    "m_IsFullRoundAction": false,
+    "LocalizedDuration": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "LocalizedSavingThrow": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "MaterialComponent": {
+      "m_Item": null,
+      "Count": 1
+    },
+    "DisableLog": false,
+    "ResourceAssetIds": []
+  }
+},
+{
+  "AssetId": "f0b622ab2d18ef7439feb8aa5680d6e5",
+  "Data": {
+    "$type": "da11db195c86e0d4dae17a2c03a4ba9a, BlueprintAbility",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$AbilityCustomOverrun$ea5ac6c8-9a09-4a98-a7de-7c8d7cb2f809",
+      "$AbilityIsFullRoundInTurnBased$5250f0fc-824b-42fc-8945-4796b7797df6"
+    ],
+    "Components": [
+      {
+        "$type": "88f91f539f40401d9fd015b2e7de33cd, AbilityCustomOverrun",
+        "name": "$AbilityCustomOverrun$ea5ac6c8-9a09-4a98-a7de-7c8d7cb2f809",
+        "m_Overrides": [],
+        "m_AddBuffWhileRunning": "!bp_ad06fa795a9e7124a88878446c675aaa",
+        "DelayBeforeStart": 0.8,
+        "DelayAfterFinish": 0.8,
+        "FirstTargetOnly": false,
+        "AutoSuccess": false,
+        "StopOnCorpulence": false,
+        "Actions": {
+          "Actions": []
+        }
+      },
+      {
+        "$type": "f536f9b5e4f54bca9ed71847d6ebe531, AbilityIsFullRoundInTurnBased",
+        "name": "$AbilityIsFullRoundInTurnBased$5250f0fc-824b-42fc-8945-4796b7797df6",
+        "m_Overrides": [],
+        "FullRoundIfTurnBased": true
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": {
+      "guid": "a5d39012724cc6542a4ee150c0d84689",
+      "fileid": 21300000
+    },
+    "m_DefaultAiAction": null,
+    "Type": "Extraordinary",
+    "Range": "Long",
+    "CustomRange": {
+      "m_Value": 0.0
+    },
+    "ShowNameForVariant": false,
+    "OnlyForAllyCaster": false,
+    "CanTargetPoint": true,
+    "CanTargetEnemies": false,
+    "CanTargetFriends": false,
+    "CanTargetSelf": false,
+    "SpellResistance": false,
+    "ActionBarAutoFillIgnored": false,
+    "Hidden": false,
+    "NeedEquipWeapons": false,
+    "NotOffensive": false,
+    "EffectOnAlly": "None",
+    "EffectOnEnemy": "None",
+    "m_Parent": null,
+    "Animation": "Immediate",
+    "HasFastAnimation": false,
+    "AnimationStyle": "CastActionOmni",
+    "m_TargetMapObjects": false,
+    "ActionType": "Standard",
+    "AvailableMetamagic": "Quicken, Heighten",
+    "m_IsFullRoundAction": false,
+    "LocalizedDuration": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "LocalizedSavingThrow": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "MaterialComponent": {
+      "m_Item": null,
+      "Count": 1
+    },
+    "DisableLog": false,
+    "ResourceAssetIds": []
+  }
+},
+{
+  "AssetId": "c22ba105a766e804b93e959b879f6c41",
+  "Data": {
+    "$type": "d0e20ba43f1689d4a964ffe958a5fa1a, BlueprintBrain",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "m_Actions": []
+  }
+},
+{
+  "AssetId": "e99b07b19d5acf843bdedd5e11e67ff7",
+  "Data": {
+    "$type": "b7d695389bff6604ca37f190a61f05b5, BlueprintDynamicMapObject",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Prefab": {
+      "guid": "40b29f4286e86a742b54b8f42cf5896e",
+      "fileid": 5369273804269170317
+    }
+  }
+},
+{
+  "AssetId": "ae9b10be1bccaf84f9b0220fc20d3e7d",
+  "Data": {
+    "$type": "b7d695389bff6604ca37f190a61f05b5, BlueprintDynamicMapObject",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Prefab": {
+      "guid": "16b8704cbda3ef441894457ee1f63cdf",
+      "fileid": 1528068560687210
+    }
+  }
+},
+{
+  "AssetId": "ba6d2fdae677e664ca76c8837aa1afff",
+  "Data": {
+    "$type": "6370c9530f88b5c41bd101d35b8e4fd2, BlueprintProjectile",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Speed": 26.0,
+    "MinTime": 0.0,
+    "View": {
+      "AssetId": "d72459ea2c52a4f4cbab112ea289c113"
+    },
+    "CastFx": null,
+    "CastEffectDuration": 1.0,
+    "LifetimeParticlesAfterHit": 23.0,
+    "ProjectileHit": {
+      "FollowTarget": false,
+      "HitFx": null,
+      "HitSnapFx": null,
+      "MissFx": null,
+      "MissDecalFx": null
+    },
+    "DamageHit": {
+      "FollowTarget": false,
+      "HitLevel": "Standard",
+      "MinorAdditionalHits": true,
+      "BillboardBlood": true,
+      "DirectionalBlood": true
+    },
+    "SourceBone": "Locator_PalmFX_Left",
+    "SourceBoneOffsetAtTarget": false,
+    "UseSourceBoneScale": false,
+    "SourceBoneCorpulenceOffset": 0.0,
+    "TargetBone": "Locator_HitFX_00",
+    "TargetBoneOnCrit": "Locator_HitCriticalFX_00",
+    "TargetBoneOffsetMultiplier": 1.0,
+    "FallsOnMiss": false,
+    "MissMinRadius": 1.0,
+    "MissMaxRadius": 3.0,
+    "MissRaycastDistance": 25.0,
+    "AddRagdollImpulse": 0.0,
+    "m_Trajectory": "!bp_d2b5ccb441b77b045a0d68a18d8f0154",
+    "FollowTerrain": false,
+    "StuckArrowPrefab": null,
+    "DeflectedArrowPrefab": {
+      "guid": "9061857c9ea8c0843adf57cb3ffa1509",
+      "fileid": 1190139256516706
+    }
+  }
+},
+{
+  "AssetId": "197f5f73c5f02274c9f577f855c20142",
+  "Data": {
+    "$type": "cfdc486c3c5449e0b9d559e8ea5fdc0b, BlueprintControllableProjectile",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "m_OnCreatureCastPrefab": {
+      "AssetId": "a432c50a889a9814f8d7559b06a4a41d"
+    },
+    "m_OnCreaturePrefab": {
+      "AssetId": "0290884fb2c7b3149a1f2ca5e33cf11b"
+    },
+    "m_HeightOffset": 1.2,
+    "m_RotationLifetime": 0.75,
+    "m_RotationCurve": [
+      {
+        "time": 0.0,
+        "value": 0.0,
+        "inTangent": -5.03946E-06,
+        "inWeight": 0.0,
+        "outTangent": -5.03946E-06,
+        "outWeight": 0.187192112,
+        "weightedMode": 0
+      },
+      {
+        "time": 0.601477,
+        "value": 0.7552518,
+        "inTangent": 0.766664565,
+        "inWeight": 0.333333343,
+        "outTangent": 0.766664565,
+        "outWeight": 0.333333343,
+        "weightedMode": 0
+      },
+      {
+        "time": 1.0,
+        "value": 0.9,
+        "inTangent": 0.04656865,
+        "inWeight": 0.120689668,
+        "outTangent": 0.04656865,
+        "outWeight": 0.0,
+        "weightedMode": 0
+      }
+    ],
+    "m_PreparationStartSound": "Mythic7lvlLich_BoneLance00_Turn_Whoosh_Play",
+    "m_PreparationEndSound": ""
+  }
+},
+{
+  "AssetId": "b85049fc60574fb44a53c1dfdf92cbbf",
+  "Data": {
+    "$type": "d0e20ba43f1689d4a964ffe958a5fa1a, BlueprintBrain",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "m_Actions": []
+  }
+},
+{
+  "AssetId": "d48e03729a253814ebb26d21b4e6a0b3",
+  "Data": {
+    "$type": "fa4fa7e4548127a47a2846c91b051065, BlueprintUnit",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$AllowDyingCondition$d5d0cdf1-338d-4d20-8b8a-81c31e477d18",
+      "$AddFacts$2912a6bc-9143-4c0e-ba6e-a322635d7662"
+    ],
+    "Components": [
+      {
+        "$type": "addae4953430725479cc27bae68ad849, AllowDyingCondition",
+        "name": "$AllowDyingCondition$d5d0cdf1-338d-4d20-8b8a-81c31e477d18",
+        "m_Overrides": []
+      },
+      {
+        "$type": "d79ad4ed064aa4f43ace0e9c238fb9b9, AddFacts",
+        "name": "$AddFacts$2912a6bc-9143-4c0e-ba6e-a322635d7662",
+        "m_Overrides": [],
+        "m_Facts": [
+          "!bp_c4403567ea9e5fe478ca38e3052fadc2"
+        ],
+        "Dummy": null,
+        "CasterLevel": 0,
+        "DoNotRestoreMissingFacts": false,
+        "HasDifficultyRequirements": false,
+        "InvertDifficultyRequirements": false,
+        "MinDifficulty": "Story"
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": null,
+    "m_Type": null,
+    "LocalizedName": {
+      "assetguid": "18e5964340b63b547802b77bb20ef745",
+      "stringkey": "1daf8fd5-fb15-4b22-ab80-6245c714c249"
+    },
+    "Gender": "Male",
+    "Size": "Medium",
+    "IsLeftHanded": false,
+    "Color": {
+      "r": 0.607843161,
+      "g": 0.0235294122,
+      "b": 0.003921569,
+      "a": 1.0
+    },
+    "m_Race": "!bp_0a5d473ead98b0646b94495af250fdc4",
+    "Alignment": "TrueNeutral",
+    "m_Portrait": null,
+    "Prefab": {
+      "AssetId": "8e96cca0dd1aea641a90290c60c78c46"
+    },
+    "m_CustomizationPreset": null,
+    "m_RandomParameters": null,
+    "Visual": {
+      "BloodType": "Common",
+      "FootprintType": "Humanoid",
+      "FootprintScale": 1.0,
+      "ArmorFx": null,
+      "BloodPuddleFx": {
+        "AssetId": "f1400b13c4d834549be5b6dc32bc2ce3"
+      },
+      "DismemberFx": null,
+      "RipLimbsApartFx": null,
+      "IsNotUseDismember": false,
+      "m_Barks": null,
+      "ReachFXThresholdBonus": 0.0,
+      "DefaultArmorSoundType": "Flesh",
+      "FootstepSoundSizeType": "BootMedium",
+      "FootSoundType": "Boot",
+      "FootSoundSize": "Medium",
+      "BodySoundType": "Flesh",
+      "BodySoundSize": "Medium",
+      "FoleySoundPrefix": "",
+      "NoFinishingBlow": false,
+      "ImportanceOverride": 0,
+      "SilentCaster": false
+    },
+    "m_Faction": "!bp_72f240260881111468db610b6c37c099",
+    "FactionOverrides": {
+      "m_AttackFactionsToAdd": [],
+      "m_AttackFactionsToRemove": []
+    },
+    "m_StartingInventory": [],
+    "m_Brain": "!bp_cf986dd7ba9d4ec46ad8a3a0406d02ae",
+    "AlternativeBrains": [],
+    "Body": {
+      "DisableHands": false,
+      "m_EmptyHandWeapon": "!bp_20375b5a0c9243d45966bd72c690ab74",
+      "m_PrimaryHand": null,
+      "m_SecondaryHand": null,
+      "m_PrimaryHandAlternative1": null,
+      "m_SecondaryHandAlternative1": null,
+      "m_PrimaryHandAlternative2": null,
+      "m_SecondaryHandAlternative2": null,
+      "m_PrimaryHandAlternative3": null,
+      "m_SecondaryHandAlternative3": null,
+      "ActiveHandSet": 0,
+      "m_AdditionalLimbs": [],
+      "m_AdditionalSecondaryLimbs": [],
+      "m_Armor": null,
+      "m_Shirt": null,
+      "m_Belt": null,
+      "m_Head": null,
+      "m_Glasses": null,
+      "m_Feet": null,
+      "m_Gloves": null,
+      "m_Neck": null,
+      "m_Ring1": null,
+      "m_Ring2": null,
+      "m_Wrist": null,
+      "m_Shoulders": null,
+      "m_QuickSlots": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "Strength": 10,
+    "Dexterity": 10,
+    "Constitution": 10,
+    "Intelligence": 10,
+    "Wisdom": 10,
+    "Charisma": 10,
+    "Speed": {
+      "m_Value": 30.0
+    },
+    "BaseAttackBonus": 0,
+    "Skills": {
+      "Acrobatics": 0,
+      "Physique": 0,
+      "Diplomacy": 0,
+      "Thievery": 0,
+      "LoreNature": 0,
+      "Perception": 0,
+      "Stealth": 0,
+      "UseMagicDevice": 0,
+      "LoreReligion": 0,
+      "KnowledgeWorld": 0,
+      "KnowledgeArcana": 0
+    },
+    "MaxHP": 0,
+    "m_AdditionalTemplates": [],
+    "m_AddFacts": [],
+    "IsCheater": false,
+    "IsFake": false
+  }
+},
+{
+  "AssetId": "9d213d132b36e554594a362669be2dbe",
+  "Data": {
+    "$type": "fa4fa7e4548127a47a2846c91b051065, BlueprintUnit",
+    "PrototypeLink": "d48e03729a253814ebb26d21b4e6a0b3",
+    "m_Overrides": [
+      "m_StartingInventory",
+      "Dexterity",
+      "Constitution",
+      "Intelligence",
+      "Wisdom",
+      "Charisma",
+      "Strength",
+      "BaseAttackBonus",
+      "$AddAbilityToCharacterComponent$616f55dc-da5e-41ec-8e6a-08904e20ce6f",
+      "Body.m_PrimaryHand",
+      "Body.m_SecondaryHand",
+      "Body.m_Armor",
+      "Body.m_QuickSlots",
+      "Body.m_Ring1",
+      "Body.m_Neck",
+      "MaxHP",
+      "$AddLoot$0d265440-0e64-4092-b393-2a113e04fd9e",
+      "m_AddFacts",
+      "Visual.m_Barks",
+      "Visual.ReachFXThresholdBonus",
+      "Prefab",
+      "Gender",
+      "LocalizedName",
+      "m_Portrait",
+      "$CampingSpecialAbility$77eebdad-0508-4e1b-8faa-ffbd9cd499c5"
+    ],
+    "Components": [
+      {
+        "$type": "214dfec3ad680e740a7218f62ad49b1c, AddAbilityToCharacterComponent",
+        "name": "$AddAbilityToCharacterComponent$616f55dc-da5e-41ec-8e6a-08904e20ce6f",
+        "m_Overrides": [],
+        "m_Abilities": [
+          "!bp_0c852a2405dd9f14a8bbcfaf245ff823"
+        ]
+      },
+      {
+        "$type": "aea59f4a6ffae1e45a67d731f3f7908f, AddLoot",
+        "name": "$AddLoot$0d265440-0e64-4092-b393-2a113e04fd9e",
+        "m_Overrides": [],
+        "m_Loot": "!bp_d3118f72b1be57c4191a06d2e6098fe0"
+      },
+      {
+        "$type": "addae4953430725479cc27bae68ad849, AllowDyingCondition",
+        "name": "$AllowDyingCondition$d5d0cdf1-338d-4d20-8b8a-81c31e477d18(Clone)",
+        "PrototypeLink": {
+          "guid": "d48e03729a253814ebb26d21b4e6a0b3",
+          "name": "$AllowDyingCondition$d5d0cdf1-338d-4d20-8b8a-81c31e477d18"
+        },
+        "m_Overrides": []
+      },
+      {
+        "$type": "d40f9df2551cf6843b959531f168e0e7, CampingSpecialAbility",
+        "name": "$CampingSpecialAbility$77eebdad-0508-4e1b-8faa-ffbd9cd499c5",
+        "m_Overrides": [],
+        "Name": {
+          "m_Key": "",
+          "m_OwnerString": "",
+          "m_OwnerPropertyPath": "",
+          "m_JsonPath": "",
+          "Shared": {
+            "assetguid": "f4bea6c1f64eacf4797d4ba1d7ddf5f9",
+            "stringkey": "429001f3-2825-4dd7-993c-1c72f9bef871"
+          }
+        },
+        "Description": {
+          "m_Key": "",
+          "m_OwnerString": "",
+          "m_OwnerPropertyPath": "",
+          "m_JsonPath": "",
+          "Shared": {
+            "assetguid": "04e4a58e8b5fbd049a94d94d6452e0ea",
+            "stringkey": "40d9b423-cb36-40c9-84f7-eaffbc1f349f"
+          }
+        },
+        "CampPositionType": "Default",
+        "m_CampCutscene": null,
+        "m_SelfBuff": null,
+        "m_PartyBuff": null,
+        "m_PartyBuffDuringCamp": null,
+        "m_SelfBuffOnRandomEncounter": null,
+        "m_PartyBuffOnRandomEncounter": null,
+        "m_EnemiesBuffOnRandomEncounter": null,
+        "MinEnemyRandomEncounterBuffs": 0,
+        "MaxEnemyRandomEncounterBuffs": 0,
+        "RandomEncounterBuffsChance": 1.0,
+        "ExtraRations": 6,
+        "CustomMechanics": "BaronProcurement",
+        "DLCLock": 1
+      },
+      {
+        "$type": "d79ad4ed064aa4f43ace0e9c238fb9b9, AddFacts",
+        "name": "$AddFacts$2912a6bc-9143-4c0e-ba6e-a322635d7662(Clone)",
+        "PrototypeLink": {
+          "guid": "d48e03729a253814ebb26d21b4e6a0b3",
+          "name": "$AddFacts$2912a6bc-9143-4c0e-ba6e-a322635d7662"
+        },
+        "m_Overrides": [],
+        "m_Facts": [
+          "!bp_c4403567ea9e5fe478ca38e3052fadc2"
+        ],
+        "Dummy": null,
+        "CasterLevel": 0,
+        "DoNotRestoreMissingFacts": false,
+        "HasDifficultyRequirements": false,
+        "InvertDifficultyRequirements": false,
+        "MinDifficulty": "Story"
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": null,
+    "m_Type": null,
+    "LocalizedName": {
+      "assetguid": "2dbec0afb0a143f449cf76de2ddf3117",
+      "stringkey": "e78a0887-3265-4a46-a365-34b7ba9d1731"
+    },
+    "Gender": "Male",
+    "Size": "Medium",
+    "IsLeftHanded": false,
+    "Color": {
+      "r": 0.607843161,
+      "g": 0.0235294122,
+      "b": 0.003921569,
+      "a": 1.0
+    },
+    "m_Race": "!bp_0a5d473ead98b0646b94495af250fdc4",
+    "Alignment": "TrueNeutral",
+    "m_Portrait": "!bp_b0e618847177061438388224ee11f0f9",
+    "Prefab": {
+      "AssetId": "8e96cca0dd1aea641a90290c60c78c46"
+    },
+    "m_CustomizationPreset": null,
+    "m_RandomParameters": null,
+    "Visual": {
+      "BloodType": "Common",
+      "FootprintType": "Humanoid",
+      "FootprintScale": 1.0,
+      "ArmorFx": null,
+      "BloodPuddleFx": {
+        "AssetId": "f1400b13c4d834549be5b6dc32bc2ce3"
+      },
+      "DismemberFx": null,
+      "RipLimbsApartFx": null,
+      "IsNotUseDismember": false,
+      "m_Barks": "!bp_875e273f9fb12e74c82d2ac7d901eae7",
+      "ReachFXThresholdBonus": 5.0,
+      "DefaultArmorSoundType": "Flesh",
+      "FootstepSoundSizeType": "BootMedium",
+      "FootSoundType": "Boot",
+      "FootSoundSize": "Medium",
+      "BodySoundType": "Flesh",
+      "BodySoundSize": "Medium",
+      "FoleySoundPrefix": "",
+      "NoFinishingBlow": false,
+      "ImportanceOverride": 0,
+      "SilentCaster": false
+    },
+    "m_Faction": "!bp_72f240260881111468db610b6c37c099",
+    "FactionOverrides": {
+      "m_AttackFactionsToAdd": [],
+      "m_AttackFactionsToRemove": []
+    },
+    "m_StartingInventory": [
+      "!bp_1e9eac9f2a300f34b9510b370836da5d"
+    ],
+    "m_Brain": "!bp_cf986dd7ba9d4ec46ad8a3a0406d02ae",
+    "AlternativeBrains": [],
+    "Body": {
+      "DisableHands": false,
+      "m_EmptyHandWeapon": "!bp_20375b5a0c9243d45966bd72c690ab74",
+      "m_PrimaryHand": "!bp_d93c33a2d9ebfd94d90c1c70139a8216",
+      "m_SecondaryHand": "!bp_cac3ca0cae325b44b9d7833bbe0e6c69",
+      "m_PrimaryHandAlternative1": null,
+      "m_SecondaryHandAlternative1": null,
+      "m_PrimaryHandAlternative2": null,
+      "m_SecondaryHandAlternative2": null,
+      "m_PrimaryHandAlternative3": null,
+      "m_SecondaryHandAlternative3": null,
+      "ActiveHandSet": 0,
+      "m_AdditionalLimbs": [],
+      "m_AdditionalSecondaryLimbs": [],
+      "m_Armor": "!bp_91bf657f26eb80f4ba05b0b8440b1e8c",
+      "m_Shirt": null,
+      "m_Belt": null,
+      "m_Head": null,
+      "m_Glasses": null,
+      "m_Feet": null,
+      "m_Gloves": null,
+      "m_Neck": "!bp_209960f8d60e23a4c8e75d14e2261263",
+      "m_Ring1": "!bp_f333bf86cd122974792162cbcd27c9ed",
+      "m_Ring2": null,
+      "m_Wrist": null,
+      "m_Shoulders": null,
+      "m_QuickSlots": [
+        "!bp_e76d14096063ee041bdb1d13d8172599",
+        "!bp_e76d14096063ee041bdb1d13d8172599",
+        "!bp_f991f3051c3b9e64fabc87891077b613",
+        null,
+        null
+      ]
+    },
+    "Strength": 10,
+    "Dexterity": 20,
+    "Constitution": 16,
+    "Intelligence": 13,
+    "Wisdom": 10,
+    "Charisma": 8,
+    "Speed": {
+      "m_Value": 30.0
+    },
+    "BaseAttackBonus": 0,
+    "Skills": {
+      "Acrobatics": 0,
+      "Physique": 0,
+      "Diplomacy": 0,
+      "Thievery": 0,
+      "LoreNature": 0,
+      "Perception": 0,
+      "Stealth": 0,
+      "UseMagicDevice": 0,
+      "LoreReligion": 0,
+      "KnowledgeWorld": 0,
+      "KnowledgeArcana": 0
+    },
+    "MaxHP": 0,
+    "m_AdditionalTemplates": [],
+    "m_AddFacts": [
+      "!bp_0b35e679bd7d7c9419a837040b99afbf",
+      "!bp_6101a05a025278e43988ac303e9eb122",
+      "!bp_1b2778c5f09ec124f891415e0e16b283",
+      "!bp_6d273f46bce2e0f47a0958810dc4c7d9",
+      "!bp_a22e30bd35fbb704cab2d7e3c00717c1"
+    ],
+    "IsCheater": false,
+    "IsFake": false
+  }
+},
+{
+  "AssetId": "d12ef8d487e02f5408ff2a6da840f04b",
+  "Data": {
+    "$type": "d0e20ba43f1689d4a964ffe958a5fa1a, BlueprintBrain",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "m_Actions": []
+  }
+},
+{
+  "AssetId": "dbcc51cfd11fc1441a495daf9df9b340",
+  "Data": {
+    "$type": "6370c9530f88b5c41bd101d35b8e4fd2, BlueprintProjectile",
+    "PrototypeLink": null,
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "",
+    "Speed": 15.0,
+    "MinTime": 0.0,
+    "View": {
+      "AssetId": "db62b7037cae9a74fa8c1987534cb7e1"
+    },
+    "CastFx": null,
+    "CastEffectDuration": 1.0,
+    "LifetimeParticlesAfterHit": 23.0,
+    "ProjectileHit": {
+      "FollowTarget": false,
+      "HitFx": null,
+      "HitSnapFx": null,
+      "MissFx": null,
+      "MissDecalFx": null
+    },
+    "DamageHit": {
+      "FollowTarget": false,
+      "HitLevel": "Standard",
+      "MinorAdditionalHits": true,
+      "BillboardBlood": true,
+      "DirectionalBlood": true
+    },
+    "SourceBone": "Locator_PalmFX_Left",
+    "SourceBoneOffsetAtTarget": false,
+    "UseSourceBoneScale": false,
+    "SourceBoneCorpulenceOffset": 0.0,
+    "TargetBone": "Locator_HitFX_00",
+    "TargetBoneOnCrit": "Locator_HitCriticalFX_00",
+    "TargetBoneOffsetMultiplier": 1.0,
+    "FallsOnMiss": false,
+    "MissMinRadius": 1.0,
+    "MissMaxRadius": 3.0,
+    "MissRaycastDistance": 25.0,
+    "AddRagdollImpulse": 0.0,
+    "m_Trajectory": "!bp_d2b5ccb441b77b045a0d68a18d8f0154",
+    "FollowTerrain": false,
+    "StuckArrowPrefab": null,
+    "DeflectedArrowPrefab": {
+      "guid": "d9b0bf90fe3aff742a1721908e381d1b",
+      "fileid": 1190139256516706
+    }
+  }
+},
+{
+  "AssetId": "20375b5a0c9243d45966bd72c690ab74",
+  "Data": {
+    "$type": "c00f723cccf2d314198c42a572c631fd, BlueprintItemWeapon",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [],
+    "Comment": "Fake item for empty hand's attack",
+    "m_DisplayNameText": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionText": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_FlavorText": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_NonIdentifiedNameText": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_NonIdentifiedDescriptionText": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": {
+      "guid": "b4b19cbdf900d444fb5306455dcfd21e",
+      "fileid": 21300000
+    },
+    "m_Cost": 10,
+    "m_Weight": 0.0,
+    "m_IsNotable": false,
+    "m_Destructible": false,
+    "m_ShardItem": null,
+    "m_MiscellaneousType": "None",
+    "m_InventoryPutSound": "",
+    "m_InventoryTakeSound": "",
+    "NeedSkinningForCollect": false,
+    "TrashLootTypes": [],
+    "CR": 0,
+    "m_Ability": null,
+    "m_ActivatableAbility": null,
+    "SpendCharges": true,
+    "Charges": 1,
+    "RestoreChargesOnRest": false,
+    "CasterLevel": 1,
+    "SpellLevel": 1,
+    "DC": 11,
+    "IsNonRemovable": false,
+    "m_EquipmentEntity": null,
+    "m_EquipmentEntityAlternatives": [],
+    "m_ForcedRampColorPresetIndex": 0,
+    "m_VisualParameters": {
+      "m_Projectiles": [],
+      "m_WeaponAnimationStyle": "None",
+      "m_SpecialAnimation": "None",
+      "m_WeaponModel": null,
+      "m_WeaponBeltModelOverride": null,
+      "m_WeaponSheathModelOverride": null,
+      "m_OverrideAttachSlots": false,
+      "m_PossibleAttachSlots": [],
+      "m_ReachFXThresholdBonus": 0.0,
+      "m_SoundSize": "Medium",
+      "m_SoundType": "Unarmed",
+      "m_WhooshSound": "",
+      "m_MissSoundType": "None",
+      "m_EquipSound": "",
+      "m_UnequipSound": "",
+      "m_InventoryEquipSound": "",
+      "m_InventoryPutSound": "",
+      "m_InventoryTakeSound": ""
+    },
+    "m_Type": "!bp_a8b38f6b734daa44087ec0ec2e80c1cd",
+    "m_Size": "Medium",
+    "m_Enchantments": [],
+    "m_OverrideDamageDice": false,
+    "m_DamageDice": {
+      "m_Rolls": 0,
+      "m_Dice": "Zero"
+    },
+    "m_OverrideDamageType": false,
+    "m_DamageType": {
+      "Type": "Physical",
+      "Common": {
+        "Reality": 0,
+        "Alignment": 0,
+        "Precision": false
+      },
+      "Physical": {
+        "Material": 0,
+        "Form": "Slashing",
+        "Enhancement": 0,
+        "EnhancementTotal": 0
+      },
+      "Energy": "Fire"
+    },
+    "Double": false,
+    "m_SecondWeapon": null,
+    "KeepInPolymorph": false,
+    "m_OverrideShardItem": false,
+    "m_OverrideDestructible": false,
+    "m_AlwaysPrimary": false
+  }
+},
+{
+  "AssetId": "ad06fa795a9e7124a88878446c675aaa",
+  "Data": {
+    "$type": "618a7e0d54149064ab3ffa5d9057362c, BlueprintBuff",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$SpecialAnimationState$70eebd66-f5ff-4375-a040-f09595f1c901"
+    ],
+    "Components": [
+      {
+        "$type": "0272fcd7051643f9912f1c8e05a530ed, SpecialAnimationState",
+        "name": "$SpecialAnimationState$70eebd66-f5ff-4375-a040-f09595f1c901",
+        "m_Overrides": [],
+        "Animation": {
+          "guid": "81bce43e3917a6047bff3d869b4160c0",
+          "fileid": 11400000
+        }
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": null,
+    "IsClassFeature": false,
+    "m_Flags": 0,
+    "Stacking": "Replace",
+    "Ranks": 0,
+    "TickEachSecond": false,
+    "Frequency": "Rounds",
+    "FxOnStart": null,
+    "FxOnRemove": null,
+    "ResourceAssetIds": []
+  }
+}]

@@ -1,0 +1,571 @@
+[{
+  "AssetId": "705481ead7d4b4142b2c07f0088e9913",
+  "Data": {
+    "$type": "da11db195c86e0d4dae17a2c03a4ba9a, BlueprintAbility",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$AbilitySillyFeed$faaf5fe5-a1b6-46f8-b8ec-a3610ec94b71"
+    ],
+    "Components": [
+      {
+        "$type": "dcabe15babc4413c9c28af5ad552de76, AbilitySillyFeed",
+        "name": "$AbilitySillyFeed$faaf5fe5-a1b6-46f8-b8ec-a3610ec94b71",
+        "m_Overrides": [],
+        "m_Animation": {
+          "guid": "b7952e56bfe9f85448cff21fc345357d",
+          "fileid": 11400000
+        }
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "246accef-137b-4e59-bcc9-af8c83561dcc",
+      "m_OwnerString": "705481ead7d4b4142b2c07f0088e9913",
+      "m_OwnerPropertyPath": "m_DisplayName",
+      "m_JsonPath": "Strings/Mechanics/Blueprints/Abilities/AbilitySillyFeed_m_DisplayName.json",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "1a7cf3bf-cb34-488b-9469-7f92176211e5",
+      "m_OwnerString": "705481ead7d4b4142b2c07f0088e9913",
+      "m_OwnerPropertyPath": "m_Description",
+      "m_JsonPath": "Strings/Mechanics/Blueprints/Abilities/AbilitySillyFeed_m_Description.json",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": {
+      "guid": "0b5d6470c801f95439a6e88a2670b17c",
+      "fileid": 21300000
+    },
+    "m_DefaultAiAction": null,
+    "Type": "Extraordinary",
+    "Range": "Custom",
+    "CustomRange": {
+      "m_Value": 2.0
+    },
+    "ShowNameForVariant": false,
+    "OnlyForAllyCaster": false,
+    "CanTargetPoint": true,
+    "CanTargetEnemies": false,
+    "CanTargetFriends": false,
+    "CanTargetSelf": false,
+    "SpellResistance": false,
+    "ActionBarAutoFillIgnored": true,
+    "Hidden": false,
+    "NeedEquipWeapons": false,
+    "NotOffensive": false,
+    "EffectOnAlly": "None",
+    "EffectOnEnemy": "None",
+    "m_Parent": null,
+    "Animation": "Special",
+    "HasFastAnimation": false,
+    "AnimationStyle": "CastActionOmni",
+    "m_TargetMapObjects": false,
+    "ActionType": "Standard",
+    "AvailableMetamagic": "Quicken, Heighten",
+    "m_IsFullRoundAction": false,
+    "LocalizedDuration": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "LocalizedSavingThrow": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "MaterialComponent": {
+      "m_Item": null,
+      "Count": 1
+    },
+    "DisableLog": true,
+    "ResourceAssetIds": []
+  }
+},
+{
+  "AssetId": "6075d8e2ecfdcd44eae462711ed8ff80",
+  "Data": {
+    "$type": "da11db195c86e0d4dae17a2c03a4ba9a, BlueprintAbility",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$AbilityEffectRunAction$de2cd747-ea2c-41b3-80ca-c2e1598af7fc"
+    ],
+    "Components": [
+      {
+        "$type": "66e032e5cf38801428940a1a0d14b946, AbilityEffectRunAction",
+        "name": "$AbilityEffectRunAction$de2cd747-ea2c-41b3-80ca-c2e1598af7fc",
+        "m_Overrides": [],
+        "SavingThrowType": "Unknown",
+        "Actions": {
+          "Actions": [
+            {
+              "$type": "5d13a597de91e4746b804f8233518523, ContextActionApplyBuff",
+              "name": "$ContextActionApplyBuff$e29b044b-95b8-42cd-ba9c-00f8e8f79c45",
+              "m_Buff": "!bp_43981a02863a5d34b9e1448d32000fd7",
+              "Permanent": false,
+              "UseDurationSeconds": false,
+              "DurationValue": {
+                "Rate": "Rounds",
+                "DiceType": "Zero",
+                "DiceCountValue": {
+                  "ValueType": "Simple",
+                  "Value": 0,
+                  "ValueRank": "Default",
+                  "ValueShared": "Damage",
+                  "Property": "None",
+                  "m_CustomProperty": null
+                },
+                "BonusValue": {
+                  "ValueType": "CasterProperty",
+                  "Value": 0,
+                  "ValueRank": "Default",
+                  "ValueShared": "Damage",
+                  "Property": "Level",
+                  "m_CustomProperty": null
+                },
+                "m_IsExtendable": true
+              },
+              "DurationSeconds": 0.0,
+              "IsFromSpell": false,
+              "IsNotDispelable": false,
+              "ToCaster": false,
+              "AsChild": true,
+              "SameDuration": false
+            }
+          ]
+        }
+      }
+    ],
+    "Comment": "Это таргетный импрувед инвиз. Цель воспринимает кастера, как будто у него Concealment = Total. Нет спасброска .Раунд на левел.",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "bf47220e-7c1c-47c5-a548-9dea219386d0",
+      "m_OwnerString": "6075d8e2ecfdcd44eae462711ed8ff80",
+      "m_OwnerPropertyPath": "m_DisplayName",
+      "m_JsonPath": "Strings/Mechanics/Blueprints/Abilities/BlindVictim_m_DisplayName.json",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": {
+      "guid": "f549aced0cfe8a7469985214a71d9503",
+      "fileid": 21300000
+    },
+    "m_DefaultAiAction": null,
+    "Type": "Special",
+    "Range": "Medium",
+    "CustomRange": {
+      "m_Value": 0.0
+    },
+    "ShowNameForVariant": false,
+    "OnlyForAllyCaster": false,
+    "CanTargetPoint": false,
+    "CanTargetEnemies": true,
+    "CanTargetFriends": false,
+    "CanTargetSelf": false,
+    "SpellResistance": false,
+    "ActionBarAutoFillIgnored": false,
+    "Hidden": false,
+    "NeedEquipWeapons": false,
+    "NotOffensive": false,
+    "EffectOnAlly": "None",
+    "EffectOnEnemy": "Harmful",
+    "m_Parent": null,
+    "Animation": "Potion",
+    "HasFastAnimation": false,
+    "AnimationStyle": "CastActionPotion",
+    "m_TargetMapObjects": false,
+    "ActionType": "Standard",
+    "AvailableMetamagic": 0,
+    "m_IsFullRoundAction": false,
+    "LocalizedDuration": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "LocalizedSavingThrow": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "MaterialComponent": {
+      "m_Item": null,
+      "Count": 1
+    },
+    "DisableLog": false,
+    "ResourceAssetIds": [
+      "f00bbb092bd65a4468e72869b99f1d66",
+      "72e115990e2d31c40b9573f3d50ec60a"
+    ]
+  }
+},
+{
+  "AssetId": "b5362f4dc554d2544921934b3a841efa",
+  "Data": {
+    "$type": "da11db195c86e0d4dae17a2c03a4ba9a, BlueprintAbility",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$AbilityCustomTongueGrab$234596da-4015-4f8b-8472-903eb488f14c"
+    ],
+    "Components": [
+      {
+        "$type": "0c70d8aaca4a449f8a4169114e8e2316, AbilityCustomTongueGrab",
+        "name": "$AbilityCustomTongueGrab$234596da-4015-4f8b-8472-903eb488f14c",
+        "m_Overrides": [],
+        "AnimationAction": {
+          "guid": "f5e6164100e42a149883b382e7f1915a",
+          "fileid": 11400000
+        },
+        "TongueStickSpeed": 100.0,
+        "TongueReturnSpeed": 50.0,
+        "StickCurve": [
+          {
+            "time": 0.0,
+            "value": 0.0,
+            "inTangent": 1.239447,
+            "inWeight": 0.0,
+            "outTangent": 1.239447,
+            "outWeight": 0.734534562,
+            "weightedMode": 2
+          },
+          {
+            "time": 1.0,
+            "value": 1.0,
+            "inTangent": -2.4646337,
+            "inWeight": 0.0565189719,
+            "outTangent": -2.4646337,
+            "outWeight": 0.0,
+            "weightedMode": 1
+          }
+        ],
+        "ReturnCurve": [
+          {
+            "time": 0.0,
+            "value": 0.0,
+            "inTangent": -0.107280932,
+            "inWeight": 0.0,
+            "outTangent": -0.107280932,
+            "outWeight": 0.0582582578,
+            "weightedMode": 0
+          },
+          {
+            "time": 0.152713746,
+            "value": 0.0280612186,
+            "inTangent": 0.6075758,
+            "inWeight": 0.333333343,
+            "outTangent": 0.6075758,
+            "outWeight": 0.333333343,
+            "weightedMode": 0
+          },
+          {
+            "time": 1.0,
+            "value": 1.0,
+            "inTangent": 0.194509238,
+            "inWeight": 0.06426424,
+            "outTangent": 0.194509238,
+            "outWeight": 0.0,
+            "weightedMode": 0
+          }
+        ],
+        "PullDistance": {
+          "m_Value": 3.0
+        }
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": {
+      "guid": "9100e5f2e80631d47822697ae833a4b6",
+      "fileid": 21300000
+    },
+    "m_DefaultAiAction": null,
+    "Type": "Special",
+    "Range": "Medium",
+    "CustomRange": {
+      "m_Value": 0.0
+    },
+    "ShowNameForVariant": false,
+    "OnlyForAllyCaster": false,
+    "CanTargetPoint": false,
+    "CanTargetEnemies": true,
+    "CanTargetFriends": true,
+    "CanTargetSelf": false,
+    "SpellResistance": false,
+    "ActionBarAutoFillIgnored": false,
+    "Hidden": false,
+    "NeedEquipWeapons": false,
+    "NotOffensive": false,
+    "EffectOnAlly": "None",
+    "EffectOnEnemy": "Harmful",
+    "m_Parent": null,
+    "Animation": "Special",
+    "HasFastAnimation": false,
+    "AnimationStyle": "CastActionPotion",
+    "m_TargetMapObjects": false,
+    "ActionType": "Standard",
+    "AvailableMetamagic": "Quicken, Heighten, Reach",
+    "m_IsFullRoundAction": false,
+    "LocalizedDuration": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "LocalizedSavingThrow": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "MaterialComponent": {
+      "m_Item": null,
+      "Count": 1
+    },
+    "DisableLog": false,
+    "ResourceAssetIds": []
+  }
+},
+{
+  "AssetId": "78e79b09c2d724447a5c432e54ce4294",
+  "Data": {
+    "$type": "da11db195c86e0d4dae17a2c03a4ba9a, BlueprintAbility",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$AbilityTargetsAround$4d9a40f9-b144-4606-8436-82baa2783abf",
+      "$AbilityEffectRunAction$de2cd747-ea2c-41b3-80ca-c2e1598af7fc"
+    ],
+    "Components": [
+      {
+        "$type": "757439ef8cc900741bd9b57bf26eb500, AbilityTargetsAround",
+        "name": "$AbilityTargetsAround$4d9a40f9-b144-4606-8436-82baa2783abf",
+        "m_Overrides": [],
+        "m_Radius": {
+          "m_Value": 30.0
+        },
+        "m_TargetType": "Enemy",
+        "m_IncludeDead": false,
+        "m_Condition": {
+          "Operation": "And",
+          "Conditions": []
+        },
+        "m_SpreadSpeed": {
+          "m_Value": 0.0
+        }
+      },
+      {
+        "$type": "66e032e5cf38801428940a1a0d14b946, AbilityEffectRunAction",
+        "name": "$AbilityEffectRunAction$de2cd747-ea2c-41b3-80ca-c2e1598af7fc",
+        "m_Overrides": [],
+        "SavingThrowType": "Will",
+        "Actions": {
+          "Actions": [
+            {
+              "$type": "d61949c589ee885458c9439b2aa202b6, ContextActionConditionalSaved",
+              "name": "$AbilityActionConditionalSaved$8313a56c-9509-4174-b41b-115a6deb2ddf",
+              "Succeed": {
+                "Actions": [
+                  {
+                    "$type": "5d13a597de91e4746b804f8233518523, ContextActionApplyBuff",
+                    "name": "$AbilityActionApplyBuff$f87f4ab9-792d-45ca-baca-f92fe5757606",
+                    "m_Buff": "!bp_25ec6cb6ab1845c48a95f9c20b034220",
+                    "Permanent": false,
+                    "UseDurationSeconds": false,
+                    "DurationValue": {
+                      "Rate": "Rounds",
+                      "DiceType": "Zero",
+                      "DiceCountValue": {
+                        "ValueType": "Simple",
+                        "Value": 0,
+                        "ValueRank": "Default",
+                        "ValueShared": "Damage",
+                        "Property": "None",
+                        "m_CustomProperty": null
+                      },
+                      "BonusValue": {
+                        "ValueType": "Simple",
+                        "Value": 6,
+                        "ValueRank": "Default",
+                        "ValueShared": "Damage",
+                        "Property": "None",
+                        "m_CustomProperty": null
+                      },
+                      "m_IsExtendable": true
+                    },
+                    "DurationSeconds": 0.0,
+                    "IsFromSpell": false,
+                    "IsNotDispelable": false,
+                    "ToCaster": false,
+                    "AsChild": true,
+                    "SameDuration": false
+                  }
+                ]
+              },
+              "Failed": {
+                "Actions": [
+                  {
+                    "$type": "5d13a597de91e4746b804f8233518523, ContextActionApplyBuff",
+                    "name": "$AbilityActionApplyBuff$b7aad1f5-8617-4690-98cc-afa5e223c067",
+                    "m_Buff": "!bp_f08a7239aa961f34c8301518e71d4cdf",
+                    "Permanent": false,
+                    "UseDurationSeconds": false,
+                    "DurationValue": {
+                      "Rate": "Rounds",
+                      "DiceType": "Zero",
+                      "DiceCountValue": {
+                        "ValueType": "Simple",
+                        "Value": 0,
+                        "ValueRank": "Default",
+                        "ValueShared": "Damage",
+                        "Property": "None",
+                        "m_CustomProperty": null
+                      },
+                      "BonusValue": {
+                        "ValueType": "Simple",
+                        "Value": 6,
+                        "ValueRank": "Default",
+                        "ValueShared": "Damage",
+                        "Property": "None",
+                        "m_CustomProperty": null
+                      },
+                      "m_IsExtendable": true
+                    },
+                    "DurationSeconds": 0.0,
+                    "IsFromSpell": false,
+                    "IsNotDispelable": false,
+                    "ToCaster": false,
+                    "AsChild": true,
+                    "SameDuration": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "5a18c27d-3cad-41df-ae8f-9de67810e15c",
+      "m_OwnerString": "78e79b09c2d724447a5c432e54ce4294",
+      "m_OwnerPropertyPath": "m_DisplayName",
+      "m_JsonPath": "Strings/Mechanics/Blueprints/Abilities/TrollhoudnHowl_m_DisplayName.json",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "f0e56983-7bef-4f82-b95a-1c2e871f1319",
+      "m_OwnerString": "78e79b09c2d724447a5c432e54ce4294",
+      "m_OwnerPropertyPath": "m_Description",
+      "m_JsonPath": "Strings/Mechanics/Blueprints/Abilities/TrollhoudnHowl_m_Description.json",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": null,
+    "m_DefaultAiAction": null,
+    "Type": "Special",
+    "Range": "Personal",
+    "CustomRange": {
+      "m_Value": 0.0
+    },
+    "ShowNameForVariant": false,
+    "OnlyForAllyCaster": false,
+    "CanTargetPoint": false,
+    "CanTargetEnemies": true,
+    "CanTargetFriends": true,
+    "CanTargetSelf": true,
+    "SpellResistance": false,
+    "ActionBarAutoFillIgnored": false,
+    "Hidden": false,
+    "NeedEquipWeapons": false,
+    "NotOffensive": false,
+    "EffectOnAlly": "None",
+    "EffectOnEnemy": "Harmful",
+    "m_Parent": null,
+    "Animation": "Potion",
+    "HasFastAnimation": false,
+    "AnimationStyle": "CastActionPotion",
+    "m_TargetMapObjects": false,
+    "ActionType": "Standard",
+    "AvailableMetamagic": "Quicken, Extend, Heighten",
+    "m_IsFullRoundAction": false,
+    "LocalizedDuration": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "LocalizedSavingThrow": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "MaterialComponent": {
+      "m_Item": null,
+      "Count": 1
+    },
+    "DisableLog": false,
+    "ResourceAssetIds": [
+      "f00bbb092bd65a4468e72869b99f1d66",
+      "72e115990e2d31c40b9573f3d50ec60a"
+    ]
+  }
+}]

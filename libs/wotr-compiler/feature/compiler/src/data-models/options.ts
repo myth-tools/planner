@@ -1,9 +1,17 @@
-export interface Options {
-    /**
-     * Path to Pathfinder: WOTR game directory.
-     * Example: C:\Program Files (x86)\Steam\steamapps\common\Pathfinder Second Adventure
-     */
-    root: string;
-    file: string;
-    output: string;
+export interface CompileOptions {
+    extractFolder: string;
+    compileFolder: string;
+    indexFileName: string;
+}
+
+export interface ExtractOptions {
+    gameDirectory: string;
+    zipFile: string;
+    extractFolder: string;
+}
+
+export interface VersionOptions {
+    gameDirectory: string;
+    versionInfoFile: string;
+    outputFile: string;
 }

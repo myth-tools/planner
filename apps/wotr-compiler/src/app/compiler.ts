@@ -1,21 +1,31 @@
-import { Blueprints, Version, Options } from '@myth-tools/wotr-compiler/feature/compiler';
+import { Compile, Extract, Version } from '@myth-tools/wotr-compiler/feature/compiler';
+import { environment } from '../environments/environment';
 
 export class Compiler {
-    constructor(
-        private readonly blueprints: Options,
-        private readonly version: Options,
-        private readonly foldersOfInterest: string[]
-    ) {}
-
     public async execute() {
-        const version = new Version(this.version);
-        const blueprints = new Blueprints(this.blueprints);
+        const extract = new Extract();
+        const compile = new Compile();
+        const version = new Version();
 
-        // Extract the game version and inject it into the app environment.ts
-        await version.extract();
+        // Extract blueprints from zip in game directory.
+        await extract.execute({
+            gameDirectory: environment.gameDirectory,
+            zipFile: environment.blueprints.zipFile,
+            extractFolder: environment.blueprints.extractFolder
+        });
 
-        // Clean the blueprint folder and extract the blueprints from the game folder.
-        await blueprints.clean();
-        await blueprints.extract(this.foldersOfInterest);
+        // Compile blueprints in a format easily accessible to the browser.
+        await compile.execute({
+            extractFolder: environment.blueprints.extractFolder,
+            compileFolder: environment.blueprints.compileFolder,
+            indexFileName: environment.blueprints.indexFileName
+        });
+
+        // Extract the game version and inject it into the apps environment.ts
+        await version.execute({
+            gameDirectory: environment.gameDirectory,
+            versionInfoFile: environment.version.versionInfoFile,
+            outputFile: environment.version.outputFile
+        });
     }
 }

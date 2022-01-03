@@ -116,7 +116,14 @@
                         "polyfills": "apps/wotr-planner/src/polyfills.ts",
                         "tsConfig": "apps/wotr-planner/tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
-                        "assets": ["apps/wotr-planner/src/favicon.ico", "apps/wotr-planner/src/assets"],
+                        "assets": [
+                            { "input": "libs/shared/assets", "output": ".", "glob": "favicon.ico" },
+                            {
+                                "input": "libs/shared/assets",
+                                "output": "./assets",
+                                "glob": "fonts/**/*"
+                            }
+                        ],
                         "styles": ["apps/wotr-planner/src/styles/styles.scss"],
                         "scripts": []
                     },

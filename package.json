@@ -24,6 +24,7 @@
         "@angular/router": "13.1.1",
         "@nrwl/angular": "13.4.1",
         "angular-cli-ghpages": "1.0.0",
+        "fdir": "5.1.0",
         "node-stream-zip": "1.15.0",
         "rxjs": "7.5.1",
         "tslib": "2.3.1",
