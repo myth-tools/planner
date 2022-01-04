@@ -24,6 +24,113 @@
             },
             "tags": []
         },
+        "wotr-blueprints": {
+            "projectType": "application",
+            "root": "apps/wotr-blueprints",
+            "sourceRoot": "apps/wotr-blueprints/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "build/apps/wotr-blueprints",
+                        "index": "apps/wotr-blueprints/src/index.html",
+                        "main": "apps/wotr-blueprints/src/main.ts",
+                        "polyfills": "apps/wotr-blueprints/src/polyfills.ts",
+                        "tsConfig": "apps/wotr-blueprints/tsconfig.app.json",
+                        "inlineStyleLanguage": "scss",
+                        "assets": [
+                            {
+                                "input": "libs/shared/assets",
+                                "output": ".",
+                                "glob": "favicon.ico"
+                            },
+                            {
+                                "input": "libs/shared/assets",
+                                "output": "./assets",
+                                "glob": "fonts/**/*"
+                            },
+                            {
+                                "input": "libs/shared/assets",
+                                "output": "./assets",
+                                "glob": "all-blueprints/**/*"
+                            }
+                        ],
+                        "styles": ["apps/wotr-blueprints/src/styles.scss"],
+                        "scripts": [],
+                        "stylePreprocessorOptions": {
+                            "includePaths": ["libs/shared"]
+                        }
+                    },
+                    "configurations": {
+                        "production": {
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "500kb",
+                                    "maximumError": "1mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
+                                }
+                            ],
+                            "fileReplacements": [
+                                {
+                                    "replace": "apps/wotr-blueprints/src/environments/environment.ts",
+                                    "with": "apps/wotr-blueprints/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "wotr-blueprints:build:production"
+                        },
+                        "development": {
+                            "browserTarget": "wotr-blueprints:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "wotr-blueprints:build"
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["apps/wotr-blueprints/src/**/*.ts", "apps/wotr-blueprints/src/**/*.html"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/wotr-blueprints"],
+                    "options": {
+                        "jestConfig": "apps/wotr-blueprints/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
         "wotr-compiler": {
             "root": "apps/wotr-compiler",
             "sourceRoot": "apps/wotr-compiler/src",
@@ -117,7 +224,11 @@
                         "tsConfig": "apps/wotr-planner/tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
-                            { "input": "libs/shared/assets", "output": ".", "glob": "favicon.ico" },
+                            {
+                                "input": "libs/shared/assets",
+                                "output": ".",
+                                "glob": "favicon.ico"
+                            },
                             {
                                 "input": "libs/shared/assets",
                                 "output": "./assets",
@@ -125,7 +236,10 @@
                             }
                         ],
                         "styles": ["apps/wotr-planner/src/styles/styles.scss"],
-                        "scripts": []
+                        "scripts": [],
+                        "stylePreprocessorOptions": {
+                            "includePaths": ["libs/shared"]
+                        }
                     },
                     "configurations": {
                         "production": {

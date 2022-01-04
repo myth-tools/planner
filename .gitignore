@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /blueprints
+libs/shared/assets/all-blueprints
 
 # dependencies
 /node_modules

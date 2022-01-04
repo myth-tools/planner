@@ -6,7 +6,7 @@ export const environment = {
         zipFile: 'blueprints.zip',
         extractFolder: 'blueprints',
         compileFolder: 'libs/shared/assets/all-blueprints',
-        indexFileName: '_index'
+        indexFileName: '_manifest'
     },
     version: {
         versionInfoFile: '/Wrath_Data/StreamingAssets/Version.info',

@@ -17,7 +17,7 @@ export class Compile {
 
         console.log(`Found ${directories.size} directories`);
 
-        await this.writeIndex(Array.from(directories.keys()), compileFolder, indexFileName);
+        await this.writeManifest(Array.from(directories.keys()), compileFolder, indexFileName);
         await this.compileOutput(directories, compileFolder);
 
         console.timeEnd(`\nFinished compiling blueprints in`);
@@ -38,20 +38,56 @@ export class Compile {
         return Promise.all(writeFiles);
     }
 
-    private async writeIndex(directories: string[], output: string, indexFileName: string) {
+    private async writeManifest(directories: string[], output: string, indexFileName: string) {
+        /* const test = {};
+
+        for (const d of directories) {
+            d.split(sep).reduce((result, current, index, array) => {
+                const b = result[current] || (result[current] = {});
+
+                if (index === array.length - 1) {
+                    b['_index'] = join(d, 'index.json');
+                }
+
+                return b;
+            }, test);
+        } */
+
+        const test = [];
+
+        for (const d of directories) {
+            d.split(sep).reduce((result, current, index, array) => {
+                let b = result.find(r => r.name === current);
+
+                if (!b) {
+                    b = { name: current, children: [] };
+                    result.push(b);
+                }
+
+                if (index === array.length - 1) {
+                    b.children.push({ name: join(d, 'index.json'), children: [] });
+                }
+
+                return b.children;
+            }, test);
+        }
+
         const directoryString = directories.map(directory => `"${directory}"`).join(',\n');
         const outputStream = new WriteStreamEx(createWriteStream(`${join(output, `${indexFileName}.json`)}`));
 
-        await outputStream.write(`{ "files": [${directoryString}] }`);
+        await outputStream.write(JSON.stringify(test));
         await outputStream.end();
 
         console.log(`Wrote ${indexFileName}.json\n`);
     }
 
     private async writeFilesToOutput(fileName: string, files: string[], output: string) {
-        console.time(`- ${files.length} '${fileName}.json' files written in`);
+        console.time(`- ${files.length} '${fileName}' files written in`);
 
-        const outputStream = new WriteStreamEx(createWriteStream(`${join(output, `${fileName}.json`)}`));
+        const outputPath = join(output, fileName);
+        await mkdir(outputPath, { recursive: true });
+
+        const outputStream = new WriteStreamEx(createWriteStream(`${join(outputPath, `index.json`)}`));
         await outputStream.write('[');
 
         for (const [index, file] of files.entries()) {
@@ -72,7 +108,7 @@ export class Compile {
         await outputStream.write(']');
         await outputStream.end();
 
-        console.timeEnd(`- ${files.length} '${fileName}.json' files written in`);
+        console.timeEnd(`- ${files.length} '${fileName}' files written in`);
     }
 
     /** Get all blueprint files into an easy to parse format for writing. */
@@ -85,7 +121,8 @@ export class Compile {
                 return result;
             }
 
-            const key = this.kebabCase(current.dir.replace(`${input}${sep}`, '').split(sep)[0]);
+            //const key = this.kebabCase(current.dir.replace(`${input}${sep}`, '').split(sep)[0]);
+            const key = current.dir.replace(`${input}${sep}`, '').split(sep).map(this.kebabCase).join(sep);
 
             result.set(key, [...(result.get(key) || []), ...current.files]);
 

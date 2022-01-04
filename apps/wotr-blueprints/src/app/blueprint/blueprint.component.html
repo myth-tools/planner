@@ -1,0 +1,26 @@
+<mat-accordion [multi]="true">
+    <ng-container *ngFor="let blueprint of blueprints; trackBy: blueprintTrackBy">
+        <mat-expansion-panel [(expanded)]="blueprint.isExpanded">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <span>{{ blueprint.name }}</span>
+                    <span class="summary" *ngIf="(layout.isSmall$ | async) === false">
+                        <span *ngIf="blueprint.children.length">{{ blueprint.children.length }} directories</span>
+                        <span *ngIf="blueprint.entities.length">{{ blueprint.entities.length }} entities</span>
+                    </span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <ng-template matExpansionPanelContent>
+                <myth-tools-blueprint
+                    [blueprints]="blueprint.children"
+                    *ngIf="blueprint.children.length"
+                ></myth-tools-blueprint>
+
+                <div *ngFor="let entity of blueprint.entities; trackBy: entityTrackBy" class="entity">
+                    <myth-tools-entity [entity]="entity"></myth-tools-entity>
+                </div>
+            </ng-template>
+        </mat-expansion-panel>
+    </ng-container>
+</mat-accordion>
