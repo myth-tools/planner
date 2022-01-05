@@ -18,7 +18,8 @@ export class Compiler {
         await compile.execute({
             extractFolder: environment.blueprints.extractFolder,
             compileFolder: environment.blueprints.compileFolder,
-            indexFileName: environment.blueprints.indexFileName
+            indexFileName: environment.blueprints.indexFileName,
+            manifestFileName: environment.blueprints.manifestFileName
         });
 
         // Extract the game version and inject it into the apps environment.ts

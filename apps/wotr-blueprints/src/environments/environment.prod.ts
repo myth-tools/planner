@@ -1,4 +1,5 @@
 export const environment = {
     production: true,
-    indexFileName: '_manifest'
+    indexFileName: 'index',
+    manifestFileName: '_manifest'
 };

@@ -4,7 +4,8 @@
 
 export const environment = {
     production: false,
-    indexFileName: '_manifest'
+    indexFileName: 'index',
+    manifestFileName: '_manifest'
 };
 
 /*

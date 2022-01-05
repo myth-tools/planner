@@ -13,61 +13,73 @@ export class BlueprintService {
 
     public get$(): Observable<BlueprintResponse[]> {
         return this.http
-            .get<Blueprint[]>(`/assets/all-blueprints/${environment.indexFileName}.json`)
-            .pipe(this.getChildren$());
+            .get<Blueprint[]>(`/assets/all-blueprints/${environment.manifestFileName}.json`)
+            .pipe(this.getBlueprints$());
     }
 
-    private getChildren$(): (source$: Observable<Blueprint[]>) => Observable<BlueprintResponse[]> {
+    private getBlueprints$(): (source$: Observable<Blueprint[]>) => Observable<BlueprintResponse[]> {
         return (source$: Observable<Blueprint[]>) =>
             source$.pipe(
                 switchMap(blueprints =>
                     forkJoin(
-                        blueprints
-                            .sort((a, b) => a.name.localeCompare(b.name))
-                            .map(blueprint => {
-                                if (!blueprint.children.length) {
-                                    return this.getBlueprint$(blueprint).pipe(
-                                        tap(entities => {
-                                            entities.forEach(entity =>
-                                                this.hash.set(entity.AssetId, { entity, name: blueprint.name })
-                                            );
-                                        }),
-                                        map(entities => ({
-                                            name: blueprint.name,
-                                            entities,
-                                            isExpanded: false,
-                                            children: []
-                                        }))
-                                    );
-                                }
+                        this.orderedBlueprints(blueprints).map(blueprint => {
+                            const name = blueprint.name;
 
-                                return of(blueprint.children.sort((a, b) => a.name.localeCompare(b.name))).pipe(
-                                    delay(1000),
-                                    this.getChildren$(),
-                                    map(b => {
-                                        const entities = b.findIndex(c => c.name.includes('index.json'));
-                                        const bb: BlueprintResponse = {
-                                            name: blueprint.name,
-                                            entities: [],
-                                            isExpanded: false,
-                                            children: b
-                                        };
-
-                                        if (entities > -1) {
-                                            bb.entities = b[entities].entities;
-                                            b.splice(entities, 1);
-                                        }
-
-                                        return bb;
-                                    })
+                            if (!blueprint.blueprints.length) {
+                                return this.getEntities$(blueprint).pipe(
+                                    map(entities => ({
+                                        name,
+                                        entities,
+                                        isExpanded: false,
+                                        blueprints: []
+                                    }))
                                 );
-                            })
+                            }
+
+                            return of(this.orderedBlueprints(blueprint.blueprints)).pipe(
+                                delay(1000), // delay to stop browser from breaking with so many file requests
+                                this.getBlueprints$(),
+                                map(blueprints => {
+                                    const entitiesIndex = blueprints.findIndex(entity =>
+                                        entity.name.includes(`${environment.indexFileName}.json`)
+                                    );
+
+                                    const blueprint: BlueprintResponse = {
+                                        name,
+                                        entities: [],
+                                        isExpanded: false,
+                                        blueprints
+                                    };
+
+                                    // Remove entities entry and add to parent blueprint.
+                                    if (entitiesIndex > -1) {
+                                        blueprint.entities = blueprints[entitiesIndex].entities;
+                                        blueprints.splice(entitiesIndex, 1);
+                                    }
+
+                                    return blueprint;
+                                })
+                            );
+                        })
                     )
                 )
             );
     }
 
-    private getBlueprint$(blueprint: Blueprint): Observable<Entity[]> {
-        return this.http.get<Entity[]>(`/assets/all-blueprints/${blueprint.name}`);
+    private getEntities$(blueprint: Blueprint): Observable<Entity[]> {
+        return this.http.get<Entity[]>(`/assets/all-blueprints/${blueprint.name}`).pipe(this.toHash(blueprint));
+    }
+
+    private orderedBlueprints(blueprints: Blueprint[]) {
+        return blueprints.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    private toHash(blueprint: Blueprint) {
+        return ($source: Observable<Entity[]>) =>
+            $source.pipe(
+                tap(entities =>
+                    entities.forEach(entity => this.hash.set(entity.AssetId, { entity, name: blueprint.name }))
+                )
+            );
     }
 }

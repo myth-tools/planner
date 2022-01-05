@@ -2,12 +2,12 @@ import { Entity } from './entity';
 
 export interface Blueprint {
     name: string;
-    children: Blueprint[];
+    blueprints: Blueprint[];
 }
 
 export interface BlueprintResponse {
     name: string;
-    children: BlueprintResponse[];
+    blueprints: BlueprintResponse[];
     entities: Entity[];
     isExpanded: boolean;
 }
