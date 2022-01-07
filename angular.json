@@ -27,6 +27,32 @@
             },
             "tags": []
         },
+        "feature-wotr-planner": {
+            "projectType": "library",
+            "root": "libs/feature/wotr/planner",
+            "sourceRoot": "libs/feature/wotr/planner/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/feature/wotr/planner"],
+                    "options": {
+                        "jestConfig": "libs/feature/wotr/planner/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/feature/wotr/planner/src/**/*.ts",
+                            "libs/feature/wotr/planner/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": []
+        },
         "ui-shared": {
             "projectType": "library",
             "root": "libs/ui/shared",
@@ -212,29 +238,6 @@
                     "outputs": ["coverage/apps/wotr/bundler"],
                     "options": {
                         "jestConfig": "apps/wotr/bundler/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": []
-        },
-        "wotr-compiler-feature-compiler": {
-            "root": "libs/wotr-compiler/feature/compiler",
-            "sourceRoot": "libs/wotr-compiler/feature/compiler/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/wotr-compiler/feature/compiler/**/*.ts"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/wotr-compiler/feature/compiler"],
-                    "options": {
-                        "jestConfig": "libs/wotr-compiler/feature/compiler/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
