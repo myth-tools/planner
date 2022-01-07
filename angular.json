@@ -140,19 +140,19 @@
             "tags": [],
             "implicitDependencies": ["wotr-blueprint"]
         },
-        "wotr-compiler": {
-            "root": "apps/wotr-compiler",
-            "sourceRoot": "apps/wotr-compiler/src",
+        "wotr-bundler": {
+            "root": "apps/wotr/bundler",
+            "sourceRoot": "apps/wotr/bundler/src",
             "projectType": "application",
             "architect": {
                 "build": {
                     "builder": "@nrwl/node:build",
                     "outputs": ["{options.outputPath}"],
                     "options": {
-                        "outputPath": "build/apps/wotr-compiler",
-                        "main": "apps/wotr-compiler/src/main.ts",
-                        "tsConfig": "apps/wotr-compiler/tsconfig.app.json",
-                        "assets": ["apps/wotr-compiler/src/assets"]
+                        "outputPath": "dist/apps/wotr/bundler",
+                        "main": "apps/wotr/bundler/src/main.ts",
+                        "tsConfig": "apps/wotr/bundler/tsconfig.app.json",
+                        "assets": ["apps/wotr/bundler/src/assets"]
                     },
                     "configurations": {
                         "production": {
@@ -161,8 +161,8 @@
                             "inspect": false,
                             "fileReplacements": [
                                 {
-                                    "replace": "apps/wotr-compiler/src/environments/environment.ts",
-                                    "with": "apps/wotr-compiler/src/environments/environment.prod.ts"
+                                    "replace": "apps/wotr/bundler/src/environments/environment.ts",
+                                    "with": "apps/wotr/bundler/src/environments/environment.prod.ts"
                                 }
                             ]
                         }
@@ -171,22 +171,21 @@
                 "serve": {
                     "builder": "@nrwl/node:execute",
                     "options": {
-                        "buildTarget": "wotr-compiler:build",
-                        "inspect": true
+                        "buildTarget": "wotr-bundler:build"
                     }
                 },
                 "lint": {
                     "builder": "@nrwl/linter:eslint",
                     "outputs": ["{options.outputFile}"],
                     "options": {
-                        "lintFilePatterns": ["apps/wotr-compiler/**/*.ts"]
+                        "lintFilePatterns": ["apps/wotr/bundler/**/*.ts"]
                     }
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/apps/wotr-compiler"],
+                    "outputs": ["coverage/apps/wotr/bundler"],
                     "options": {
-                        "jestConfig": "apps/wotr-compiler/jest.config.js",
+                        "jestConfig": "apps/wotr/bundler/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
