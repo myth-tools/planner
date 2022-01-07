@@ -17,6 +17,7 @@
         "paths": {
             "@myth-tools/data-access/firebase": ["libs/data-access/firebase/src/index.ts"],
             "@myth-tools/feature/wotr/blueprint": ["libs/feature/wotr/blueprint/src/index.ts"],
+            "@myth-tools/feature/wotr/explorer": ["libs/feature/wotr/explorer/src/index.ts"],
             "@myth-tools/feature/wotr/planner": ["libs/feature/wotr/planner/src/index.ts"],
             "@myth-tools/ui/shared": ["libs/ui/shared/src/index.ts"],
             "@myth-tools/wotr-compiler/feature/compiler": ["libs/wotr-compiler/feature/compiler/src/index.ts"]

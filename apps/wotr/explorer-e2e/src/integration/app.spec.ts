@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('wotr-blueprint', () => {
+describe('wotr-explorer', () => {
     beforeEach(() => cy.visit('/'));
 
     it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('wotr-blueprint', () => {
         cy.login('my-email@something.com', 'myPassword');
 
         // Function helper example, see `../support/app.po.ts` file
-        getGreeting().contains('Welcome wotr-blueprint');
+        getGreeting().contains('Welcome wotr-explorer');
     });
 });

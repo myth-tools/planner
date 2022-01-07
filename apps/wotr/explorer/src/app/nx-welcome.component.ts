@@ -425,7 +425,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
                 <div id="welcome">
                     <h1>
                         <span> Hello there, </span>
-                        Welcome wotr-blueprint 👋
+                        Welcome wotr-explorer 👋
                     </h1>
                 </div>
 
