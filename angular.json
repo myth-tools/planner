@@ -27,6 +27,32 @@
             },
             "tags": []
         },
+        "data-access-wotr-blueprint": {
+            "projectType": "library",
+            "root": "libs/data-access/wotr/blueprint",
+            "sourceRoot": "libs/data-access/wotr/blueprint/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/data-access/wotr/blueprint"],
+                    "options": {
+                        "jestConfig": "libs/data-access/wotr/blueprint/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/data-access/wotr/blueprint/src/**/*.ts",
+                            "libs/data-access/wotr/blueprint/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": []
+        },
         "feature-wotr-environment": {
             "projectType": "library",
             "root": "libs/feature/wotr/environment",
