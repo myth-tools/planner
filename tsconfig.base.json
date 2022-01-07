@@ -21,6 +21,7 @@
             "@myth-tools/feature/wotr/environment": ["libs/feature/wotr/environment/src/index.ts"],
             "@myth-tools/feature/wotr/explorer": ["libs/feature/wotr/explorer/src/index.ts"],
             "@myth-tools/feature/wotr/planner": ["libs/feature/wotr/planner/src/index.ts"],
+            "@myth-tools/model/wotr/blueprint": ["libs/model/wotr/blueprint/src/index.ts"],
             "@myth-tools/ui/shared": ["libs/ui/shared/src/index.ts"]
         }
     },
