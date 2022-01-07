@@ -15,7 +15,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@myth-tools/shared/data-access/firebase": ["libs/shared/data-access/firebase/src/index.ts"],
+            "@myth-tools/data-access/firebase": ["libs/data-access/firebase/src/index.ts"],
             "@myth-tools/wotr-compiler/feature/compiler": ["libs/wotr-compiler/feature/compiler/src/index.ts"]
         }
     },

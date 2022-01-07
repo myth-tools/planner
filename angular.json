@@ -1,24 +1,27 @@
 {
     "version": 1,
     "projects": {
-        "shared-data-access-firebase": {
-            "root": "libs/shared/data-access/firebase",
-            "sourceRoot": "libs/shared/data-access/firebase/src",
+        "data-access-firebase": {
             "projectType": "library",
+            "root": "libs/data-access/firebase",
+            "sourceRoot": "libs/data-access/firebase/src",
+            "prefix": "myth-tools",
             "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/shared/data-access/firebase/**/*.ts"]
-                    }
-                },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/shared/data-access/firebase"],
+                    "outputs": ["coverage/libs/data-access/firebase"],
                     "options": {
-                        "jestConfig": "libs/shared/data-access/firebase/jest.config.js",
+                        "jestConfig": "libs/data-access/firebase/jest.config.js",
                         "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/data-access/firebase/src/**/*.ts",
+                            "libs/data-access/firebase/src/**/*.html"
+                        ]
                     }
                 }
             },
