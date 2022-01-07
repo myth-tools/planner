@@ -140,113 +140,6 @@
             "tags": [],
             "implicitDependencies": ["wotr-blueprint"]
         },
-        "wotr-blueprints": {
-            "projectType": "application",
-            "root": "apps/wotr-blueprints",
-            "sourceRoot": "apps/wotr-blueprints/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "build": {
-                    "builder": "@angular-devkit/build-angular:browser",
-                    "outputs": ["{options.outputPath}"],
-                    "options": {
-                        "outputPath": "build/apps/wotr-blueprints",
-                        "index": "apps/wotr-blueprints/src/index.html",
-                        "main": "apps/wotr-blueprints/src/main.ts",
-                        "polyfills": "apps/wotr-blueprints/src/polyfills.ts",
-                        "tsConfig": "apps/wotr-blueprints/tsconfig.app.json",
-                        "inlineStyleLanguage": "scss",
-                        "assets": [
-                            {
-                                "input": "libs/shared/assets",
-                                "output": ".",
-                                "glob": "favicon.ico"
-                            },
-                            {
-                                "input": "libs/shared/assets",
-                                "output": "./assets",
-                                "glob": "fonts/**/*"
-                            },
-                            {
-                                "input": "libs/shared/assets",
-                                "output": "./assets",
-                                "glob": "all-blueprints/**/*"
-                            }
-                        ],
-                        "styles": ["apps/wotr-blueprints/src/styles.scss"],
-                        "scripts": [],
-                        "stylePreprocessorOptions": {
-                            "includePaths": ["libs/shared"]
-                        }
-                    },
-                    "configurations": {
-                        "production": {
-                            "budgets": [
-                                {
-                                    "type": "initial",
-                                    "maximumWarning": "500kb",
-                                    "maximumError": "1mb"
-                                },
-                                {
-                                    "type": "anyComponentStyle",
-                                    "maximumWarning": "2kb",
-                                    "maximumError": "4kb"
-                                }
-                            ],
-                            "fileReplacements": [
-                                {
-                                    "replace": "apps/wotr-blueprints/src/environments/environment.ts",
-                                    "with": "apps/wotr-blueprints/src/environments/environment.prod.ts"
-                                }
-                            ],
-                            "outputHashing": "all"
-                        },
-                        "development": {
-                            "buildOptimizer": false,
-                            "optimization": false,
-                            "vendorChunk": true,
-                            "extractLicenses": false,
-                            "sourceMap": true,
-                            "namedChunks": true
-                        }
-                    },
-                    "defaultConfiguration": "production"
-                },
-                "serve": {
-                    "builder": "@angular-devkit/build-angular:dev-server",
-                    "configurations": {
-                        "production": {
-                            "browserTarget": "wotr-blueprints:build:production"
-                        },
-                        "development": {
-                            "browserTarget": "wotr-blueprints:build:development"
-                        }
-                    },
-                    "defaultConfiguration": "development"
-                },
-                "extract-i18n": {
-                    "builder": "@angular-devkit/build-angular:extract-i18n",
-                    "options": {
-                        "browserTarget": "wotr-blueprints:build"
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": ["apps/wotr-blueprints/src/**/*.ts", "apps/wotr-blueprints/src/**/*.html"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/apps/wotr-blueprints"],
-                    "options": {
-                        "jestConfig": "apps/wotr-blueprints/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": []
-        },
         "wotr-compiler": {
             "root": "apps/wotr-compiler",
             "sourceRoot": "apps/wotr-compiler/src",
@@ -325,37 +218,23 @@
         },
         "wotr-planner": {
             "projectType": "application",
-            "root": "apps/wotr-planner",
-            "sourceRoot": "apps/wotr-planner/src",
+            "root": "apps/wotr/planner",
+            "sourceRoot": "apps/wotr/planner/src",
             "prefix": "myth-tools",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "outputs": ["{options.outputPath}"],
                     "options": {
-                        "outputPath": "build/apps/wotr-planner",
-                        "index": "apps/wotr-planner/src/index.html",
-                        "main": "apps/wotr-planner/src/main.ts",
-                        "polyfills": "apps/wotr-planner/src/polyfills.ts",
-                        "tsConfig": "apps/wotr-planner/tsconfig.app.json",
+                        "outputPath": "dist/apps/wotr/planner",
+                        "index": "apps/wotr/planner/src/index.html",
+                        "main": "apps/wotr/planner/src/main.ts",
+                        "polyfills": "apps/wotr/planner/src/polyfills.ts",
+                        "tsConfig": "apps/wotr/planner/tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
-                        "assets": [
-                            {
-                                "input": "libs/shared/assets",
-                                "output": ".",
-                                "glob": "favicon.ico"
-                            },
-                            {
-                                "input": "libs/shared/assets",
-                                "output": "./assets",
-                                "glob": "fonts/**/*"
-                            }
-                        ],
-                        "styles": ["apps/wotr-planner/src/styles/styles.scss"],
-                        "scripts": [],
-                        "stylePreprocessorOptions": {
-                            "includePaths": ["libs/shared"]
-                        }
+                        "assets": ["apps/wotr/planner/src/favicon.ico", "apps/wotr/planner/src/assets"],
+                        "styles": ["apps/wotr/planner/src/styles.scss"],
+                        "scripts": []
                     },
                     "configurations": {
                         "production": {
@@ -373,8 +252,8 @@
                             ],
                             "fileReplacements": [
                                 {
-                                    "replace": "apps/wotr-planner/src/environments/environment.ts",
-                                    "with": "apps/wotr-planner/src/environments/environment.prod.ts"
+                                    "replace": "apps/wotr/planner/src/environments/environment.ts",
+                                    "with": "apps/wotr/planner/src/environments/environment.prod.ts"
                                 }
                             ],
                             "outputHashing": "all"
@@ -411,38 +290,38 @@
                 "lint": {
                     "builder": "@nrwl/linter:eslint",
                     "options": {
-                        "lintFilePatterns": ["apps/wotr-planner/src/**/*.ts", "apps/wotr-planner/src/**/*.html"]
+                        "lintFilePatterns": ["apps/wotr/planner/src/**/*.ts", "apps/wotr/planner/src/**/*.html"]
                     }
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/apps/wotr-planner"],
+                    "outputs": ["coverage/apps/wotr/planner"],
                     "options": {
-                        "jestConfig": "apps/wotr-planner/jest.config.js",
+                        "jestConfig": "apps/wotr/planner/jest.config.js",
                         "passWithNoTests": true
-                    }
-                },
-                "deploy": {
-                    "builder": "angular-cli-ghpages:deploy",
-                    "options": {
-                        "cname": "wotr.myth-tools.com",
-                        "repo": "https://github.com/myth-tools/wotr.git",
-                        "name": "Christopher",
-                        "email": "24984762+christopher-kiss@users.noreply.github.com"
+                    },
+                    "deploy": {
+                        "builder": "angular-cli-ghpages:deploy",
+                        "options": {
+                            "cname": "wotr.myth-tools.com",
+                            "repo": "https://github.com/myth-tools/wotr.git",
+                            "name": "Christopher",
+                            "email": "24984762+christopher-kiss@users.noreply.github.com"
+                        }
                     }
                 }
             },
             "tags": []
         },
         "wotr-planner-e2e": {
-            "root": "apps/wotr-planner-e2e",
-            "sourceRoot": "apps/wotr-planner-e2e/src",
+            "root": "apps/wotr/planner-e2e",
+            "sourceRoot": "apps/wotr/planner-e2e/src",
             "projectType": "application",
             "architect": {
                 "e2e": {
                     "builder": "@nrwl/cypress:cypress",
                     "options": {
-                        "cypressConfig": "apps/wotr-planner-e2e/cypress.json",
+                        "cypressConfig": "apps/wotr/planner-e2e/cypress.json",
                         "devServerTarget": "wotr-planner:serve:development"
                     },
                     "configurations": {
@@ -455,7 +334,7 @@
                     "builder": "@nrwl/linter:eslint",
                     "outputs": ["{options.outputFile}"],
                     "options": {
-                        "lintFilePatterns": ["apps/wotr-planner-e2e/**/*.{js,ts}"]
+                        "lintFilePatterns": ["apps/wotr/planner-e2e/**/*.{js,ts}"]
                     }
                 }
             },
