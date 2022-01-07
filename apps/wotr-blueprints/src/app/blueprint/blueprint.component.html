@@ -18,7 +18,7 @@
                 ></myth-tools-blueprint>
 
                 <div *ngFor="let entity of blueprint.entities; trackBy: entityTrackBy" class="entity">
-                    <myth-tools-entity [entity]="entity"></myth-tools-entity>
+                    <myth-tools-entity [entity]="entity.entity"></myth-tools-entity>
                 </div>
             </ng-template>
         </mat-expansion-panel>

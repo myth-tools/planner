@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { environment } from '../../environments/environment';
 import { Entity } from '../data-models/entity';
 import { BlueprintService } from '../shared/blueprint.service';
 
@@ -42,7 +43,7 @@ export class ResultComponent implements OnChanges {
             this.jsonHash.push({
                 assetId,
                 name: this.toEntityName(hash.name),
-                hash: hash.entity,
+                hash: hash.entity.entity,
                 hashString: JSON.stringify(hash.entity)
             });
         }
@@ -76,7 +77,7 @@ export class ResultComponent implements OnChanges {
 
         const result: Result = {
             name: this.toEntityName(entityHash?.name),
-            entity: entityHash?.entity,
+            entity: entityHash?.entity.entity,
             references
         };
 
@@ -86,6 +87,6 @@ export class ResultComponent implements OnChanges {
     private toEntityName(name: string): string;
     private toEntityName(name?: string): undefined;
     private toEntityName(name?: string): string | undefined {
-        return name?.replace(`\\index.json`, '');
+        return name?.replace(`\\${environment.indexFileName}.json`, '');
     }
 }

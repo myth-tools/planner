@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material.module';
 import { BlueprintModule } from './blueprint/blueprint.module';
 import { SearchModule } from './search/search.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -18,7 +19,8 @@ import { SearchModule } from './search/search.module';
         HttpClientModule,
         BlueprintModule,
         SearchModule,
-        MaterialModule
+        MaterialModule,
+        SharedModule
     ],
     providers: [],
     bootstrap: [AppComponent]

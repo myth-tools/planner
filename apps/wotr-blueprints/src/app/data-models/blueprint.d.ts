@@ -1,4 +1,4 @@
-import { Entity } from './entity';
+import { EntitySource } from './entity';
 
 export interface Blueprint {
     name: string;
@@ -8,6 +8,6 @@ export interface Blueprint {
 export interface BlueprintResponse {
     name: string;
     blueprints: BlueprintResponse[];
-    entities: Entity[];
+    entities: EntitySource[];
     isExpanded: boolean;
 }

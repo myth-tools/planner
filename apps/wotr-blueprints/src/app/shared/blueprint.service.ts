@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { delay, forkJoin, map, Observable, of, switchMap, tap } from 'rxjs';
-import { Entity, EntityHash } from '../data-models/entity';
+import { EntityHash, EntitySource } from '../data-models/entity';
 import { Blueprint, BlueprintResponse } from '../data-models/blueprint';
 
 @Injectable({ providedIn: 'root' })
@@ -37,7 +37,7 @@ export class BlueprintService {
                             }
 
                             return of(this.orderedBlueprints(blueprint.blueprints)).pipe(
-                                delay(1000), // delay to stop browser from breaking with so many file requests
+                                delay(1500), // delay to stop browser from breaking with so many file requests
                                 this.getBlueprints$(),
                                 map(blueprints => {
                                     const entitiesIndex = blueprints.findIndex(entity =>
@@ -66,8 +66,8 @@ export class BlueprintService {
             );
     }
 
-    private getEntities$(blueprint: Blueprint): Observable<Entity[]> {
-        return this.http.get<Entity[]>(`/assets/all-blueprints/${blueprint.name}`).pipe(this.toHash(blueprint));
+    private getEntities$(blueprint: Blueprint): Observable<EntitySource[]> {
+        return this.http.get<EntitySource[]>(`/assets/all-blueprints/${blueprint.name}`).pipe(this.toHash(blueprint));
     }
 
     private orderedBlueprints(blueprints: Blueprint[]) {
@@ -75,10 +75,10 @@ export class BlueprintService {
     }
 
     private toHash(blueprint: Blueprint) {
-        return ($source: Observable<Entity[]>) =>
+        return ($source: Observable<EntitySource[]>) =>
             $source.pipe(
                 tap(entities =>
-                    entities.forEach(entity => this.hash.set(entity.AssetId, { entity, name: blueprint.name }))
+                    entities.forEach(entity => this.hash.set(entity.entity.AssetId, { entity, name: blueprint.name }))
                 )
             );
     }

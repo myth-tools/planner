@@ -9,4 +9,8 @@ import { Reference } from '../data-models/reference';
 export class ReferencesComponent {
     @Input()
     public references!: Reference[];
+
+    public referenceTrackBy(_index: number, reference: Reference) {
+        return reference.entity.AssetId;
+    }
 }

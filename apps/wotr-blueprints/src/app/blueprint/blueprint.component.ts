@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BlueprintResponse } from '../data-models/blueprint';
-import { Entity } from '../data-models/entity';
+import { EntitySource } from '../data-models/entity';
 import { LayoutService } from '../shared/layout.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class BlueprintComponent {
         return blueprint.name;
     }
 
-    public entityTrackBy(_index: number, entity: Entity) {
-        return entity.AssetId;
+    public entityTrackBy(_index: number, entity: EntitySource) {
+        return entity.entity.AssetId;
     }
 }

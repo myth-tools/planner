@@ -1,7 +1,7 @@
 import { fdir, GroupOutput } from 'fdir';
 import { createReadStream, createWriteStream } from 'fs';
 import { mkdir, rm } from 'fs/promises';
-import { join, sep } from 'path';
+import { join, normalize, sep } from 'path';
 import { CompileOptions } from '../data-models/options';
 import { WriteStreamEx } from '../utils/write-stream-ex';
 
@@ -95,7 +95,9 @@ export class Compile {
             const fileStream = createReadStream(file);
 
             try {
+                await outputStream.write(`{\n"file": "${normalize(file).replace(/\\/g, `\\${sep}`)}",\n"entity": `);
                 await outputStream.copyFrom(fileStream);
+                await outputStream.write(`\n}`);
 
                 if (index < files.length - 1) {
                     await outputStream.write(',\n');
