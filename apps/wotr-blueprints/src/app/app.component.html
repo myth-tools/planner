@@ -6,12 +6,12 @@
 </div>
 
 <div *ngIf="getBlueprints$ | async as blueprints" class="blueprints" [ngClass]="{ small: layout.isSmall$ | async }">
-    <div class="output">
+    <!-- <div class="output">
         <myth-tools-blueprint [blueprints]="blueprints"></myth-tools-blueprint>
 
         <div class="lookup">
             <myth-tools-search (search)="onSearch($event)"></myth-tools-search>
             <myth-tools-result [search]="search"></myth-tools-result>
         </div>
-    </div>
+    </div> -->
 </div>

@@ -8,11 +8,11 @@ export class Compiler {
         const version = new Version();
 
         // Extract blueprints from zip in game directory.
-        await extract.execute({
+        /* await extract.execute({
             gameDirectory: environment.gameDirectory,
             zipFile: environment.blueprints.zipFile,
             extractFolder: environment.blueprints.extractFolder
-        });
+        }); */
 
         // Compile blueprints in a format easily accessible to the browser.
         await compile.execute({
@@ -23,10 +23,10 @@ export class Compiler {
         });
 
         // Extract the game version and inject it into the apps environment.ts
-        await version.execute({
+        /* await version.execute({
             gameDirectory: environment.gameDirectory,
             versionInfoFile: environment.version.versionInfoFile,
             outputFile: environment.version.outputFile
-        });
+        }); */
     }
 }

@@ -20,10 +20,16 @@ export class Compile {
 
         const directories = await this.getDirectoryMap(extractFolder);
 
-        console.log(`Found ${directories.size} directories`);
+        console.log(`Found ${directories.length} directories`);
 
-        await this.writeManifest(Array.from(directories.keys()), compileFolder, manifestFileName, indexFileName);
-        await this.compileOutput(directories, compileFolder, indexFileName);
+        const outputStream = new WriteStreamEx(createWriteStream(`${join(compileFolder, `test.json`)}`));
+
+        await outputStream.write(`[`);
+        // await this.writeManifest(directories, compileFolder, manifestFileName, indexFileName);
+        await this.compileOutput(directories, compileFolder, indexFileName, outputStream);
+        await outputStream.write(`]`);
+
+        await outputStream.end();
 
         console.timeEnd(`\nFinished compiling blueprints in`);
         console.log(); // add a new line to console.
@@ -36,14 +42,59 @@ export class Compile {
     }
 
     /** Write all file content to output files in parallel. */
-    private async compileOutput(directories: Map<string, string[]>, output: string, indexFileName: string) {
-        const entries = Array.from(directories.entries());
+    private async compileOutput(directory: any[], output: string, indexFileName: string, outputStream: WriteStreamEx) {
+        let count = 0;
 
-        const writeFiles = entries.map(([fileName, files]) =>
-            this.writeFilesToOutput(fileName, files, output, indexFileName)
+        for (const { name, files, directories } of directory) {
+            count += 1;
+            await outputStream.write(`{\n"n": "${name}",\n"f": [`);
+
+            for (const [index, file] of files.entries()) {
+                const fileStream = createReadStream(file);
+
+                try {
+                    await outputStream.write(
+                        `{\n"p": [${file
+                            .replace(`blueprints${sep}`, '')
+                            .split(sep)
+                            .map(this.kebabCase)
+                            .map(str => `"${str}"`)
+                            .join(', ')}],\n"e": `
+                    );
+                    await outputStream.copyFrom(fileStream);
+
+                    await outputStream.write('\n}');
+
+                    if (index !== files.length - 1) {
+                        await outputStream.write(`,\n`);
+                    }
+                } catch (error) {
+                    console.error(error);
+                    break;
+                }
+            }
+
+            await outputStream.write(`],\n"d": [`);
+
+            if (directories.length) {
+                await this.compileOutput(directories, output, indexFileName, outputStream);
+            }
+
+            await outputStream.write(`]}`);
+
+            if (count !== directory.length) {
+                await outputStream.write(`,\n`);
+            }
+
+            //await this.writeFilesToOutput(name, files, output, indexFileName, outputStream);
+        }
+        /* const writeFiles = entries.map(([fileName, files]) =>
+            this.writeFilesToOutput(fileName, files, output, indexFileName, outputStream)
         );
 
-        return Promise.all(writeFiles);
+        await Promise.all(writeFiles); */
+
+        // await outputStream.write('}');
     }
 
     private async writeManifest(
@@ -82,25 +133,45 @@ export class Compile {
         console.log(`Wrote ${manifestFileName}.json\n`);
     }
 
-    private async writeFilesToOutput(fileName: string, files: string[], output: string, indexFileName: string) {
+    private async writeFilesToOutput(
+        fileName: string,
+        files: string[],
+        output: string,
+        indexFileName: string,
+        outputStream: WriteStreamEx
+    ) {
         console.time(`- ${files.length} '${fileName}' files written in`);
 
-        const outputPath = join(output, fileName);
+        /* const outputPath = join(output, fileName);
         await mkdir(outputPath, { recursive: true });
 
         const outputStream = new WriteStreamEx(createWriteStream(`${join(outputPath, `${indexFileName}.json`)}`));
-        await outputStream.write('[');
+        await outputStream.write('['); */
+
+        /*
+            [
+                { name: 'achievements', entities: [{}], directories: [] }
+            ]
+        */
 
         for (const [index, file] of files.entries()) {
             const fileStream = createReadStream(file);
 
             try {
-                await outputStream.write(`{\n"file": "${normalize(file).replace(/\\/g, `\\${sep}`)}",\n"entity": `);
+                await outputStream.write(
+                    `{\n"file": [${file
+                        .replace(`blueprints${sep}`, '')
+                        .split(sep)
+                        .map(this.kebabCase)
+                        .map(str => `"${str}"`)
+                        .join(', ')}],\n"entity": `
+                );
                 await outputStream.copyFrom(fileStream);
-                await outputStream.write(`\n}`);
 
-                if (index < files.length - 1) {
-                    await outputStream.write(',\n');
+                if (index === files.length - 1) {
+                    await outputStream.write('\n}');
+                } else {
+                    await outputStream.write(`\n},\n`);
                 }
             } catch (error) {
                 console.error(error);
@@ -108,8 +179,8 @@ export class Compile {
             }
         }
 
-        await outputStream.write(']');
-        await outputStream.end();
+        /* await outputStream.write(']');
+        await outputStream.end(); */
 
         console.timeEnd(`- ${files.length} '${fileName}' files written in`);
     }
@@ -118,7 +189,49 @@ export class Compile {
     private async getDirectoryMap(input: string) {
         const directoryGroups = (await new fdir().group().withBasePath().crawl(input).withPromise()) as GroupOutput;
 
-        const directories = directoryGroups.reduce((result, current) => {
+        const test = directoryGroups.reduce((result, current) => {
+            // ignore directories without files, this is most likely directories only containing other directories.
+            if (!current.files.length) {
+                return result;
+            }
+
+            const parts = current.dir.replace(`${input}${sep}`, '').split(sep).map(this.kebabCase);
+
+            let parent = result; // result.find(r => r.name === parts[0]);
+
+            // classes/archanist/archtypes/eldrith-font
+            for (const [index, part] of parts.entries()) {
+                let _parent = parent.find(r => r.name === part);
+
+                /* if (parent) {
+                    const bb = parent.directories.find(v => v.name === part);
+
+                    if (bb) {
+                        parent = bb;
+                    } else {
+                        const v = { name: part, files: [], directories: [] };
+                        parent.directories.push(v);
+                        parent = v;
+                    }
+                } else  */
+                if (!_parent) {
+                    const bbb = { name: part, files: [], directories: [] };
+                    parent.push(bbb);
+                    _parent = bbb;
+                }
+
+                if (index === parts.length - 1) {
+                    _parent.files = current.files;
+                }
+
+                parent = _parent.directories;
+            }
+
+            return result;
+        }, []);
+
+        return test;
+        /* const directories = directoryGroups.reduce((result, current) => {
             // ignore directories without files, this is most likely directories only containing other directories.
             if (!current.files.length) {
                 return result;
@@ -132,7 +245,7 @@ export class Compile {
             return result;
         }, new Map<string, string[]>());
 
-        return directories;
+        return directories; */
     }
 
     // https://www.w3resource.com/javascript-exercises/fundamental/javascript-fundamental-exercise-123.php

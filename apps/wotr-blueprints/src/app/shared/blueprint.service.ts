@@ -2,8 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { delay, forkJoin, map, Observable, of, switchMap, tap } from 'rxjs';
-import { EntityHash, EntitySource } from '../data-models/entity';
+import { Entity, EntityHash, EntitySource } from '../data-models/entity';
 import { Blueprint, BlueprintResponse } from '../data-models/blueprint';
+
+interface Directory {
+    name: string;
+    entities: EntitySourceT[];
+    directories: Directory[];
+}
+interface EntitySourceT {
+    file: string[];
+    entity: Entity;
+}
 
 @Injectable({ providedIn: 'root' })
 export class BlueprintService {
@@ -11,10 +21,11 @@ export class BlueprintService {
 
     constructor(private readonly http: HttpClient) {}
 
-    public get$(): Observable<BlueprintResponse[]> {
-        return this.http
+    public get$() {
+        return this.http.get<EntitySourceT[]>(`/assets/all-blueprints/test.json`).pipe(tap(console.log));
+        /* return this.http
             .get<Blueprint[]>(`/assets/all-blueprints/${environment.manifestFileName}.json`)
-            .pipe(this.getBlueprints$());
+            .pipe(this.getBlueprints$()); */
     }
 
     private getBlueprints$(): (source$: Observable<Blueprint[]>) => Observable<BlueprintResponse[]> {
