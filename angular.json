@@ -24,6 +24,122 @@
             },
             "tags": []
         },
+        "wotr-blueprint": {
+            "projectType": "application",
+            "root": "apps/wotr/blueprint",
+            "sourceRoot": "apps/wotr/blueprint/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/apps/wotr/blueprint",
+                        "index": "apps/wotr/blueprint/src/index.html",
+                        "main": "apps/wotr/blueprint/src/main.ts",
+                        "polyfills": "apps/wotr/blueprint/src/polyfills.ts",
+                        "tsConfig": "apps/wotr/blueprint/tsconfig.app.json",
+                        "inlineStyleLanguage": "scss",
+                        "assets": ["apps/wotr/blueprint/src/favicon.ico", "apps/wotr/blueprint/src/assets"],
+                        "styles": ["apps/wotr/blueprint/src/styles.scss"],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "500kb",
+                                    "maximumError": "1mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
+                                }
+                            ],
+                            "fileReplacements": [
+                                {
+                                    "replace": "apps/wotr/blueprint/src/environments/environment.ts",
+                                    "with": "apps/wotr/blueprint/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "wotr-blueprint:build:production"
+                        },
+                        "development": {
+                            "browserTarget": "wotr-blueprint:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "wotr-blueprint:build"
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["apps/wotr/blueprint/src/**/*.ts", "apps/wotr/blueprint/src/**/*.html"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/wotr/blueprint"],
+                    "options": {
+                        "jestConfig": "apps/wotr/blueprint/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
+        "wotr-blueprint-e2e": {
+            "root": "apps/wotr/blueprint-e2e",
+            "sourceRoot": "apps/wotr/blueprint-e2e/src",
+            "projectType": "application",
+            "architect": {
+                "e2e": {
+                    "builder": "@nrwl/cypress:cypress",
+                    "options": {
+                        "cypressConfig": "apps/wotr/blueprint-e2e/cypress.json",
+                        "devServerTarget": "wotr-blueprint:serve:development"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "wotr-blueprint:serve:production"
+                        }
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["apps/wotr/blueprint-e2e/**/*.{js,ts}"]
+                    }
+                }
+            },
+            "tags": [],
+            "implicitDependencies": ["wotr-blueprint"]
+        },
         "wotr-blueprints": {
             "projectType": "application",
             "root": "apps/wotr-blueprints",
