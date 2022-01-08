@@ -459,34 +459,6 @@
             },
             "tags": ["type:app"]
         },
-        "wotr-explorer-e2e": {
-            "root": "apps/wotr/explorer-e2e",
-            "sourceRoot": "apps/wotr/explorer-e2e/src",
-            "projectType": "application",
-            "architect": {
-                "e2e": {
-                    "builder": "@nrwl/cypress:cypress",
-                    "options": {
-                        "cypressConfig": "apps/wotr/explorer-e2e/cypress.json",
-                        "devServerTarget": "wotr-explorer:serve:development"
-                    },
-                    "configurations": {
-                        "production": {
-                            "devServerTarget": "wotr-explorer:serve:production"
-                        }
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["apps/wotr/explorer-e2e/**/*.{js,ts}"]
-                    }
-                }
-            },
-            "tags": [],
-            "implicitDependencies": ["wotr-explorer"]
-        },
         "wotr-planner": {
             "projectType": "application",
             "root": "apps/wotr/planner",
@@ -582,34 +554,6 @@
                 }
             },
             "tags": ["type:app"]
-        },
-        "wotr-planner-e2e": {
-            "root": "apps/wotr/planner-e2e",
-            "sourceRoot": "apps/wotr/planner-e2e/src",
-            "projectType": "application",
-            "architect": {
-                "e2e": {
-                    "builder": "@nrwl/cypress:cypress",
-                    "options": {
-                        "cypressConfig": "apps/wotr/planner-e2e/cypress.json",
-                        "devServerTarget": "wotr-planner:serve:development"
-                    },
-                    "configurations": {
-                        "production": {
-                            "devServerTarget": "wotr-planner:serve:production"
-                        }
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["apps/wotr/planner-e2e/**/*.{js,ts}"]
-                    }
-                }
-            },
-            "tags": [],
-            "implicitDependencies": ["wotr-planner"]
         }
     }
 }
