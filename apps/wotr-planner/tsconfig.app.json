@@ -1,7 +1,7 @@
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
-        "outDir": "../../build/out-tsc",
+        "outDir": "../../.output/build/out-tsc",
         "types": [],
         "target": "ES2017"
     },

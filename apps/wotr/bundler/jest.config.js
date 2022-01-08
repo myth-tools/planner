@@ -11,5 +11,5 @@ module.exports = {
         '^.+\\.[tj]s$': 'ts-jest'
     },
     moduleFileExtensions: ['ts', 'js', 'html'],
-    coverageDirectory: '../../../coverage/apps/wotr/bundler'
+    coverageDirectory: '../../../.output/coverage/apps/wotr/bundler'
 };

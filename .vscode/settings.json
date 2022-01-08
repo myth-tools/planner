@@ -15,7 +15,7 @@
         "**/node_modules": true,
         "**/bower_components": true,
         "**/coverage": true,
-        "**/build": true,
+        "**/.output": true,
         "**/documentation": true
     }
 }

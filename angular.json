@@ -9,7 +9,7 @@
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/data-access/firebase"],
+                    "outputs": [".output/coverage/libs/data-access/firebase"],
                     "options": {
                         "jestConfig": "libs/data-access/firebase/jest.config.js",
                         "passWithNoTests": true
@@ -25,7 +25,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:data-access"]
         },
         "data-access-wotr-blueprint": {
             "projectType": "library",
@@ -35,7 +35,7 @@
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/data-access/wotr/blueprint"],
+                    "outputs": [".output/coverage/libs/data-access/wotr/blueprint"],
                     "options": {
                         "jestConfig": "libs/data-access/wotr/blueprint/jest.config.js",
                         "passWithNoTests": true
@@ -51,7 +51,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:data-access"]
         },
         "feature-wotr-bundle-explorer": {
             "root": "libs/feature/wotr/bundle-explorer",
@@ -67,14 +67,14 @@
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/feature/wotr/bundle-explorer"],
+                    "outputs": [".output/coverage/libs/feature/wotr/bundle-explorer"],
                     "options": {
                         "jestConfig": "libs/feature/wotr/bundle-explorer/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:feature"]
         },
         "feature-wotr-bundle-planner": {
             "root": "libs/feature/wotr/bundle-planner",
@@ -90,14 +90,14 @@
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/feature/wotr/bundle-planner"],
+                    "outputs": [".output/coverage/libs/feature/wotr/bundle-planner"],
                     "options": {
                         "jestConfig": "libs/feature/wotr/bundle-planner/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:feature"]
         },
         "feature-wotr-environment": {
             "projectType": "library",
@@ -107,7 +107,7 @@
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/feature/wotr/environment"],
+                    "outputs": [".output/coverage/libs/feature/wotr/environment"],
                     "options": {
                         "jestConfig": "libs/feature/wotr/environment/jest.config.js",
                         "passWithNoTests": true
@@ -123,7 +123,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:feature"]
         },
         "feature-wotr-explorer": {
             "projectType": "library",
@@ -133,7 +133,7 @@
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/feature/wotr/explorer"],
+                    "outputs": [".output/coverage/libs/feature/wotr/explorer"],
                     "options": {
                         "jestConfig": "libs/feature/wotr/explorer/jest.config.js",
                         "passWithNoTests": true
@@ -149,7 +149,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:feature"]
         },
         "feature-wotr-extract": {
             "root": "libs/feature/wotr/extract",
@@ -165,14 +165,14 @@
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/feature/wotr/extract"],
+                    "outputs": [".output/coverage/libs/feature/wotr/extract"],
                     "options": {
                         "jestConfig": "libs/feature/wotr/extract/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:feature"]
         },
         "feature-wotr-planner": {
             "projectType": "library",
@@ -182,7 +182,7 @@
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/feature/wotr/planner"],
+                    "outputs": [".output/coverage/libs/feature/wotr/planner"],
                     "options": {
                         "jestConfig": "libs/feature/wotr/planner/jest.config.js",
                         "passWithNoTests": true
@@ -198,7 +198,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:feature"]
         },
         "feature-wotr-version": {
             "root": "libs/feature/wotr/version",
@@ -214,14 +214,14 @@
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/feature/wotr/version"],
+                    "outputs": [".output/coverage/libs/feature/wotr/version"],
                     "options": {
                         "jestConfig": "libs/feature/wotr/version/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:feature"]
         },
         "model-wotr-blueprint": {
             "root": "libs/model/wotr/blueprint",
@@ -237,14 +237,14 @@
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/model/wotr/blueprint"],
+                    "outputs": [".output/coverage/libs/model/wotr/blueprint"],
                     "options": {
                         "jestConfig": "libs/model/wotr/blueprint/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:model"]
         },
         "ui-shared": {
             "projectType": "library",
@@ -254,7 +254,7 @@
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/ui/shared"],
+                    "outputs": [".output/coverage/libs/ui/shared"],
                     "options": {
                         "jestConfig": "libs/ui/shared/jest.config.js",
                         "passWithNoTests": true
@@ -267,7 +267,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:ui"]
         },
         "ui-wotr-explorer": {
             "projectType": "library",
@@ -277,7 +277,7 @@
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/ui/wotr/explorer"],
+                    "outputs": [".output/coverage/libs/ui/wotr/explorer"],
                     "options": {
                         "jestConfig": "libs/ui/wotr/explorer/jest.config.js",
                         "passWithNoTests": true
@@ -290,7 +290,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:ui"]
         },
         "ui-wotr-planner": {
             "projectType": "library",
@@ -300,7 +300,7 @@
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/ui/wotr/planner"],
+                    "outputs": [".output/coverage/libs/ui/wotr/planner"],
                     "options": {
                         "jestConfig": "libs/ui/wotr/planner/jest.config.js",
                         "passWithNoTests": true
@@ -313,7 +313,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:ui"]
         },
         "wotr-bundler": {
             "root": "apps/wotr/bundler",
@@ -324,7 +324,7 @@
                     "builder": "@nrwl/node:build",
                     "outputs": ["{options.outputPath}"],
                     "options": {
-                        "outputPath": "dist/apps/wotr/bundler",
+                        "outputPath": ".output/build/apps/wotr/bundler",
                         "main": "apps/wotr/bundler/src/main.ts",
                         "tsConfig": "apps/wotr/bundler/tsconfig.app.json",
                         "assets": ["apps/wotr/bundler/src/assets"]
@@ -358,14 +358,14 @@
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/apps/wotr/bundler"],
+                    "outputs": [".output/coverage/apps/wotr/bundler"],
                     "options": {
                         "jestConfig": "apps/wotr/bundler/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:app"]
         },
         "wotr-explorer": {
             "projectType": "application",
@@ -377,13 +377,29 @@
                     "builder": "@angular-devkit/build-angular:browser",
                     "outputs": ["{options.outputPath}"],
                     "options": {
-                        "outputPath": "dist/apps/wotr/explorer",
+                        "outputPath": ".output/build/apps/wotr/explorer",
                         "index": "apps/wotr/explorer/src/index.html",
                         "main": "apps/wotr/explorer/src/main.ts",
                         "polyfills": "apps/wotr/explorer/src/polyfills.ts",
                         "tsConfig": "apps/wotr/explorer/tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
-                        "assets": ["apps/wotr/explorer/src/favicon.ico", "apps/wotr/explorer/src/assets"],
+                        "assets": [
+                            {
+                                "input": "libs/assets",
+                                "output": ".",
+                                "glob": "favicon.ico"
+                            },
+                            {
+                                "input": "libs/assets",
+                                "output": "./assets",
+                                "glob": "fonts/**/*"
+                            },
+                            {
+                                "input": "libs/assets",
+                                "output": "./assets",
+                                "glob": "explorer.json"
+                            }
+                        ],
                         "styles": ["apps/wotr/explorer/src/styles.scss"],
                         "scripts": []
                     },
@@ -446,14 +462,14 @@
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/apps/wotr/explorer"],
+                    "outputs": [".output/coverage/apps/wotr/explorer"],
                     "options": {
                         "jestConfig": "apps/wotr/explorer/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:application"]
         },
         "wotr-explorer-e2e": {
             "root": "apps/wotr/explorer-e2e",
@@ -493,13 +509,24 @@
                     "builder": "@angular-devkit/build-angular:browser",
                     "outputs": ["{options.outputPath}"],
                     "options": {
-                        "outputPath": "dist/apps/wotr/planner",
+                        "outputPath": ".output/build/apps/wotr/planner",
                         "index": "apps/wotr/planner/src/index.html",
                         "main": "apps/wotr/planner/src/main.ts",
                         "polyfills": "apps/wotr/planner/src/polyfills.ts",
                         "tsConfig": "apps/wotr/planner/tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
-                        "assets": ["apps/wotr/planner/src/favicon.ico", "apps/wotr/planner/src/assets"],
+                        "assets": [
+                            {
+                                "input": "libs/assets",
+                                "output": ".",
+                                "glob": "favicon.ico"
+                            },
+                            {
+                                "input": "libs/assets",
+                                "output": "./assets",
+                                "glob": "fonts/**/*"
+                            }
+                        ],
                         "styles": ["apps/wotr/planner/src/styles.scss"],
                         "scripts": []
                     },
@@ -562,7 +589,7 @@
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/apps/wotr/planner"],
+                    "outputs": [".output/coverage/apps/wotr/planner"],
                     "options": {
                         "jestConfig": "apps/wotr/planner/jest.config.js",
                         "passWithNoTests": true
@@ -578,7 +605,7 @@
                     }
                 }
             },
-            "tags": []
+            "tags": ["type:app"]
         },
         "wotr-planner-e2e": {
             "root": "apps/wotr/planner-e2e",

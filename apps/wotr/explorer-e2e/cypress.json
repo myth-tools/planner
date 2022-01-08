@@ -5,8 +5,9 @@
     "modifyObstructiveCode": false,
     "supportFile": "./src/support/index.ts",
     "pluginsFile": false,
-    "video": true,
-    "videosFolder": "../../../dist/cypress/apps/wotr/explorer-e2e/videos",
-    "screenshotsFolder": "../../../dist/cypress/apps/wotr/explorer-e2e/screenshots",
+    "video": false,
+    "videosFolder": "../../../.output/build/cypress/apps/wotr/explorer-e2e/videos",
+    "screenshotOnRunFailure": false,
+    "screenshotsFolder": "../../../.output/build/cypress/apps/wotr/explorer-e2e/screenshots",
     "chromeWebSecurity": false
 }

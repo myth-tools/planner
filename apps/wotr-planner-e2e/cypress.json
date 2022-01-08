@@ -6,8 +6,8 @@
     "supportFile": "./src/support/index.ts",
     "pluginsFile": false,
     "video": false,
-    "videosFolder": "../../build/cypress/apps/wotr-planner-e2e/videos",
+    "videosFolder": "../../.output/build/cypress/apps/wotr-planner-e2e/videos",
     "screenshotOnRunFailure": false,
-    "screenshotsFolder": "../../build/cypress/apps/wotr-planner-e2e/screenshots",
+    "screenshotsFolder": "../../.output/build/cypress/apps/wotr-planner-e2e/screenshots",
     "chromeWebSecurity": false
 }
