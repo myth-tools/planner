@@ -1,4 +1,4 @@
-import { Environment } from '@myth-tools/model/wotr/environment';
+import { Environment } from '../lib/models/environment';
 
 export const environment: Environment = {
     production: false,

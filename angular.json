@@ -220,29 +220,6 @@
             },
             "tags": ["type:model"]
         },
-        "model-wotr-environment": {
-            "root": "libs/model/wotr/environment",
-            "sourceRoot": "libs/model/wotr/environment/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/model/wotr/environment/**/*.ts"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/model/wotr/environment"],
-                    "options": {
-                        "jestConfig": "libs/model/wotr/environment/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": []
-        },
         "ui-shared": {
             "projectType": "library",
             "root": "libs/ui/shared",
@@ -428,18 +405,6 @@
                     },
                     "configurations": {
                         "production": {
-                            "budgets": [
-                                {
-                                    "type": "initial",
-                                    "maximumWarning": "500kb",
-                                    "maximumError": "1mb"
-                                },
-                                {
-                                    "type": "anyComponentStyle",
-                                    "maximumWarning": "2kb",
-                                    "maximumError": "4kb"
-                                }
-                            ],
                             "fileReplacements": [
                                 {
                                     "replace": "libs/utils/wotr/environment/src/environments/environment.ts",
@@ -555,18 +520,6 @@
                     },
                     "configurations": {
                         "production": {
-                            "budgets": [
-                                {
-                                    "type": "initial",
-                                    "maximumWarning": "500kb",
-                                    "maximumError": "1mb"
-                                },
-                                {
-                                    "type": "anyComponentStyle",
-                                    "maximumWarning": "2kb",
-                                    "maximumError": "4kb"
-                                }
-                            ],
                             "fileReplacements": [
                                 {
                                     "replace": "libs/utils/wotr/environment/src/environments/environment.ts",

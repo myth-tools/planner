@@ -1,7 +1,7 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
-import { Environment } from '@myth-tools/model/wotr/environment';
 import { environment } from '../environments/environment';
 import { ENVIRONMENT } from './environment';
+import { Environment } from './models/environment';
 
 @NgModule({})
 export class EnvironmentModule {
