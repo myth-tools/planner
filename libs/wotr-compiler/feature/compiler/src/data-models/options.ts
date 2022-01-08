@@ -10,9 +10,3 @@ export interface ExtractOptions {
     zipFile: string;
     extractFolder: string;
 }
-
-export interface VersionOptions {
-    gameDirectory: string;
-    versionInfoFile: string;
-    outputFile: string;
-}
