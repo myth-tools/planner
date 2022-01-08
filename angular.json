@@ -53,6 +53,52 @@
             },
             "tags": []
         },
+        "feature-wotr-bundle-explorer": {
+            "root": "libs/feature/wotr/bundle-explorer",
+            "sourceRoot": "libs/feature/wotr/bundle-explorer/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/feature/wotr/bundle-explorer/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/feature/wotr/bundle-explorer"],
+                    "options": {
+                        "jestConfig": "libs/feature/wotr/bundle-explorer/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
+        "feature-wotr-bundle-planner": {
+            "root": "libs/feature/wotr/bundle-planner",
+            "sourceRoot": "libs/feature/wotr/bundle-planner/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/feature/wotr/bundle-planner/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/feature/wotr/bundle-planner"],
+                    "options": {
+                        "jestConfig": "libs/feature/wotr/bundle-planner/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
         "feature-wotr-environment": {
             "projectType": "library",
             "root": "libs/feature/wotr/environment",
@@ -105,6 +151,29 @@
             },
             "tags": []
         },
+        "feature-wotr-extract": {
+            "root": "libs/feature/wotr/extract",
+            "sourceRoot": "libs/feature/wotr/extract/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/feature/wotr/extract/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/feature/wotr/extract"],
+                    "options": {
+                        "jestConfig": "libs/feature/wotr/extract/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
         "feature-wotr-planner": {
             "projectType": "library",
             "root": "libs/feature/wotr/planner",
@@ -126,6 +195,29 @@
                             "libs/feature/wotr/planner/src/**/*.ts",
                             "libs/feature/wotr/planner/src/**/*.html"
                         ]
+                    }
+                }
+            },
+            "tags": []
+        },
+        "feature-wotr-version": {
+            "root": "libs/feature/wotr/version",
+            "sourceRoot": "libs/feature/wotr/version/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/feature/wotr/version/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/feature/wotr/version"],
+                    "options": {
+                        "jestConfig": "libs/feature/wotr/version/jest.config.js",
+                        "passWithNoTests": true
                     }
                 }
             },
