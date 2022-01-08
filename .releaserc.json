@@ -28,7 +28,7 @@
         [
             "semantic-release-plugin-update-version-in-files",
             {
-                "files": ["apps/**/environment.**.ts"]
+                "files": ["libs/utils/wotr/environment/src/environments/environment.prod.ts"]
             }
         ]
     ]
