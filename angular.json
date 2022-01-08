@@ -177,6 +177,29 @@
             },
             "tags": []
         },
+        "ui-wotr-explorer": {
+            "projectType": "library",
+            "root": "libs/ui/wotr/explorer",
+            "sourceRoot": "libs/ui/wotr/explorer/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/ui/wotr/explorer"],
+                    "options": {
+                        "jestConfig": "libs/ui/wotr/explorer/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/ui/wotr/explorer/src/**/*.ts", "libs/ui/wotr/explorer/src/**/*.html"]
+                    }
+                }
+            },
+            "tags": []
+        },
         "ui-wotr-planner": {
             "projectType": "library",
             "root": "libs/ui/wotr/planner",
