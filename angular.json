@@ -99,32 +99,6 @@
             },
             "tags": ["type:feature"]
         },
-        "feature-wotr-environment": {
-            "projectType": "library",
-            "root": "libs/feature/wotr/environment",
-            "sourceRoot": "libs/feature/wotr/environment/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/environment"],
-                    "options": {
-                        "jestConfig": "libs/feature/wotr/environment/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": [
-                            "libs/feature/wotr/environment/src/**/*.ts",
-                            "libs/feature/wotr/environment/src/**/*.html"
-                        ]
-                    }
-                }
-            },
-            "tags": ["type:feature"]
-        },
         "feature-wotr-explorer": {
             "projectType": "library",
             "root": "libs/feature/wotr/explorer",
@@ -246,6 +220,29 @@
             },
             "tags": ["type:model"]
         },
+        "model-wotr-environment": {
+            "root": "libs/model/wotr/environment",
+            "sourceRoot": "libs/model/wotr/environment/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/model/wotr/environment/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/model/wotr/environment"],
+                    "options": {
+                        "jestConfig": "libs/model/wotr/environment/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": []
+        },
         "ui-shared": {
             "projectType": "library",
             "root": "libs/ui/shared",
@@ -267,7 +264,7 @@
                     }
                 }
             },
-            "tags": ["type:ui"]
+            "tags": ["type:shared"]
         },
         "ui-wotr-explorer": {
             "projectType": "library",
@@ -315,6 +312,32 @@
             },
             "tags": ["type:ui"]
         },
+        "utils-wotr-environment": {
+            "projectType": "library",
+            "root": "libs/utils/wotr/environment",
+            "sourceRoot": "libs/utils/wotr/environment/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/utils/wotr/environment"],
+                    "options": {
+                        "jestConfig": "libs/utils/wotr/environment/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/utils/wotr/environment/src/**/*.ts",
+                            "libs/utils/wotr/environment/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": ["type:utils"]
+        },
         "wotr-bundler": {
             "root": "apps/wotr/bundler",
             "sourceRoot": "apps/wotr/bundler/src",
@@ -336,8 +359,8 @@
                             "inspect": false,
                             "fileReplacements": [
                                 {
-                                    "replace": "apps/wotr/bundler/src/environments/environment.ts",
-                                    "with": "apps/wotr/bundler/src/environments/environment.prod.ts"
+                                    "replace": "libs/utils/wotr/environment/src/environments/environment.ts",
+                                    "with": "libs/utils/wotr/environment/src/environments/environment.prod.ts"
                                 }
                             ]
                         }
@@ -419,8 +442,8 @@
                             ],
                             "fileReplacements": [
                                 {
-                                    "replace": "apps/wotr/explorer/src/environments/environment.ts",
-                                    "with": "apps/wotr/explorer/src/environments/environment.prod.ts"
+                                    "replace": "libs/utils/wotr/environment/src/environments/environment.ts",
+                                    "with": "libs/utils/wotr/environment/src/environments/environment.prod.ts"
                                 }
                             ],
                             "outputHashing": "all"
@@ -469,7 +492,7 @@
                     }
                 }
             },
-            "tags": ["type:application"]
+            "tags": ["type:app"]
         },
         "wotr-explorer-e2e": {
             "root": "apps/wotr/explorer-e2e",
@@ -546,8 +569,8 @@
                             ],
                             "fileReplacements": [
                                 {
-                                    "replace": "apps/wotr/planner/src/environments/environment.ts",
-                                    "with": "apps/wotr/planner/src/environments/environment.prod.ts"
+                                    "replace": "libs/utils/wotr/environment/src/environments/environment.ts",
+                                    "with": "libs/utils/wotr/environment/src/environments/environment.prod.ts"
                                 }
                             ],
                             "outputHashing": "all"

@@ -14,19 +14,27 @@
                         "depConstraints": [
                             {
                                 "sourceTag": "type:app",
-                                "onlyDependOnLibsWithTags": ["type:feature"]
+                                "onlyDependOnLibsWithTags": ["type:feature", "type:shared", "type:utils"]
                             },
                             {
                                 "sourceTag": "type:feature",
-                                "onlyDependOnLibsWithTags": ["type:data-access", "type:model", "type:ui"]
+                                "onlyDependOnLibsWithTags": ["type:data-access", "type:model", "type:ui", "type:utils"]
                             },
                             {
                                 "sourceTag": "type:data-access",
-                                "onlyDependOnLibsWithTags": ["type:model"]
+                                "onlyDependOnLibsWithTags": ["type:model", "type:utils"]
                             },
                             {
                                 "sourceTag": "type:ui",
-                                "onlyDependOnLibsWithTags": ["type:ui", "type:model"]
+                                "onlyDependOnLibsWithTags": ["type:ui", "type:model", "type:utils"]
+                            },
+                            {
+                                "sourceTag": "type:shared",
+                                "onlyDependOnLibsWithTags": ["*"]
+                            },
+                            {
+                                "sourceTag": "type:utils",
+                                "onlyDependOnLibsWithTags": ["*"]
                             }
                         ]
                     }
