@@ -1,7 +1,1 @@
-# ui-wotr-planner
-
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test ui-wotr-planner` to execute the unit tests.
+# @myth-tools/ui/wotr/planner
