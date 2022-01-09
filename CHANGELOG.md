@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/myth-tools/myth-tools/compare/v2.0.0...v2.0.1) (2022-01-09)
+
+
+### Bug Fixes
+
+* deployment failing after refactor ([a895680](https://github.com/myth-tools/myth-tools/commit/a895680b1185717624804404f199c8798b4d4fc4))
+
 # [2.0.0](https://github.com/myth-tools/myth-tools/compare/v1.5.0...v2.0.0) (2022-01-09)
 
 
