@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ExplorerModule } from '@myth-tools/feature/wotr/explorer';
-import { LayoutModule } from '@myth-tools/ui/shared';
+import { LayoutModule } from '@myth-tools/feature/wotr/layout';
 import { EnvironmentModule } from '@myth-tools/utils/wotr/environment';
 import { AppComponent } from './app.component';
 

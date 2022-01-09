@@ -1,16 +1,14 @@
 module.exports = {
-    displayName: 'feature-wotr-version',
+    displayName: 'utils-testing-common',
     preset: '../../../../jest.preset.js',
-    setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
     globals: {
         'ts-jest': {
             tsconfig: '<rootDir>/tsconfig.spec.json'
         }
     },
-    testEnvironment: 'node',
     transform: {
         '^.+\\.[tj]sx?$': 'ts-jest'
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-    coverageDirectory: '../../../../.output/coverage/libs/feature/wotr/version'
+    coverageDirectory: '../../../../.output/coverage/libs/utils/testing/common'
 };
