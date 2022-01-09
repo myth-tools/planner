@@ -15,8 +15,22 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@myth-tools/shared/data-access/firebase": ["libs/shared/data-access/firebase/src/index.ts"],
-            "@myth-tools/wotr-compiler/feature/compiler": ["libs/wotr-compiler/feature/compiler/src/index.ts"]
+            "@myth-tools/data-access/firebase": ["libs/data-access/firebase/src/index.ts"],
+            "@myth-tools/data-access/wotr/blueprint": ["libs/data-access/wotr/blueprint/src/index.ts"],
+            "@myth-tools/feature/wotr/blueprint": ["libs/feature/wotr/blueprint/src/index.ts"],
+            "@myth-tools/feature/wotr/bundle-explorer": ["libs/feature/wotr/bundle-explorer/src/index.ts"],
+            "@myth-tools/feature/wotr/bundle-planner": ["libs/feature/wotr/bundle-planner/src/index.ts"],
+            "@myth-tools/feature/wotr/explorer": ["libs/feature/wotr/explorer/src/index.ts"],
+            "@myth-tools/feature/wotr/extract": ["libs/feature/wotr/extract/src/index.ts"],
+            "@myth-tools/feature/wotr/planner": ["libs/feature/wotr/planner/src/index.ts"],
+            "@myth-tools/feature/wotr/version": ["libs/feature/wotr/version/src/index.ts"],
+            "@myth-tools/ui/shared": ["libs/ui/shared/src/index.ts"],
+            "@myth-tools/ui/wotr/explorer": ["libs/ui/wotr/explorer/src/index.ts"],
+            "@myth-tools/ui/wotr/planner": ["libs/ui/wotr/planner/src/index.ts"],
+            "@myth-tools/utils/shared/ng": ["libs/utils/shared/ng/src/index.ts"],
+            "@myth-tools/utils/shared/node": ["libs/utils/shared/node/src/index.ts"],
+            "@myth-tools/utils/wotr/environment/ng": ["libs/utils/wotr/environment/src/ng-index"],
+            "@myth-tools/utils/wotr/environment/node": ["libs/utils/wotr/environment/src/node-index"]
         }
     },
     "exclude": ["node_modules", "tmp"]
