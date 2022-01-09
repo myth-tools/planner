@@ -9,14 +9,14 @@ jest.mock('fs/promises');
 jest.mock('node-stream-zip');
 jest.mock('@myth-tools/utils/shared/node');
 
-mocked(rm).mockImplementation(() => Promise.resolve());
-mocked(mkdir).mockImplementation(() => Promise.resolve(''));
-
-const Zip = mocked(async);
-
 type Entry = { [name: string]: ZipEntry };
 
 describe('Extract', () => {
+    mocked(rm).mockImplementation(() => Promise.resolve());
+    mocked(mkdir).mockImplementation(() => Promise.resolve(''));
+
+    const Zip = mocked(async);
+
     beforeEach(() => {
         jest.clearAllMocks();
     });
