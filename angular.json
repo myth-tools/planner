@@ -266,24 +266,24 @@
             },
             "tags": ["type:ui"]
         },
-        "utils-shared-ng": {
+        "utils-shared-web": {
             "projectType": "library",
-            "root": "libs/utils/shared/ng",
-            "sourceRoot": "libs/utils/shared/ng/src",
+            "root": "libs/utils/shared/web",
+            "sourceRoot": "libs/utils/shared/web/src",
             "prefix": "myth-tools",
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/utils/shared/ng"],
+                    "outputs": [".output/coverage/libs/utils/shared/web"],
                     "options": {
-                        "jestConfig": "libs/utils/shared/ng/jest.config.js",
+                        "jestConfig": "libs/utils/shared/web/jest.config.js",
                         "passWithNoTests": true
                     }
                 },
                 "lint": {
                     "builder": "@nrwl/linter:eslint",
                     "options": {
-                        "lintFilePatterns": ["libs/utils/shared/ng/src/**/*.ts", "libs/utils/shared/ng/src/**/*.html"]
+                        "lintFilePatterns": ["libs/utils/shared/web/src/**/*.ts", "libs/utils/shared/web/src/**/*.html"]
                     }
                 }
             },
