@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/myth-tools/myth-tools/compare/v1.5.0...v2.0.0) (2022-01-09)
+
+
+* feat!: bump version as previous commit wasn't detected ([3336218](https://github.com/myth-tools/myth-tools/commit/33362189da10c28c093696ce624d269211ee0657))
+
+
+### BREAKING CHANGES
+
+* major project refactor
+
+This pull request has grown larger then originally anticipated and should have been multiple pull requests, however this refactors the entire project structure, implements version, blueprint extraction and compilation for the explorer.
+
+The explorer will assists in development by making it easy to track down entities and piece the structure of the planner together, it is not a deployable asset due to the blueprints coming in at 180MB. The hosting of this would not be feasible and is not required, this will simply be served locally where the file downloads in a matter of milliseconds as it's running off the file system.
+
+If users wish to explore the blueprints then the project can be cloned, built and run locally themself.
+
 # [1.5.0](https://github.com/myth-tools/myth-tools/compare/v1.4.1...v1.5.0) (2022-01-03)
 
 
