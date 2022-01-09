@@ -19,6 +19,10 @@ const readFileMock = mocked(readFile).mockImplementation(async (fileName: string
 });
 
 describe('Version', () => {
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
+
     it('should be defined', () => {
         expect(new Version()).toBeDefined();
     });
@@ -60,6 +64,93 @@ describe('Version', () => {
             getEnvironmentString(expected.date, expected.hash, expected.version),
             'utf-8'
         );
+    });
+
+    it('should skip update if up to date', async () => {
+        const gameDirectory = 'test/';
+        const infoFilePath = 'version.info';
+        const outputFilePath = 'environment.ts';
+
+        const environment = {
+            date: '2021-12-22T14:51:00.000Z',
+            hash: '34f0951707d3c52b611428f8db5b4710080c8b45',
+            version: '1.1.6e'
+        };
+
+        const version = new Version();
+
+        fileMap.set(
+            join(gameDirectory, infoFilePath),
+            '2021-Dec-22 14:51 34f0951707d3c52b611428f8db5b4710080c8b45 1.1.6e'
+        );
+        fileMap.set('environment.ts', getEnvironmentString(environment.date, environment.hash, environment.version));
+
+        const outOfDate = await version.execute({ gameDirectory, infoFilePath, outputFilePath });
+
+        expect(readFileMock).toHaveBeenCalledTimes(2);
+        expect(readFileMock.mock.calls[0]).toEqual([join(gameDirectory, infoFilePath), 'utf-8']);
+        expect(readFileMock.mock.calls[1]).toEqual([outputFilePath, 'utf-8']);
+
+        expect(writeFileMock).not.toHaveBeenCalled();
+        expect(outOfDate).toBe(false);
+    });
+
+    it('should detect hash out of date', async () => {
+        const gameDirectory = 'test/';
+        const infoFilePath = 'version.info';
+        const outputFilePath = 'environment.ts';
+
+        const environment = {
+            date: '2021-12-22T14:51:00.000Z',
+            hash: '00000000000000000000000000000000',
+            version: '1.1.6e'
+        };
+
+        const version = new Version();
+
+        fileMap.set(
+            join(gameDirectory, infoFilePath),
+            '2021-Dec-22 14:51 34f0951707d3c52b611428f8db5b4710080c8b45 1.1.6e'
+        );
+        fileMap.set('environment.ts', getEnvironmentString(environment.date, environment.hash, environment.version));
+
+        const outOfDate = await version.execute({ gameDirectory, infoFilePath, outputFilePath });
+
+        expect(readFileMock).toHaveBeenCalledTimes(2);
+        expect(readFileMock.mock.calls[0]).toEqual([join(gameDirectory, infoFilePath), 'utf-8']);
+        expect(readFileMock.mock.calls[1]).toEqual([outputFilePath, 'utf-8']);
+
+        expect(writeFileMock).toHaveBeenCalled();
+        expect(outOfDate).toBe(true);
+    });
+
+    it('should detect version out of date', async () => {
+        const gameDirectory = 'test/';
+        const infoFilePath = 'version.info';
+        const outputFilePath = 'environment.ts';
+
+        const environment = {
+            date: '2021-12-22T14:51:00.000Z',
+            hash: '34f0951707d3c52b611428f8db5b4710080c8b45',
+            version: '0.0.0'
+        };
+
+        const version = new Version();
+
+        fileMap.set(
+            join(gameDirectory, infoFilePath),
+            '2021-Dec-22 14:51 34f0951707d3c52b611428f8db5b4710080c8b45 1.1.6e'
+        );
+        fileMap.set('environment.ts', getEnvironmentString(environment.date, environment.hash, environment.version));
+
+        const outOfDate = await version.execute({ gameDirectory, infoFilePath, outputFilePath });
+
+        expect(readFileMock).toHaveBeenCalledTimes(2);
+        expect(readFileMock.mock.calls[0]).toEqual([join(gameDirectory, infoFilePath), 'utf-8']);
+        expect(readFileMock.mock.calls[1]).toEqual([outputFilePath, 'utf-8']);
+
+        expect(writeFileMock).toHaveBeenCalled();
+        expect(outOfDate).toBe(true);
     });
 
     function getEnvironmentString(date: string, hash: string, version: string) {

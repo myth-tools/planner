@@ -1,7 +1,6 @@
 module.exports = {
-    displayName: 'feature-wotr-extract',
+    displayName: 'utils-shared-node',
     preset: '../../../../jest.preset.js',
-    setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
     globals: {
         'ts-jest': {
             tsconfig: '<rootDir>/tsconfig.spec.json'
@@ -12,5 +11,5 @@ module.exports = {
         '^.+\\.[tj]sx?$': 'ts-jest'
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-    coverageDirectory: '../../../../.output/coverage/libs/feature/wotr/extract'
+    coverageDirectory: '../../../../coverage/libs/utils/shared/node'
 };

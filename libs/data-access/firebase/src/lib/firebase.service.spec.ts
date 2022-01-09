@@ -1,6 +1,6 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { EnvironmentModule } from '@myth-tools/utils/wotr/environment';
+import { EnvironmentModule } from '@myth-tools/utils/wotr/environment/ng';
 import { FirebaseService } from './firebase.service';
 import { DynamicLinkRequest } from './models/dynamic-link-request';
 import { DynamicLinkResponse } from './models/dynamic-link-response';

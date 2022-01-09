@@ -21,11 +21,38 @@ export class Version {
     private async update(output: string, versionInfo: VersionInfo) {
         const environment = await readFile(output, 'utf-8');
 
+        if (!this.isOutOfDate(environment, versionInfo)) {
+            console.log(`Version info is up to date. Skipping...`);
+            return false;
+        }
+
         const result = environment
             .replace(/date: '.+'/g, `date: '${versionInfo.date.toISOString()}'`)
             .replace(/hash: '.+'/g, `hash: '${versionInfo.hash}'`)
             .replace(/version: '.+'/, `version: '${versionInfo.version}'`);
 
         await writeFile(output, result, 'utf-8');
+
+        return true;
+    }
+
+    private isOutOfDate(environment: string, versionInfo: VersionInfo) {
+        const date = environment.match(/date: '.+'/g);
+        const hash = environment.match(/hash: '.+'/g);
+        const version = environment.match(/version: '.+'/);
+
+        if (`date: '${versionInfo.date.toISOString()}'` !== date[0]) {
+            return true;
+        }
+
+        if (`hash: '${versionInfo.hash}'` !== hash[0]) {
+            return true;
+        }
+
+        if (`version: '${versionInfo.version}'` !== version[0]) {
+            return true;
+        }
+
+        return false;
     }
 }

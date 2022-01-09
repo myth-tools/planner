@@ -4,9 +4,3 @@ export interface CompileOptions {
     indexFileName: string;
     manifestFileName: string;
 }
-
-export interface ExtractOptions {
-    gameDirectory: string;
-    zipFile: string;
-    extractFolder: string;
-}

@@ -16,7 +16,7 @@ export const environment: Environment = {
     },
     blueprints: {
         zipFileName: 'blueprints.zip',
-        extractToFolderPath: 'blueprints',
+        extractToFolderPath: '.output/blueprints',
         outputFilePath: 'libs/assets',
         outputFileName: 'explorer'
     },

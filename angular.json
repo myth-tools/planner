@@ -289,6 +289,52 @@
             },
             "tags": ["type:ui"]
         },
+        "utils-shared-ng": {
+            "projectType": "library",
+            "root": "libs/utils/shared/ng",
+            "sourceRoot": "libs/utils/shared/ng/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/utils/shared/ng"],
+                    "options": {
+                        "jestConfig": "libs/utils/shared/ng/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/utils/shared/ng/src/**/*.ts", "libs/utils/shared/ng/src/**/*.html"]
+                    }
+                }
+            },
+            "tags": ["type:utils"]
+        },
+        "utils-shared-node": {
+            "root": "libs/utils/shared/node",
+            "sourceRoot": "libs/utils/shared/node/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/utils/shared/node/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/utils/shared/node"],
+                    "options": {
+                        "jestConfig": "libs/utils/shared/node/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["type:utils"]
+        },
         "utils-wotr-environment": {
             "projectType": "library",
             "root": "libs/utils/wotr/environment",
