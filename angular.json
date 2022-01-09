@@ -564,15 +564,15 @@
                     "options": {
                         "jestConfig": "apps/wotr/planner/jest.config.js",
                         "passWithNoTests": true
-                    },
-                    "deploy": {
-                        "builder": "angular-cli-ghpages:deploy",
-                        "options": {
-                            "cname": "wotr.myth-tools.com",
-                            "repo": "https://github.com/myth-tools/wotr.git",
-                            "name": "Christopher",
-                            "email": "24984762+christopher-kiss@users.noreply.github.com"
-                        }
+                    }
+                },
+                "deploy": {
+                    "builder": "angular-cli-ghpages:deploy",
+                    "options": {
+                        "cname": "wotr.myth-tools.com",
+                        "repo": "https://github.com/myth-tools/wotr.git",
+                        "name": "Christopher",
+                        "email": "24984762+christopher-kiss@users.noreply.github.com"
                     }
                 }
             },
