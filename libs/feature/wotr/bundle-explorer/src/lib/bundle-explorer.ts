@@ -110,6 +110,7 @@ export class BundleExplorer {
                 return result;
             }
 
+            // Add files from root directory to the misc folder.
             if (current.dir === extractToFolderPath) {
                 current.dir = 'misc';
             }
