@@ -1,7 +1,7 @@
 import { BundleExplorer } from '@myth-tools/feature/wotr/bundle-explorer';
 import { Extract } from '@myth-tools/feature/wotr/extract';
 import { Version } from '@myth-tools/feature/wotr/version';
-import { environment } from '@myth-tools/utils/wotr/environment/node';
+import { environment } from '@myth-tools/utils/wotr/environment';
 
 export class Bundler {
     private readonly version = new Version();

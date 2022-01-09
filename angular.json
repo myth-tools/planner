@@ -350,7 +350,13 @@
                         "outputPath": ".output/build/apps/wotr/bundler",
                         "main": "apps/wotr/bundler/src/main.ts",
                         "tsConfig": "apps/wotr/bundler/tsconfig.app.json",
-                        "assets": ["apps/wotr/bundler/src/assets"]
+                        "assets": ["apps/wotr/bundler/src/assets"],
+                        "fileReplacements": [
+                            {
+                                "replace": "libs/utils/wotr/environment/src/index.ts.ts",
+                                "with": "libs/utils/wotr/environment/src/index.node.ts"
+                            }
+                        ]
                     },
                     "configurations": {
                         "production": {

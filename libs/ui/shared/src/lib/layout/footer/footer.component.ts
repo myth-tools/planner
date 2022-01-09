@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { Environment, ENVIRONMENT } from '@myth-tools/utils/wotr/environment/ng';
+import { Environment, ENVIRONMENT } from '@myth-tools/utils/wotr/environment';
 
 @Component({
     selector: 'myth-tools-footer',
