@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Environment, ENVIRONMENT } from '@myth-tools/utils/wotr/environment/ng';
+import { Environment, ENVIRONMENT } from '@myth-tools/utils/wotr/environment';
 import { Observable } from 'rxjs';
 import { Suffix } from './models/dynamic-link-info';
 import { DynamicLinkRequest } from './models/dynamic-link-request';

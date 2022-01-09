@@ -1,3 +1,3 @@
+export * from './index.node';
 export * from './lib/environment';
 export * from './lib/environment.module';
-export * from './node-index';

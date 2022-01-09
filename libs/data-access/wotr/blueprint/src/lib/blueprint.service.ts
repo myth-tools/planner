@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { ENVIRONMENT, Environment } from '@myth-tools/utils/wotr/environment/ng';
+import { ENVIRONMENT, Environment } from '@myth-tools/utils/wotr/environment';
 import { Blueprint } from './models/blueprint';
 
 @Injectable({

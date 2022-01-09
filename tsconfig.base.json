@@ -29,8 +29,7 @@
             "@myth-tools/ui/wotr/planner": ["libs/ui/wotr/planner/src/index.ts"],
             "@myth-tools/utils/shared/ng": ["libs/utils/shared/ng/src/index.ts"],
             "@myth-tools/utils/shared/node": ["libs/utils/shared/node/src/index.ts"],
-            "@myth-tools/utils/wotr/environment/ng": ["libs/utils/wotr/environment/src/ng-index"],
-            "@myth-tools/utils/wotr/environment/node": ["libs/utils/wotr/environment/src/node-index"]
+            "@myth-tools/utils/wotr/environment": ["libs/utils/wotr/environment/src/index"]
         }
     },
     "exclude": ["node_modules", "tmp"]
