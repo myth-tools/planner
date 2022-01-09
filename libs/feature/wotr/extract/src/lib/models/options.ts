@@ -1,4 +1,4 @@
-export interface ExtractOptions {
+export interface Options {
     gameDirectory: string;
     zipFileName: string;
     extractToFolderPath: string;

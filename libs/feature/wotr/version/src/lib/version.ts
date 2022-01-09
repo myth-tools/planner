@@ -1,10 +1,10 @@
 import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
-import { VersionOptions } from './models/options';
+import { Options } from './models/options';
 import { VersionInfo } from './models/version-info';
 
 export class Version {
-    public async execute({ gameDirectory, infoFilePath, outputFilePath }: VersionOptions) {
+    public async execute({ gameDirectory, infoFilePath, outputFilePath }: Options) {
         const versionInfo = await this.get(gameDirectory, infoFilePath);
 
         return this.update(outputFilePath, versionInfo);
@@ -22,7 +22,7 @@ export class Version {
         const environment = await readFile(output, 'utf-8');
 
         if (!this.isOutOfDate(environment, versionInfo)) {
-            console.log(`Version info is up to date. Skipping...`);
+            console.log(`Version is up to date. Skipping...`);
             return false;
         }
 

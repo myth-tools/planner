@@ -24,7 +24,6 @@
             "@myth-tools/feature/wotr/extract": ["libs/feature/wotr/extract/src/index.ts"],
             "@myth-tools/feature/wotr/planner": ["libs/feature/wotr/planner/src/index.ts"],
             "@myth-tools/feature/wotr/version": ["libs/feature/wotr/version/src/index.ts"],
-            "@myth-tools/model/wotr/blueprint": ["libs/model/wotr/blueprint/src/index.ts"],
             "@myth-tools/ui/shared": ["libs/ui/shared/src/index.ts"],
             "@myth-tools/ui/wotr/explorer": ["libs/ui/wotr/explorer/src/index.ts"],
             "@myth-tools/ui/wotr/planner": ["libs/ui/wotr/planner/src/index.ts"],

@@ -18,15 +18,15 @@
                             },
                             {
                                 "sourceTag": "type:feature",
-                                "onlyDependOnLibsWithTags": ["type:data-access", "type:model", "type:ui", "type:utils"]
+                                "onlyDependOnLibsWithTags": ["type:data-access", "type:ui", "type:utils"]
                             },
                             {
                                 "sourceTag": "type:data-access",
-                                "onlyDependOnLibsWithTags": ["type:model", "type:utils"]
+                                "onlyDependOnLibsWithTags": ["type:utils"]
                             },
                             {
                                 "sourceTag": "type:ui",
-                                "onlyDependOnLibsWithTags": ["type:ui", "type:model", "type:utils"]
+                                "onlyDependOnLibsWithTags": ["type:ui", "type:utils"]
                             },
                             {
                                 "sourceTag": "type:shared",

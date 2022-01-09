@@ -3,10 +3,10 @@ import { mkdir, rm } from 'fs/promises';
 import { async as Zip, StreamZipAsync, ZipEntry } from 'node-stream-zip';
 import { join } from 'path';
 import { Entry } from './models/entry';
-import { ExtractOptions } from './models/options';
+import { Options } from './models/options';
 
 export class Extract {
-    public async execute({ gameDirectory, zipFileName, extractToFolderPath, force }: ExtractOptions) {
+    public async execute({ gameDirectory, zipFileName, extractToFolderPath, force }: Options) {
         const isExtracted = await exists(extractToFolderPath);
 
         // If we already have an extract and we aren't forcing a clean run, don't extract again.
