@@ -1,4 +1,4 @@
-import { asMock, MemoryReadStream, MemoryWriteStream } from '@myth-tools/utils/shared/node';
+import { asMock, MemoryReadStream, MemoryWriteStream } from '@myth-tools/utils/testing/node';
 import { fdir } from 'fdir';
 import { createReadStream, createWriteStream } from 'fs';
 import { unlink } from 'fs/promises';

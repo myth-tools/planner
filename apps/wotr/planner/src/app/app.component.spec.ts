@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { LayoutModule } from '@myth-tools/ui/shared';
+import { LayoutModule } from '@myth-tools/feature/wotr/layout';
 import { EnvironmentModule } from '@myth-tools/utils/wotr/environment';
 import { AppComponent } from './app.component';
 
