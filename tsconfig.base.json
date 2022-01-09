@@ -27,8 +27,10 @@
             "@myth-tools/feature/wotr/version": ["libs/feature/wotr/version/src/index.ts"],
             "@myth-tools/ui/wotr/explorer": ["libs/ui/wotr/explorer/src/index.ts"],
             "@myth-tools/ui/wotr/planner": ["libs/ui/wotr/planner/src/index.ts"],
+            "@myth-tools/utils/shared/common": ["libs/utils/shared/common/src/index.ts"],
             "@myth-tools/utils/shared/node": ["libs/utils/shared/node/src/index.ts"],
             "@myth-tools/utils/shared/web": ["libs/utils/shared/web/src/index.ts"],
+            "@myth-tools/utils/testing/common": ["libs/utils/testing/common/src/index.ts"],
             "@myth-tools/utils/testing/node": ["libs/utils/testing/node/src/index.ts"],
             "@myth-tools/utils/testing/web": ["libs/utils/testing/web/src/index.ts"],
             "@myth-tools/utils/wotr/environment": ["libs/utils/wotr/environment/src/index"]

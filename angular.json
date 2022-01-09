@@ -148,6 +148,32 @@
             },
             "tags": ["tech:node", "type:feature"]
         },
+        "feature-wotr-layout": {
+            "projectType": "library",
+            "root": "libs/feature/wotr/layout",
+            "sourceRoot": "libs/feature/wotr/layout/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/feature/wotr/layout"],
+                    "options": {
+                        "jestConfig": "libs/feature/wotr/layout/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/feature/wotr/layout/src/**/*.ts",
+                            "libs/feature/wotr/layout/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:feature"]
+        },
         "feature-wotr-planner": {
             "projectType": "library",
             "root": "libs/feature/wotr/planner",
@@ -197,32 +223,6 @@
             },
             "tags": ["tech:node", "type:feature"]
         },
-        "feature-wotr-layout": {
-            "projectType": "library",
-            "root": "libs/feature/wotr/layout",
-            "sourceRoot": "libs/feature/wotr/layout/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/layout"],
-                    "options": {
-                        "jestConfig": "libs/feature/wotr/layout/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": [
-                            "libs/feature/wotr/layout/src/**/*.ts",
-                            "libs/feature/wotr/layout/src/**/*.html"
-                        ]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:feature"]
-        },
         "ui-wotr-explorer": {
             "projectType": "library",
             "root": "libs/ui/wotr/explorer",
@@ -269,6 +269,29 @@
             },
             "tags": ["tech:web", "type:ui"]
         },
+        "utils-shared-common": {
+            "root": "libs/utils/shared/common",
+            "sourceRoot": "libs/utils/shared/common/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/utils/shared/common/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/utils/shared/common"],
+                    "options": {
+                        "jestConfig": "libs/utils/shared/common/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:node", "tech:web", "type:utils"]
+        },
         "utils-shared-node": {
             "root": "libs/utils/shared/node",
             "sourceRoot": "libs/utils/shared/node/src",
@@ -314,6 +337,21 @@
                 }
             },
             "tags": ["tech:web", "type:utils"]
+        },
+        "utils-testing-common": {
+            "root": "libs/utils/testing/common",
+            "sourceRoot": "libs/utils/testing/common/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/utils/testing/common/**/*.ts"]
+                    }
+                }
+            },
+            "tags": ["tech:node", "tech:web", "type:utils"]
         },
         "utils-testing-node": {
             "root": "libs/utils/testing/node",
