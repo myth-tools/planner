@@ -1,0 +1,22 @@
+#explorer {
+    display: grid;
+    grid-template-areas:
+        'source-explorer file-window'
+        'source-explorer reference-list';
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 1fr 20%;
+    width: 100%;
+    height: 100%;
+}
+
+#source-explorer {
+    grid-area: source-explorer;
+}
+
+#file-window {
+    grid-area: file-window;
+}
+
+#reference-list {
+    grid-area: reference-list;
+}

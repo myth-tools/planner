@@ -1,0 +1,13 @@
+<ng-container *ngIf="sourceExplorer.explorerItems$ | async as result">
+    <view-state-cache [items]="result.items" [event]="result.event">
+        <cdk-virtual-scroll-viewport itemSize="26">
+            <myth-tools-explorer-item
+                *cdkVirtualFor="let item of result.items; templateCacheSize: 0; trackBy: itemTrackBy; let index = index"
+                [item]="item.item"
+                [nestedLevel]="item.nestedLevel"
+                [index]="index"
+                (directoryClick)="onDirectoryClick($event)"
+            ></myth-tools-explorer-item>
+        </cdk-virtual-scroll-viewport>
+    </view-state-cache>
+</ng-container>

@@ -9,7 +9,9 @@ $worchester: (
     'demi-bold': (weight: 600, style: normal),
     'demi-bold-italic': (weight: 600, style: italic),
     'medium': (weight: 500, style: normal),
-    'medium-italic': (weight: 500, style: italic)
+    'medium-italic': (weight: 500, style: italic),
+    'regular': (weight: 400, style: normal),
+    'regular-italic': (weight: 400, style: italic),
 );
 
 @each $key, $value in $worchester {
