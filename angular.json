@@ -223,6 +223,29 @@
             },
             "tags": ["tech:node", "type:feature"]
         },
+        "model-blueprint": {
+            "root": "libs/model/blueprint",
+            "sourceRoot": "libs/model/blueprint/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/model/blueprint/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/model/blueprint"],
+                    "options": {
+                        "jestConfig": "libs/model/blueprint/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:node", "tech:web", "type:model"]
+        },
         "ui-wotr-explorer": {
             "projectType": "library",
             "root": "libs/ui/wotr/explorer",
@@ -503,7 +526,10 @@
                                 "glob": "explorer.json"
                             }
                         ],
-                        "styles": ["apps/wotr/explorer/src/styles.scss"],
+                        "styles": [
+                            "apps/wotr/explorer/src/styles.scss",
+                            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+                        ],
                         "scripts": []
                     },
                     "configurations": {
@@ -590,7 +616,10 @@
                                 "glob": "fonts/**/*"
                             }
                         ],
-                        "styles": ["apps/wotr/planner/src/styles.scss"],
+                        "styles": [
+                            "apps/wotr/planner/src/styles.scss",
+                            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+                        ],
                         "scripts": []
                     },
                     "configurations": {

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
+import { Blueprint } from '@myth-tools/model/blueprint';
 import { ENVIRONMENT, Environment } from '@myth-tools/utils/wotr/environment';
-import { Blueprint } from './models/blueprint';
 
 @Injectable({
     providedIn: 'root'

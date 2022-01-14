@@ -1,0 +1,11 @@
+<div class="item" [ngStyle]="{ 'padding-left.px': nestedLevel * 15 }" (click)="click()">
+    <ng-container *ngIf="isBlueprint(item); then blueprint; else file"></ng-container>
+
+    <ng-template #blueprint>
+        <myth-tools-directory [blueprint]="$any(item)" [isExpanded]="isExpanded"></myth-tools-directory>
+    </ng-template>
+
+    <ng-template #file>
+        <myth-tools-file [file]="$any(item)"></myth-tools-file>
+    </ng-template>
+</div>
