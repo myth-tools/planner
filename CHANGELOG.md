@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/myth-tools/myth-tools/compare/v2.0.1...v2.1.0) (2022-01-14)
+
+
+### Features
+
+* **explorer:** implemented source explorer ([#25](https://github.com/myth-tools/myth-tools/issues/25)) ([18dd48a](https://github.com/myth-tools/myth-tools/commit/18dd48a47cf7cf61eaffb7828f097a4b77c6e9ee))
+
 ## [2.0.1](https://github.com/myth-tools/myth-tools/compare/v2.0.0...v2.0.1) (2022-01-09)
 
 
