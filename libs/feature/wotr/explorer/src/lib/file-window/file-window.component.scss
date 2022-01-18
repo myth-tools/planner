@@ -1,0 +1,11 @@
+:host {
+    display: grid;
+}
+
+#preview {
+    grid-area: preview;
+}
+
+#reference {
+    grid-area: reference;
+}
