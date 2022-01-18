@@ -1,0 +1,13 @@
+<div id="preview">Preview</div>
+
+<div
+    id="reference"
+    *ngIf="reference"
+    mwlResizable
+    [enableGhostResize]="true"
+    [validateResize]="validateResize()"
+    (resizing)="onReferenceResize($event)"
+>
+    <div class="resize-handle resize-handle-left" mwlResizeHandle [resizeEdges]="{ left: true }"></div>
+    <div>Reference</div>
+</div>

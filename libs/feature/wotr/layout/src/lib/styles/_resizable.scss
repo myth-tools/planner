@@ -1,0 +1,45 @@
+[mwlResizable] {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.resize-handle {
+    transition: 200ms background;
+    z-index: 1;
+
+    &:hover {
+        background: grey;
+    }
+}
+
+.resize-handle-top,
+.resize-handle-bottom {
+    cursor: ns-resize;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+}
+
+.resize-handle-top {
+    top: -5px;
+}
+
+.resize-handle-bottom {
+    bottom: -5px;
+}
+
+.resize-handle-left,
+.resize-handle-right {
+    cursor: ew-resize;
+    position: absolute;
+    height: 100%;
+    width: 5px;
+}
+
+.resize-handle-left {
+    left: -5px;
+}
+
+.resize-handle-right {
+    right: -5px;
+}

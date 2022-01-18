@@ -1,7 +1,29 @@
-<div id="explorer">
-    <myth-tools-source-explorer id="source-explorer"></myth-tools-source-explorer>
+<div
+    id="source-explorer"
+    mwlResizable
+    [enableGhostResize]="true"
+    [validateResize]="validateResize('source-explorer')"
+    (resizing)="onSourceExplorerResize($event)"
+>
+    <div class="resize-handle resize-handle-right" mwlResizeHandle [resizeEdges]="{ right: true }"></div>
+    <myth-tools-source-explorer></myth-tools-source-explorer>
+</div>
 
-    <myth-tools-file-window id="file-window"></myth-tools-file-window>
+<myth-tools-file-window
+    id="file-window"
+    [reference]="reference"
+    [minWidth]="minSize"
+    (lookup)="onLookup($event)"
+></myth-tools-file-window>
 
-    <myth-tools-reference-list id="reference-list"></myth-tools-reference-list>
+<div
+    id="reference-list"
+    *ngIf="lookup"
+    mwlResizable
+    [enableGhostResize]="true"
+    [validateResize]="validateResize('reference-list')"
+    (resizing)="onReferenceListResize($event)"
+>
+    <div class="resize-handle resize-handle-top" mwlResizeHandle [resizeEdges]="{ top: true }"></div>
+    <myth-tools-reference-list [lookup]="lookup" (selected)="onSelectedReference($event)"></myth-tools-reference-list>
 </div>

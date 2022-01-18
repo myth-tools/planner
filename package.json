@@ -24,6 +24,7 @@
         "@angular/router": "13.1.1",
         "@nrwl/angular": "13.4.1",
         "angular-cli-ghpages": "1.0.0",
+        "angular-resizable-element": "5.0.0",
         "fdir": "5.1.0",
         "lodash": "4.17.21",
         "lodash-es": "4.17.21",

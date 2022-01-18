@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BlueprintModule } from '@myth-tools/data-access/wotr/blueprint';
 import { ExplorerUIModule } from '@myth-tools/ui/wotr/explorer';
-import { MaterialModule } from '@myth-tools/utils/shared/web';
+import { MaterialModule, WINDOW_PROVIDER } from '@myth-tools/utils/shared/web';
+import { ResizableModule } from 'angular-resizable-element';
 import { ExplorerComponent } from './explorer.component';
 import { FileWindowComponent } from './file-window/file-window.component';
 import { ReferenceListComponent } from './reference-list/reference-list.component';
@@ -29,7 +30,9 @@ import { ViewStateCacheDirective } from './source-explorer/view-state-cache.dire
             }
         ]),
         MaterialModule,
-        ExplorerUIModule
-    ]
+        ExplorerUIModule,
+        ResizableModule
+    ],
+    providers: [WINDOW_PROVIDER]
 })
 export class ExplorerModule {}
