@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/myth-tools/myth-tools/compare/v2.1.0...v2.2.0) (2022-01-19)
+
+
+### Features
+
+* allow panes to be resized ([#26](https://github.com/myth-tools/myth-tools/issues/26)) ([40b0e42](https://github.com/myth-tools/myth-tools/commit/40b0e42686032569db5b4f84d8bab5932660a543))
+
 # [2.1.0](https://github.com/myth-tools/myth-tools/compare/v2.0.1...v2.1.0) (2022-01-14)
 
 
