@@ -1,0 +1,16 @@
+@import 'material';
+@import 'resizable';
+
+html,
+body,
+myth-tools-root {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+mat-icon {
+    vertical-align: text-bottom;
+}

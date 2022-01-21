@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { ExplorerModule } from '@myth-tools/feature/wotr/explorer';
-import { LayoutModule } from '@myth-tools/feature/wotr/layout';
-import { EnvironmentModule } from '@myth-tools/utils/wotr/environment';
+import { EnvironmentModule } from '@myth-tools/web/utils/environment';
+import { LayoutModule, StyleModule } from '@myth-tools/wotr/web/feature/core';
+import { ENVIRONMENT, environment } from '@myth-tools/wotr/web/utils/environment';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -15,15 +15,14 @@ import { AppComponent } from './app.component';
                 {
                     path: '',
                     pathMatch: 'full',
-                    loadChildren: () =>
-                        import('@myth-tools/feature/wotr/explorer').then(module => module.ExplorerModule)
+                    loadChildren: () => import('@myth-tools/wotr/explorer/feature').then(module => module.ShellModule)
                 }
             ],
             { initialNavigation: 'enabledBlocking' }
         ),
-        EnvironmentModule.forRoot(),
-        LayoutModule,
-        ExplorerModule
+        EnvironmentModule.forRoot({ token: ENVIRONMENT, config: environment }),
+        StyleModule,
+        LayoutModule
     ],
     providers: [],
     bootstrap: [AppComponent]

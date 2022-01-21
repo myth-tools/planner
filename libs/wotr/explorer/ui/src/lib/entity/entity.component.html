@@ -1,0 +1,10 @@
+<!-- Unfortunately, formatting of this file is odd because of pre/code tags. -->
+<ng-template #guid let-id="id">
+    <span class="guid" (click)="onReference(id)">{{ id }}</span>
+</ng-template>
+
+<ng-template #part let-text="text">
+    <span>{{ text }}</span>
+</ng-template>
+
+<pre><code><ng-container #code></ng-container></code></pre>

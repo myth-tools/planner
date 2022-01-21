@@ -1,0 +1,7 @@
+<myth-tools-open-files
+    [files]="files"
+    [(selected)]="selected"
+    (closeFile)="onCloseFile($event)"
+></myth-tools-open-files>
+
+<myth-tools-entity *ngIf="selected" [entity]="selected.e | json"></myth-tools-entity>

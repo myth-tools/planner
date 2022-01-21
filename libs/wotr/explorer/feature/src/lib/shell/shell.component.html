@@ -1,0 +1,39 @@
+<div
+    id="source-explorer"
+    mwlResizable
+    [validateResize]="validateSourceExplorer()"
+    (resizing)="onSourceExplorerResize($event)"
+>
+    <div class="resize-handle resize-handle-right" mwlResizeHandle [resizeEdges]="{ right: true }"></div>
+    <myth-tools-source-explorer [selected]="selected" (fileClick)="onFileClick($event)"></myth-tools-source-explorer>
+</div>
+
+<myth-tools-file-window
+    id="file-window"
+    *ngIf="files.length"
+    [(files)]="files"
+    [(selected)]="selected"
+    (lookup)="onLookup($event)"
+></myth-tools-file-window>
+
+<div
+    id="reference"
+    *ngIf="files.length"
+    mwlResizable
+    [validateResize]="validateReference()"
+    (resizing)="onReferenceResize($event)"
+>
+    <div class="resize-handle resize-handle-left" mwlResizeHandle [resizeEdges]="{ left: true }"></div>
+    <myth-tools-file-window [(files)]="files" (lookup)="onLookup($event)"></myth-tools-file-window>
+</div>
+
+<div
+    id="reference-list"
+    *ngIf="lookup"
+    mwlResizable
+    [validateResize]="validateReferenceList()"
+    (resizing)="onReferenceListResize($event)"
+>
+    <div class="resize-handle resize-handle-top" mwlResizeHandle [resizeEdges]="{ top: true }"></div>
+    <myth-tools-reference-list [lookup]="lookup" (selected)="onSelectedReference($event)"></myth-tools-reference-list>
+</div>
