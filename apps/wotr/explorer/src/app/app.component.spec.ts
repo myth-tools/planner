@@ -1,13 +1,19 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { LayoutModule } from '@myth-tools/feature/wotr/layout';
-import { EnvironmentModule } from '@myth-tools/utils/wotr/environment';
+import { EnvironmentModule } from '@myth-tools/web/utils/environment';
+import { LayoutModule, StyleModule } from '@myth-tools/wotr/web/feature/core';
+import { environment, ENVIRONMENT } from '@myth-tools/wotr/web/utils/environment';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [RouterTestingModule, EnvironmentModule.forRoot(), LayoutModule],
+            imports: [
+                RouterTestingModule,
+                EnvironmentModule.forRoot({ token: ENVIRONMENT, config: environment }),
+                LayoutModule,
+                StyleModule
+            ],
             declarations: [AppComponent]
         }).compileComponents();
     });

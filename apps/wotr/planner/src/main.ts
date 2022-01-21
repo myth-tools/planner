@@ -1,6 +1,6 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { environment } from '@myth-tools/utils/wotr/environment';
+import { environment } from '@myth-tools/wotr/web/utils/environment';
 import { AppModule } from './app/app.module';
 
 if (environment.production) {

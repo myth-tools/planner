@@ -15,22 +15,30 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@myth-tools/data-access/firebase": ["libs/data-access/firebase/src/index.ts"],
-            "@myth-tools/data-access/wotr/blueprint": ["libs/data-access/wotr/blueprint/src/index.ts"],
-            "@myth-tools/feature/wotr/blueprint": ["libs/feature/wotr/blueprint/src/index.ts"],
-            "@myth-tools/feature/wotr/bundle-explorer": ["libs/feature/wotr/bundle-explorer/src/index.ts"],
-            "@myth-tools/feature/wotr/bundle-planner": ["libs/feature/wotr/bundle-planner/src/index.ts"],
-            "@myth-tools/feature/wotr/explorer": ["libs/feature/wotr/explorer/src/index.ts"],
-            "@myth-tools/feature/wotr/extract": ["libs/feature/wotr/extract/src/index.ts"],
-            "@myth-tools/feature/wotr/layout": ["libs/feature/wotr/layout/src/index.ts"],
-            "@myth-tools/feature/wotr/version": ["libs/feature/wotr/version/src/index.ts"],
-            "@myth-tools/model/blueprint": ["libs/model/blueprint/src/index.ts"],
-            "@myth-tools/ui/wotr/explorer": ["libs/ui/wotr/explorer/src/index.ts"],
-            "@myth-tools/utils/shared/node": ["libs/utils/shared/node/src/index.ts"],
-            "@myth-tools/utils/shared/web": ["libs/utils/shared/web/src/index.ts"],
-            "@myth-tools/utils/testing/common": ["libs/utils/testing/common/src/index.ts"],
-            "@myth-tools/utils/testing/node": ["libs/utils/testing/node/src/index.ts"],
-            "@myth-tools/utils/wotr/environment": ["libs/utils/wotr/environment/src/index"]
+            "@myth-tools/common/utils/testing": ["libs/common/utils/testing/src/index.ts"],
+            "@myth-tools/node/utils/file-system": ["libs/node/utils/file-system/src/index.ts"],
+            "@myth-tools/node/utils/testing": ["libs/node/utils/testing/src/index.ts"],
+            "@myth-tools/web/utils/environment": ["libs/web/utils/environment/src/index.ts"],
+            "@myth-tools/web/utils/material": ["libs/web/utils/material/src/index.ts"],
+            "@myth-tools/web/utils/window": ["libs/web/utils/window/src/index.ts"],
+            "@myth-tools/wotr/bundler/feature/bundle-bundle-planner": [
+                "libs/wotr/bundler/feature/bundle-planner/src/index.ts"
+            ],
+            "@myth-tools/wotr/bundler/feature/bundle-explorer": [
+                "libs/wotr/bundler/feature/bundle-explorer/src/index.ts"
+            ],
+            "@myth-tools/wotr/bundler/feature/extract": ["libs/wotr/bundler/feature/extract/src/index.ts"],
+            "@myth-tools/wotr/bundler/feature/version": ["libs/wotr/bundler/feature/version/src/index.ts"],
+            "@myth-tools/wotr/explorer/data-access/blueprint": [
+                "libs/wotr/explorer/data-access/blueprint/src/index.ts"
+            ],
+            "@myth-tools/wotr/explorer/feature": ["libs/wotr/explorer/feature/src/index.ts"],
+            "@myth-tools/wotr/explorer/model/blueprint": ["libs/wotr/explorer/model/blueprint/src/index.ts"],
+            "@myth-tools/wotr/explorer/ui": ["libs/wotr/explorer/ui/src/index.ts"],
+            "@myth-tools/wotr/node/utils/environment": ["libs/wotr/node/utils/environment/src/index.ts"],
+            "@myth-tools/wotr/web/data-access/firebase": ["libs/wotr/web/data-access/firebase/src/index.ts"],
+            "@myth-tools/wotr/web/feature/core": ["libs/wotr/web/feature/core/src/index.ts"],
+            "@myth-tools/wotr/web/utils/environment": ["libs/wotr/web/utils/environment/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

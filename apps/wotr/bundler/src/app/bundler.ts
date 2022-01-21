@@ -1,7 +1,7 @@
-import { BundleExplorer } from '@myth-tools/feature/wotr/bundle-explorer';
-import { Extract } from '@myth-tools/feature/wotr/extract';
-import { Version } from '@myth-tools/feature/wotr/version';
-import { environment } from '@myth-tools/utils/wotr/environment';
+import { BundleExplorer } from '@myth-tools/wotr/bundler/feature/bundle-explorer';
+import { Extract } from '@myth-tools/wotr/bundler/feature/extract';
+import { Version } from '@myth-tools/wotr/bundler/feature/version';
+import { environment } from '@myth-tools/wotr/node/utils/environment';
 
 export class Bundler {
     private readonly version = new Version();
@@ -12,7 +12,7 @@ export class Bundler {
         const updated = await this.version.execute({
             gameDirectory: environment.game.directory,
             infoFilePath: environment.version.infoFilePath,
-            outputFilePath: environment.version.outputFilePath
+            outputFilePaths: environment.version.outputFilePaths
         });
 
         await this.extract.execute({

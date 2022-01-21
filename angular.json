@@ -1,335 +1,119 @@
 {
     "version": 1,
     "projects": {
-        "data-access-firebase": {
+        "common-assets": {
+            "root": "libs/common/assets",
+            "sourceRoot": "libs/common/assets/src",
             "projectType": "library",
-            "root": "libs/data-access/firebase",
-            "sourceRoot": "libs/data-access/firebase/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/data-access/firebase"],
-                    "options": {
-                        "jestConfig": "libs/data-access/firebase/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": [
-                            "libs/data-access/firebase/src/**/*.ts",
-                            "libs/data-access/firebase/src/**/*.html"
-                        ]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:data-access"]
+            "architect": {},
+            "tags": ["type:assets"]
         },
-        "data-access-wotr-blueprint": {
-            "projectType": "library",
-            "root": "libs/data-access/wotr/blueprint",
-            "sourceRoot": "libs/data-access/wotr/blueprint/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/data-access/wotr/blueprint"],
-                    "options": {
-                        "jestConfig": "libs/data-access/wotr/blueprint/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": [
-                            "libs/data-access/wotr/blueprint/src/**/*.ts",
-                            "libs/data-access/wotr/blueprint/src/**/*.html"
-                        ]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:data-access"]
-        },
-        "feature-wotr-bundle-explorer": {
-            "root": "libs/feature/wotr/bundle-explorer",
-            "sourceRoot": "libs/feature/wotr/bundle-explorer/src",
+        "common-utils-testing": {
+            "root": "libs/common/utils/testing",
+            "sourceRoot": "libs/common/utils/testing/src",
             "projectType": "library",
             "architect": {
                 "lint": {
                     "builder": "@nrwl/linter:eslint",
                     "outputs": ["{options.outputFile}"],
                     "options": {
-                        "lintFilePatterns": ["libs/feature/wotr/bundle-explorer/**/*.ts"]
+                        "lintFilePatterns": ["libs/common/utils/testing/**/*.ts"]
                     }
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/bundle-explorer"],
+                    "outputs": [".output/coverage/libs/common/utils/testing"],
                     "options": {
-                        "jestConfig": "libs/feature/wotr/bundle-explorer/jest.config.js",
+                        "jestConfig": "libs/common/utils/testing/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
-            "tags": ["tech:node", "type:feature"]
+            "tags": ["tech:node", "tech:web", "type:utils"]
         },
-        "feature-wotr-bundle-planner": {
-            "root": "libs/feature/wotr/bundle-planner",
-            "sourceRoot": "libs/feature/wotr/bundle-planner/src",
+        "node-utils-file-system": {
+            "root": "libs/node/utils/file-system",
+            "sourceRoot": "libs/node/utils/file-system/src",
             "projectType": "library",
             "architect": {
                 "lint": {
                     "builder": "@nrwl/linter:eslint",
                     "outputs": ["{options.outputFile}"],
                     "options": {
-                        "lintFilePatterns": ["libs/feature/wotr/bundle-planner/**/*.ts"]
+                        "lintFilePatterns": ["libs/node/utils/file-system/**/*.ts"]
                     }
                 },
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/bundle-planner"],
+                    "outputs": [".output/coverage/libs/node/utils/file-system"],
                     "options": {
-                        "jestConfig": "libs/feature/wotr/bundle-planner/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": ["tech:node", "type:feature"]
-        },
-        "feature-wotr-explorer": {
-            "projectType": "library",
-            "root": "libs/feature/wotr/explorer",
-            "sourceRoot": "libs/feature/wotr/explorer/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/explorer"],
-                    "options": {
-                        "jestConfig": "libs/feature/wotr/explorer/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": [
-                            "libs/feature/wotr/explorer/src/**/*.ts",
-                            "libs/feature/wotr/explorer/src/**/*.html"
-                        ]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:feature"]
-        },
-        "feature-wotr-extract": {
-            "root": "libs/feature/wotr/extract",
-            "sourceRoot": "libs/feature/wotr/extract/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/feature/wotr/extract/**/*.ts"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/extract"],
-                    "options": {
-                        "jestConfig": "libs/feature/wotr/extract/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": ["tech:node", "type:feature"]
-        },
-        "feature-wotr-layout": {
-            "projectType": "library",
-            "root": "libs/feature/wotr/layout",
-            "sourceRoot": "libs/feature/wotr/layout/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/layout"],
-                    "options": {
-                        "jestConfig": "libs/feature/wotr/layout/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": [
-                            "libs/feature/wotr/layout/src/**/*.ts",
-                            "libs/feature/wotr/layout/src/**/*.html"
-                        ]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:feature"]
-        },
-        "feature-wotr-version": {
-            "root": "libs/feature/wotr/version",
-            "sourceRoot": "libs/feature/wotr/version/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/feature/wotr/version/**/*.ts"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/version"],
-                    "options": {
-                        "jestConfig": "libs/feature/wotr/version/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": ["tech:node", "type:feature"]
-        },
-        "model-blueprint": {
-            "root": "libs/model/blueprint",
-            "sourceRoot": "libs/model/blueprint/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/model/blueprint/**/*.ts"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": ["coverage/libs/model/blueprint"],
-                    "options": {
-                        "jestConfig": "libs/model/blueprint/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": ["tech:node", "tech:web", "type:model"]
-        },
-        "ui-wotr-explorer": {
-            "projectType": "library",
-            "root": "libs/ui/wotr/explorer",
-            "sourceRoot": "libs/ui/wotr/explorer/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/ui/wotr/explorer"],
-                    "options": {
-                        "jestConfig": "libs/ui/wotr/explorer/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": ["libs/ui/wotr/explorer/src/**/*.ts", "libs/ui/wotr/explorer/src/**/*.html"]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:ui"]
-        },
-        "utils-shared-node": {
-            "root": "libs/utils/shared/node",
-            "sourceRoot": "libs/utils/shared/node/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/utils/shared/node/**/*.ts"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/utils/shared/node"],
-                    "options": {
-                        "jestConfig": "libs/utils/shared/node/jest.config.js",
+                        "jestConfig": "libs/node/utils/file-system/jest.config.js",
                         "passWithNoTests": true
                     }
                 }
             },
             "tags": ["tech:node", "type:utils"]
         },
-        "utils-shared-web": {
+        "node-utils-testing": {
+            "root": "libs/node/utils/testing",
+            "sourceRoot": "libs/node/utils/testing/src",
             "projectType": "library",
-            "root": "libs/utils/shared/web",
-            "sourceRoot": "libs/utils/shared/web/src",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/node/utils/testing/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/node/utils/testing"],
+                    "options": {
+                        "jestConfig": "libs/node/utils/testing/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:node", "type:utils"]
+        },
+        "web-utils-environment": {
+            "projectType": "library",
+            "root": "libs/web/utils/environment",
+            "sourceRoot": "libs/web/utils/environment/src",
             "prefix": "myth-tools",
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/utils/shared/web"],
+                    "outputs": [".output/coverage/libs/web/utils/environment"],
                     "options": {
-                        "jestConfig": "libs/utils/shared/web/jest.config.js",
+                        "jestConfig": "libs/web/utils/environment/jest.config.js",
                         "passWithNoTests": true
                     }
                 },
                 "lint": {
                     "builder": "@nrwl/linter:eslint",
                     "options": {
-                        "lintFilePatterns": ["libs/utils/shared/web/src/**/*.ts", "libs/utils/shared/web/src/**/*.html"]
+                        "lintFilePatterns": [
+                            "libs/web/utils/environment/src/**/*.ts",
+                            "libs/web/utils/environment/src/**/*.html"
+                        ]
                     }
                 }
             },
             "tags": ["tech:web", "type:utils"]
         },
-        "utils-testing-common": {
-            "root": "libs/utils/testing/common",
-            "sourceRoot": "libs/utils/testing/common/src",
+        "web-utils-material": {
             "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/utils/testing/common/**/*.ts"]
-                    }
-                }
-            },
-            "tags": ["tech:node", "tech:web", "type:utils"]
-        },
-        "utils-testing-node": {
-            "root": "libs/utils/testing/node",
-            "sourceRoot": "libs/utils/testing/node/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/utils/testing/node/**/*.ts"]
-                    }
-                }
-            },
-            "tags": ["tech:node", "type:utils"]
-        },
-        "utils-wotr-environment": {
-            "projectType": "library",
-            "root": "libs/utils/wotr/environment",
-            "sourceRoot": "libs/utils/wotr/environment/src",
+            "root": "libs/web/utils/material",
+            "sourceRoot": "libs/web/utils/material/src",
             "prefix": "myth-tools",
             "architect": {
                 "test": {
                     "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/utils/wotr/environment"],
+                    "outputs": [".output/coverage/libs/web/utils/material"],
                     "options": {
-                        "jestConfig": "libs/utils/wotr/environment/jest.config.js",
+                        "jestConfig": "libs/web/utils/material/jest.config.js",
                         "passWithNoTests": true
                     }
                 },
@@ -337,13 +121,43 @@
                     "builder": "@nrwl/linter:eslint",
                     "options": {
                         "lintFilePatterns": [
-                            "libs/utils/wotr/environment/src/**/*.ts",
-                            "libs/utils/wotr/environment/src/**/*.html"
+                            "libs/web/utils/material/src/**/*.ts",
+                            "libs/web/utils/material/src/**/*.html"
                         ]
                     }
                 }
             },
-            "tags": ["tech:node", "tech:web", "type:utils"]
+            "tags": ["tech:web", "type:utils"]
+        },
+        "web-utils-window": {
+            "projectType": "library",
+            "root": "libs/web/utils/window",
+            "sourceRoot": "libs/web/utils/window/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/web/utils/window"],
+                    "options": {
+                        "jestConfig": "libs/web/utils/window/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/web/utils/window/src/**/*.ts", "libs/web/utils/window/src/**/*.html"]
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:utils"]
+        },
+        "wotr-assets": {
+            "root": "libs/wotr/assets",
+            "sourceRoot": "libs/wotr/assets/src",
+            "projectType": "library",
+            "architect": {},
+            "tags": ["type:assets"]
         },
         "wotr-bundler": {
             "root": "apps/wotr/bundler",
@@ -357,13 +171,7 @@
                         "outputPath": ".output/build/apps/wotr/bundler",
                         "main": "apps/wotr/bundler/src/main.ts",
                         "tsConfig": "apps/wotr/bundler/tsconfig.app.json",
-                        "assets": ["apps/wotr/bundler/src/assets"],
-                        "fileReplacements": [
-                            {
-                                "replace": "libs/utils/wotr/environment/src/index.ts",
-                                "with": "libs/utils/wotr/environment/src/index.node.ts"
-                            }
-                        ]
+                        "assets": ["apps/wotr/bundler/src/assets"]
                     },
                     "configurations": {
                         "production": {
@@ -372,8 +180,8 @@
                             "inspect": false,
                             "fileReplacements": [
                                 {
-                                    "replace": "libs/utils/wotr/environment/src/environments/environment.ts",
-                                    "with": "libs/utils/wotr/environment/src/environments/environment.prod.ts"
+                                    "replace": "libs/wotr/node/utils/environment/src/lib/environments/environment.ts",
+                                    "with": "libs/wotr/node/utils/environment/src/lib/environments/environment.prod.ts"
                                 }
                             ]
                         }
@@ -403,6 +211,98 @@
             },
             "tags": ["tech:node", "type:app"]
         },
+        "wotr-bundler-feature-bundle-explorer": {
+            "root": "libs/wotr/bundler/feature/bundle-explorer",
+            "sourceRoot": "libs/wotr/bundler/feature/bundle-explorer/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr/bundler/feature/bundle-explorer/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/bundler/feature/bundle-explorer"],
+                    "options": {
+                        "jestConfig": "libs/wotr/bundler/feature/bundle-explorer/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:node", "type:feature"]
+        },
+        "wotr-bundler-feature-bundle-planner": {
+            "root": "libs/wotr/bundler/feature/bundle-planner",
+            "sourceRoot": "libs/wotr/bundler/feature/bundle-planner/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr/bundler/feature/bundle-planner/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/bundler/feature/bundle-planner"],
+                    "options": {
+                        "jestConfig": "libs/wotr/bundler/feature/bundle-planner/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:node", "type:feature"]
+        },
+        "wotr-bundler-feature-extract": {
+            "root": "libs/wotr/bundler/feature/extract",
+            "sourceRoot": "libs/wotr/bundler/feature/extract/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr/bundler/feature/extract/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/bundler/feature/extract"],
+                    "options": {
+                        "jestConfig": "libs/wotr/bundler/feature/extract/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:node", "type:feature"]
+        },
+        "wotr-bundler-feature-version": {
+            "root": "libs/wotr/bundler/feature/version",
+            "sourceRoot": "libs/wotr/bundler/feature/version/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr/bundler/feature/version/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/bundler/feature/version"],
+                    "options": {
+                        "jestConfig": "libs/wotr/bundler/feature/version/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:node", "type:feature"]
+        },
         "wotr-explorer": {
             "projectType": "application",
             "root": "apps/wotr/explorer",
@@ -421,31 +321,28 @@
                         "inlineStyleLanguage": "scss",
                         "assets": [
                             {
-                                "input": "libs/assets",
+                                "input": "libs/common/assets/src/lib",
                                 "output": ".",
                                 "glob": "favicon.ico"
                             },
                             {
-                                "input": "libs/assets",
+                                "input": "libs/wotr/assets/src/lib",
                                 "output": "./assets",
                                 "glob": "fonts/**/*"
                             },
                             {
-                                "input": "libs/assets",
+                                "input": "libs/wotr/assets/src/lib",
                                 "output": "./assets",
                                 "glob": "explorer.json"
                             }
                         ],
                         "fileReplacements": [
                             {
-                                "replace": "libs/utils/wotr/environment/src/environments/environment.ts",
-                                "with": "libs/utils/wotr/environment/src/environments/environment.prod.ts"
+                                "replace": "libs/wotr/web/utils/environment/src/lib/environments/environment.ts",
+                                "with": "libs/wotr/web/utils/environment/src/lib/environments/environment.prod.ts"
                             }
                         ],
-                        "styles": [
-                            "apps/wotr/explorer/src/styles.scss",
-                            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-                        ],
+                        "styles": ["apps/wotr/explorer/src/styles.scss"],
                         "scripts": []
                     },
                     "configurations": {
@@ -492,6 +389,127 @@
             },
             "tags": ["tech:web", "type:app"]
         },
+        "wotr-explorer-data-access-blueprint": {
+            "projectType": "library",
+            "root": "libs/wotr/explorer/data-access/blueprint",
+            "sourceRoot": "libs/wotr/explorer/data-access/blueprint/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/explorer/data-access/blueprint"],
+                    "options": {
+                        "jestConfig": "libs/wotr/explorer/data-access/blueprint/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/wotr/explorer/data-access/blueprint/src/**/*.ts",
+                            "libs/wotr/explorer/data-access/blueprint/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:data-access"]
+        },
+        "wotr-explorer-feature": {
+            "projectType": "library",
+            "root": "libs/wotr/explorer/feature",
+            "sourceRoot": "libs/wotr/explorer/feature/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/explorer/feature"],
+                    "options": {
+                        "jestConfig": "libs/wotr/explorer/feature/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/wotr/explorer/feature/src/**/*.ts",
+                            "libs/wotr/explorer/feature/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:feature"]
+        },
+        "wotr-explorer-model-blueprint": {
+            "root": "libs/wotr/explorer/model/blueprint",
+            "sourceRoot": "libs/wotr/explorer/model/blueprint/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr/explorer/model/blueprint/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/explorer/model/blueprint"],
+                    "options": {
+                        "jestConfig": "libs/wotr/explorer/model/blueprint/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:model"]
+        },
+        "wotr-explorer-ui": {
+            "projectType": "library",
+            "root": "libs/wotr/explorer/ui",
+            "sourceRoot": "libs/wotr/explorer/ui/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/explorer/ui"],
+                    "options": {
+                        "jestConfig": "libs/wotr/explorer/ui/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr/explorer/ui/src/**/*.ts", "libs/wotr/explorer/ui/src/**/*.html"]
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:ui"]
+        },
+        "wotr-node-utils-environment": {
+            "root": "libs/wotr/node/utils/environment",
+            "sourceRoot": "libs/wotr/node/utils/environment/src",
+            "projectType": "library",
+            "architect": {
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/wotr/node/utils/environment/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/node/utils/environment"],
+                    "options": {
+                        "jestConfig": "libs/wotr/node/utils/environment/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            },
+            "tags": ["tech:node", "type:utils"]
+        },
         "wotr-planner": {
             "projectType": "application",
             "root": "apps/wotr/planner",
@@ -510,28 +528,25 @@
                         "inlineStyleLanguage": "scss",
                         "assets": [
                             {
-                                "input": "libs/assets",
+                                "input": "libs/common/assets/src/lib",
                                 "output": ".",
                                 "glob": "favicon.ico"
                             },
                             {
-                                "input": "libs/assets",
+                                "input": "libs/wotr/assets/src/lib",
                                 "output": "./assets",
                                 "glob": "fonts/**/*"
                             }
                         ],
-                        "styles": [
-                            "apps/wotr/planner/src/styles.scss",
-                            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-                        ],
+                        "styles": ["apps/wotr/planner/src/styles.scss"],
                         "scripts": []
                     },
                     "configurations": {
                         "production": {
                             "fileReplacements": [
                                 {
-                                    "replace": "libs/utils/wotr/environment/src/environments/environment.ts",
-                                    "with": "libs/utils/wotr/environment/src/environments/environment.prod.ts"
+                                    "replace": "libs/wotr/web/utils/environment/src/lib/environments/environment.ts",
+                                    "with": "libs/wotr/web/utils/environment/src/lib/environments/environment.prod.ts"
                                 }
                             ],
                             "outputHashing": "all"
@@ -584,6 +599,84 @@
                 }
             },
             "tags": ["tech:web", "type:app"]
+        },
+        "wotr-web-data-access-firebase": {
+            "projectType": "library",
+            "root": "libs/wotr/web/data-access/firebase",
+            "sourceRoot": "libs/wotr/web/data-access/firebase/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/web/data-access/firebase"],
+                    "options": {
+                        "jestConfig": "libs/wotr/web/data-access/firebase/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/wotr/web/data-access/firebase/src/**/*.ts",
+                            "libs/wotr/web/data-access/firebase/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:data-access"]
+        },
+        "wotr-web-feature-core": {
+            "projectType": "library",
+            "root": "libs/wotr/web/feature/core",
+            "sourceRoot": "libs/wotr/web/feature/core/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/web/feature/core"],
+                    "options": {
+                        "jestConfig": "libs/wotr/web/feature/core/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/wotr/web/feature/core/src/**/*.ts",
+                            "libs/wotr/web/feature/core/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:feature"]
+        },
+        "wotr-web-utils-environment": {
+            "projectType": "library",
+            "root": "libs/wotr/web/utils/environment",
+            "sourceRoot": "libs/wotr/web/utils/environment/src",
+            "prefix": "myth-tools",
+            "architect": {
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": [".output/coverage/libs/wotr/web/utils/environment"],
+                    "options": {
+                        "jestConfig": "libs/wotr/web/utils/environment/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/wotr/web/utils/environment/src/**/*.ts",
+                            "libs/wotr/web/utils/environment/src/**/*.html"
+                        ]
+                    }
+                }
+            },
+            "tags": ["tech:web", "type:utils"]
         }
     }
 }
