@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/myth-tools/planner/compare/v2.2.0...v2.2.1) (2022-01-21)
+
+
+### Bug Fixes
+
+* broken file replacement and update build definitions ([#27](https://github.com/myth-tools/planner/issues/27)) ([347407a](https://github.com/myth-tools/planner/commit/347407aa06f653ea4f074e6a90e8294196c03baa))
+
 # [2.2.0](https://github.com/myth-tools/planner/compare/v2.1.0...v2.2.0) (2022-01-19)
 
 
