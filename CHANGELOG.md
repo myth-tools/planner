@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/myth-tools/planner/compare/v2.2.1...v2.3.0) (2022-01-21)
+
+
+### Features
+
+* initial file-window implementation ([#28](https://github.com/myth-tools/planner/issues/28)) ([0b59fe2](https://github.com/myth-tools/planner/commit/0b59fe24adaf655394407c6e6fa3030bebce182f))
+
 ## [2.2.1](https://github.com/myth-tools/planner/compare/v2.2.0...v2.2.1) (2022-01-21)
 
 
