@@ -1,54 +1,42 @@
-import { Component, EventEmitter, HostBinding, Input, Output, ViewContainerRef } from '@angular/core';
-import { File } from '@myth-tools/model/blueprint';
-import { ResizeEvent } from 'angular-resizable-element';
+import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
+import { File, FileWithId } from '@myth-tools/model/blueprint';
 
 @Component({
-    selector: 'myth-tools-file-window[minWidth]',
+    selector: 'myth-tools-file-window',
     templateUrl: './file-window.component.html',
     styleUrls: ['./file-window.component.scss']
 })
-export class FileWindowComponent {
-    @HostBinding('style.gridTemplateColumns')
-    public get gridTemplateColumns() {
-        return `minmax(${this.minWidth}px, 1fr) ${this.reference ? `minmax(${this.minWidth}px, ${this.width})` : ''} `;
-    }
-
-    @HostBinding('style.gridTemplateAreas')
-    public get gridTemplateAreas() {
-        return this.reference ? `'preview reference'` : `'preview'`;
-    }
+export class FileWindowComponent implements OnChanges {
+    @Input()
+    public files: FileWithId[] = [];
 
     @Input()
-    public preview?: File;
+    public selected?: FileWithId;
 
     @Input()
     public reference?: File;
 
-    @Input()
-    public minWidth!: number;
-
     @Output()
     public lookup = new EventEmitter<string>();
 
-    private width = '1fr';
+    @Output()
+    public filesChange = new EventEmitter<FileWithId[]>();
 
-    constructor(private readonly viewContainer: ViewContainerRef) {}
+    @Output()
+    public selectedChange = new EventEmitter<FileWithId>();
 
-    public onReferenceResize({ rectangle }: ResizeEvent) {
-        const { width } = rectangle;
-
-        this.width = `${width}px`;
+    public ngOnChanges(): void {
+        if (this.files.length && !this.selected) {
+            this.selectedChange.emit(this.files[0]);
+        }
     }
 
-    /** Ensure that you can only resize the elements between sizes that make sense. */
-    public validateResize() {
-        return ({ rectangle }: ResizeEvent) => {
-            const width = rectangle.width ?? 0;
+    public onCloseFile(file: FileWithId) {
+        this.files = this.files.filter(existingFile => existingFile.id !== file.id);
+        this.filesChange.emit(this.files);
 
-            const isSmallerThenContainer = width < this.viewContainer.element.nativeElement.clientWidth - this.minWidth;
-            const isLargerThenMinimum = width > this.minWidth;
-
-            return isSmallerThenContainer && isLargerThenMinimum;
-        };
+        if (this.selected?.id === file.id) {
+            this.selectedChange.emit(undefined);
+        }
     }
 }

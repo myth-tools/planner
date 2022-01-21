@@ -10,4 +10,8 @@
     color: #f1f1f1;
     font-weight: 400;
     letter-spacing: 0.5px;
+
+    &.selected {
+        background: purple;
+    }
 }

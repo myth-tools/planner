@@ -16,6 +16,9 @@ export class ExplorerItemComponent {
     @Input()
     public index!: number;
 
+    @Input()
+    public isSelected = false;
+
     @Output()
     public directoryClick = new EventEmitter<BlueprintEvent>();
 

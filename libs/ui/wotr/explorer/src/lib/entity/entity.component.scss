@@ -1,0 +1,17 @@
+:host {
+    height: 100%;
+    overflow: auto;
+}
+
+pre {
+    padding: 20px;
+    margin: 0;
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.guid {
+    color: blue;
+    cursor: pointer;
+}

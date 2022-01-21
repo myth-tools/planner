@@ -9,4 +9,7 @@ import { FileWithId } from '@myth-tools/model/blueprint';
 export class FileComponent {
     @Input()
     public file!: FileWithId;
+
+    @Input()
+    public isSelected = false;
 }

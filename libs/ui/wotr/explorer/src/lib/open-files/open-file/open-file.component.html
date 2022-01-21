@@ -1,0 +1,6 @@
+<div (click)="onSelectFile()" [ngClass]="{ selected: isSelected }">
+    {{ file.p[file.p.length - 1] }}
+    <mat-icon aria-hidden="true" inline="true" fontSet="material-icons-outlined" (click)="onCloseFile()"
+        >close</mat-icon
+    >
+</div>

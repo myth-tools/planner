@@ -1,0 +1,9 @@
+<ng-container *ngIf="files">
+    <myth-tools-open-file
+        *ngFor="let file of files"
+        [file]="file"
+        [isSelected]="file.id === selected?.id"
+        (closeFile)="onCloseFile($event)"
+        (selectFile)="onSelectFile($event)"
+    ></myth-tools-open-file>
+</ng-container>

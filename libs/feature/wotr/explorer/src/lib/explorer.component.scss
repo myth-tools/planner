@@ -1,8 +1,5 @@
 :host {
     display: grid;
-    grid-template-areas:
-        'source-explorer file-window'
-        'source-explorer reference-list';
     width: 100%;
     height: 100%;
 }
@@ -13,6 +10,10 @@
 
 #file-window {
     grid-area: file-window;
+}
+
+#reference {
+    grid-area: reference;
 }
 
 #reference-list {

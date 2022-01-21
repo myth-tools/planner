@@ -6,7 +6,9 @@
                 [item]="item.item"
                 [nestedLevel]="item.nestedLevel"
                 [index]="index"
+                [isSelected]="selected?.id === item.item.id"
                 (directoryClick)="onDirectoryClick($event)"
+                (fileClick)="onFileClick($event)"
             ></myth-tools-explorer-item>
         </cdk-virtual-scroll-viewport>
     </view-state-cache>

@@ -1,4 +1,4 @@
-<div class="item" [ngStyle]="{ 'padding-left.px': nestedLevel * 15 }" (click)="click()">
+<div class="item" [ngStyle]="{ 'padding-left.px': nestedLevel * 15, selected: isSelected }" (click)="click()">
     <ng-container *ngIf="isBlueprint(item); then blueprint; else file"></ng-container>
 
     <ng-template #blueprint>
@@ -6,6 +6,6 @@
     </ng-template>
 
     <ng-template #file>
-        <myth-tools-file [file]="$any(item)"></myth-tools-file>
+        <myth-tools-file [file]="$any(item)" [isSelected]="isSelected"></myth-tools-file>
     </ng-template>
 </div>
