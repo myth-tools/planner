@@ -174,32 +174,6 @@
             },
             "tags": ["tech:web", "type:feature"]
         },
-        "feature-wotr-planner": {
-            "projectType": "library",
-            "root": "libs/feature/wotr/planner",
-            "sourceRoot": "libs/feature/wotr/planner/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/feature/wotr/planner"],
-                    "options": {
-                        "jestConfig": "libs/feature/wotr/planner/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": [
-                            "libs/feature/wotr/planner/src/**/*.ts",
-                            "libs/feature/wotr/planner/src/**/*.html"
-                        ]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:feature"]
-        },
         "feature-wotr-version": {
             "root": "libs/feature/wotr/version",
             "sourceRoot": "libs/feature/wotr/version/src",
@@ -268,52 +242,6 @@
                 }
             },
             "tags": ["tech:web", "type:ui"]
-        },
-        "ui-wotr-planner": {
-            "projectType": "library",
-            "root": "libs/ui/wotr/planner",
-            "sourceRoot": "libs/ui/wotr/planner/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/ui/wotr/planner"],
-                    "options": {
-                        "jestConfig": "libs/ui/wotr/planner/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                },
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": ["libs/ui/wotr/planner/src/**/*.ts", "libs/ui/wotr/planner/src/**/*.html"]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:ui"]
-        },
-        "utils-shared-common": {
-            "root": "libs/utils/shared/common",
-            "sourceRoot": "libs/utils/shared/common/src",
-            "projectType": "library",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "outputs": ["{options.outputFile}"],
-                    "options": {
-                        "lintFilePatterns": ["libs/utils/shared/common/**/*.ts"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "outputs": [".output/coverage/libs/utils/shared/common"],
-                    "options": {
-                        "jestConfig": "libs/utils/shared/common/jest.config.js",
-                        "passWithNoTests": true
-                    }
-                }
-            },
-            "tags": ["tech:node", "tech:web", "type:utils"]
         },
         "utils-shared-node": {
             "root": "libs/utils/shared/node",
@@ -390,24 +318,6 @@
                 }
             },
             "tags": ["tech:node", "type:utils"]
-        },
-        "utils-testing-web": {
-            "projectType": "library",
-            "root": "libs/utils/testing/web",
-            "sourceRoot": "libs/utils/testing/web/src",
-            "prefix": "myth-tools",
-            "architect": {
-                "lint": {
-                    "builder": "@nrwl/linter:eslint",
-                    "options": {
-                        "lintFilePatterns": [
-                            "libs/utils/testing/web/src/**/*.ts",
-                            "libs/utils/testing/web/src/**/*.html"
-                        ]
-                    }
-                }
-            },
-            "tags": ["tech:web", "type:utils"]
         },
         "utils-wotr-environment": {
             "projectType": "library",
